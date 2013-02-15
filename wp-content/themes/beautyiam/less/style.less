@@ -9,6 +9,56 @@ Project Name: Twitter Bootstrap Framework
 	color: @white;
 }
 
+/*..................................the footer */
+footer {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 30px;
+	line-height: 2;
+	background-color: @black;
+	color: @gray;
+	text-transform: uppercase;
+
+	a {
+		color: @gray;
+	}
+}
+
+.social-media {
+	float: left;
+}
+
+.footer-nav {
+	width: 541px;
+	margin: 0 auto;
+
+	 li {
+	 	display: block;
+	 	float: left;
+
+	 	a {
+	 		padding: 0 10px;
+	 		line-height: 2;
+	 	}
+
+	 	&:after {
+	 		content: "/";
+	 	}
+
+	 	&:last-child {
+	 		&:after {
+	 			content: " ";
+	 		}
+	 	}
+	 }
+}
+
+#site-info {
+
+}
+
 img.size-auto,
 img.size-full,
 img.size-large,

@@ -2,8 +2,15 @@
 		</div> <!-- /container -->
 		<footer role="contentinfo">
 			<div class="container">
-				<div id="site-info">
-					&copy;<?php echo date ('Y'); ?><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				<div class="social-media">
+					<a href="#">Facebook</a>
+					<a href="#">Twitter</a>
+				</div>
+				
+				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'footer-nav' ) ); ?>
+			
+				<div id="site-info" class="pull-right">
+					<?php echo date ('Y'); ?><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php bloginfo( 'name' ); ?></a>
 					 | <a href="http://twitter.github.com/bootstrap" target="_blank">Bootstrap Docs</a><!-- Remove for production -->
 				</div><!-- #site-info -->

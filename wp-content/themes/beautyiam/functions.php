@@ -65,6 +65,10 @@ function smm_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'smm' ),
 	) );
+
+	register_nav_menus( array(
+		'footer' => __( 'Footer Navigation', 'smm' ),
+	) );
 }
 endif;
 
