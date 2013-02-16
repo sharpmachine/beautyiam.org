@@ -36,7 +36,7 @@
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
     	<style>
       	body {
-        	padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
+        	/*padding-top: 40px;  60px to make the container go all the way to the bottom of the topbar */
       	}
     	</style>
     	<link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
@@ -60,6 +60,21 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+	
+		<div id="support-group-details">
+			<div class="container">
+			<span class="close"><a href="#">X</a></span>
+				Content
+			</div>
+		</div>
+		
+		<div id="support-group">
+			<div class="container">
+				<div id="sg-tab" class="pull-right">
+					<span><a href="#">Artist Support Group</a></span>
+				</div>
+			</div>
+		</div>
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">

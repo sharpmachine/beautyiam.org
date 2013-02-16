@@ -9,6 +9,16 @@ jQuery(document).ready(function($) {
  	$("li.dropdown > a").addClass('dropdown-toggle');
 	$("li.dropdown > a").attr('data-toggle','dropdown');
 	$("a.dropdown-toggle").append('<b class="caret"></b>');
+
+	$("#sg-tab a").click(function(){
+		$("#support-group-details").slideDown();
+		// $(".navbar").css("marginTop" , "130px");
+	});
+
+	$("#support-group-details span.close a").click(function(){
+		$("#support-group-details").slideUp();
+		// $(".navbar").css("marginTop" , "30px");
+	});
 	
 });
 

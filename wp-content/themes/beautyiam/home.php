@@ -24,7 +24,9 @@
 	</div>
 	
 	<div class="landing">
-		<h1>Hello</h1>
+		<div class="container">
+			<h1>Hello</h1>
+		</div>
 	</div>
 	
 </section><!-- #page -->

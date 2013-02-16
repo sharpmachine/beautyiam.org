@@ -9,7 +9,12 @@
 // Base class and wrapper
 .navbar {
   overflow: visible;
-  margin-bottom: @baseLineHeight;
+  margin-top: 30px;
+  // position: absolute;
+  top: 20px;
+  z-index: 4;
+  // width: 100%;
+  // margin-bottom: @baseLineHeight;
 
   // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
   *position: relative;
@@ -19,13 +24,14 @@
 // Inner for background effects
 // Gradient is applied to its own element because overflow visible is not honored by IE when filter is present
 .navbar-inner {
+  width: 100%;
   min-height: @navbarHeight;
   padding-left:  20px;
   padding-right: 20px;
-  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
-  border: 1px solid @navbarBorder;
-  .border-radius(@baseBorderRadius);
-  .box-shadow(0 1px 4px rgba(0,0,0,.065));
+  // #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  // border: 1px solid @navbarBorder;
+  // .border-radius(@baseBorderRadius);
+  // .box-shadow(0 1px 4px rgba(0,0,0,.065));
 
   // Prevent floats from breaking the navbar
   .clearfix();
@@ -34,7 +40,7 @@
 // Set width to auto for default container
 // We then reset it for fixed navbars in the #gridSystem mixin
 .navbar .container {
-  width: auto;
+  // width: auto;
 }
 
 // Override the default collapsed state
@@ -227,7 +233,7 @@
   position: relative;
   left: 0;
   display: block;
-  float: left;
+  float: right;
   margin: 0 10px 0 0;
 }
 .navbar .nav.pull-right {
@@ -235,7 +241,7 @@
   margin-right: 0; // remove margin on float right nav
 }
 .navbar .nav > li {
-  float: left;
+  float: none;
 }
 
 // Links
