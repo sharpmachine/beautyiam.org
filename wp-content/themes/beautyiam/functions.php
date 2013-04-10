@@ -438,6 +438,7 @@ function bootstrap_pagination(){
 // Enqueue jQuery right from the get go for Hashgrid
 function getgo_method() {
     wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'jquery-ui-core' );
 }    
  
 add_action('wp_enqueue_scripts', 'getgo_method');

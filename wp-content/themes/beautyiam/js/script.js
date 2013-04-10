@@ -19,6 +19,10 @@ jQuery(document).ready(function($) {
 		$("#support-group-details").slideUp();
 		// $(".navbar").css("marginTop" , "30px");
 	});
+
+	$(".landing .headline").show("slide", { direction: "left" }, 1000);
+
+	// $('#myCarousel').carousel();
 	
 });
 

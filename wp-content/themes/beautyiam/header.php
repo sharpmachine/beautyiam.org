@@ -32,11 +32,14 @@
     	<meta name="author" content="Sharp Machine Media">
 	
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Linden+Hill' rel='stylesheet' type='text/css'>
     	<!-- Le styles -->
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
     	<style>
       	body {
-        	/*padding-top: 40px;  60px to make the container go all the way to the bottom of the topbar */
+        	/*padding-top: 40px;  60px to make the container-fluid go all the way to the bottom of the tspiropbar */
       	}
     	</style>
     	<link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
@@ -57,28 +60,33 @@
 				wp_enqueue_script( 'comment-reply' );
 			wp_head();
 			?>
+			
+			<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+			<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 	</head>
 
 	<body <?php body_class(); ?>>
 	
 		<div id="support-group-details">
-			<div class="container">
+			<div class="container-fluid">
 			<span class="close"><a href="#">X</a></span>
 				Content
 			</div>
 		</div>
 		
-		<div id="support-group">
-			<div class="container">
-				<div id="sg-tab" class="pull-right">
-					<span><a href="#">Artist Support Group</a></span>
-				</div>
-			</div>
-		</div>
+		
 
 		<div class="navbar navbar-fixed-top">
+			<div id="support-group">
+				<div class="container-fluid">
+					<div id="sg-tab" class="pull-right">
+						<span><a href="#">Artist Support Group</a></span>
+					</div>
+				</div>
+			</div>
 			<div class="navbar-inner">
-				<div class="container">
+				<div class="container-fluid">
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             			<span class="icon-bar"></span>
             			<span class="icon-bar"></span>
@@ -87,7 +95,7 @@
 					<a class="brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name'); ?></a>
 					<div class="nav-collapse">
             			<ul class="nav">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container-fluid' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
             			</ul>
 					</div><!--/.nav-collapse -->
         		</div>

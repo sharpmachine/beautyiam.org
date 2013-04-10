@@ -32,10 +32,32 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-collapse.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-carousel.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/easing.1.3.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/animate-enhanced.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/superslides.js" type="text/javascript" charset="utf-8"></script>
+
 
 	<!-- scripts concatenated and minified via ant build script-->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>
 	<script src="<?php bloginfo ('template_directory'); ?>/js/script.js"></script>
+
+	<script>
+		jQuery(document).ready(function($) {
+			// $("#landing-slide1").backstretch("<?php bloginfo('template_directory'); ?>/img/landing-slide1.jpg");
+			// $("#landing-slide2").backstretch("<?php bloginfo('template_directory'); ?>/img/landing-slide2.jpg");
+			// $("#landing-slide3").backstretch("<?php bloginfo('template_directory'); ?>/img/landing-slide3.jpg");
+			// $("#landing-slide4").backstretch("<?php bloginfo('template_directory'); ?>/img/landing-slide4.jpg");
+
+			$('#slides').superslides({
+				play: false, //7000,
+			    slide_easing: 'easeInOutCubic',
+			    slide_speed: 800,
+			    pagination: true,
+			    hashchange: false,
+			    scrollable: true
+ 			});
+		});
+	</script>
 
 	<!-- Remove these before deploying to production -->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/hashgrid.js" type="text/javascript"></script>
