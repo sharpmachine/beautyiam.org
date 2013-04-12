@@ -29,20 +29,20 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<meta name="description" content="">
-    	<meta name="author" content="Sharp Machine Media">
+    	<meta name="author" content="Sharp Machine">
 	
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		
-		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Linden+Hill' rel='stylesheet' type='text/css'>
     	<!-- Le styles -->
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
     	<style>
       	body {
-        	/*padding-top: 40px;  60px to make the container-fluid go all the way to the bottom of the tspiropbar */
+        	/*padding-top: 40px;  60px to make the container go all the way to the bottom of the tspiropbar */
       	}
     	</style>
-    	<link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
+    	<!-- <link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet"> -->
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     	<!-- Le fav and touch icons -->
@@ -68,36 +68,41 @@
 
 	<body <?php body_class(); ?>>
 	
+	<header>
+	
 		<div id="support-group-details">
-			<div class="container-fluid">
+			<div class="container">
 			<span class="close"><a href="#">X</a></span>
 				Content
 			</div>
 		</div>
 		
-		
-
 		<div class="navbar navbar-fixed-top">
+		
 			<div id="support-group">
-				<div class="container-fluid">
+				<div class="container">
 					<div id="sg-tab" class="pull-right">
-						<span><a href="#">Artist Support Group</a></span>
+						<span><a href="#">Artist Support Group <img src="<?php bloginfo( 'template_directory' ); ?>/img/chevron.png" alt="Chevron"></a></span>
 					</div>
 				</div>
 			</div>
+			
 			<div class="navbar-inner">
-				<div class="container-fluid">
+				<div class="container">
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             			<span class="icon-bar"></span>
             			<span class="icon-bar"></span>
             			<span class="icon-bar"></span>
 					</a>
-					<a class="brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name'); ?></a>
+					<a class="brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/img/logo-white.png" alt="Logo"></a>
 					<div class="nav-collapse">
             			<ul class="nav">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container-fluid' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
             			</ul>
 					</div><!--/.nav-collapse -->
         		</div>
 			</div>
-    	</div>
+			
+    	</div><!-- .navbar -->
+    	
+    </header>

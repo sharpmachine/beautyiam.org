@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 
 	$(".landing .headline").show("slide", { direction: "left" }, 1000);
 
-	// $('#myCarousel').carousel();
+	// $("header").fadeIn();
 	
 });
 

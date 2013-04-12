@@ -1,127 +1,100 @@
 <?php get_header(); ?>
-<section id="page">
 
-<div id="slides">
-    <ul class="slides-container">
-      <li>
-        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide1.jpg" alt="Cinelli">
-        <div class="container">
-        	<div id="slide-landing1" class="inner-slide">
-	         	<h4>
-					<span class="i-am">I am</span> 
-					<span class="descriptor">beautiful<span>
-				</h4>
-			</div><!-- .inner-slide -->
-        </div>
-      </li>
-      <li>
-        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide2.jpg" alt="Surly">
-        <div class="container">
-          <div class="inner-slide">
-	         	<h4>
-					<span class="i-am">I am</span> 
-					<span class="descriptor">worth it<span>
-				</h4>
-			</div><!-- .inner-slide -->
-        </div>
-      </li>
-      <li>
-        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide4.jpg" alt="Cinelli">
-        <div class="container">
-          <div id="slide-landing3" class="inner-slide">
-	         	<h4>
-					<span class="i-am">I am</span> 
-					<span class="descriptor">strong<span>
-				</h4>
-			</div><!-- .inner-slide -->
-        </div>
-      </li>
-      <li>
-        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide2.jpg" alt="Affinity">
-        <div class="container">
-          <div class="inner-slide">
-	         	<h4>
-					<span class="i-am">I am</span> 
-					<span class="descriptor">valuable<span>
-				</h4>
-			</div><!-- .inner-slide -->
-        </div>
-      </li>
-    </ul>
-   <!--  <nav class="slides-navigation">
-      <a href="#" class="next">Next</a>
-      <a href="#" class="prev">Previous</a>
-    </nav> -->
-  </div>
+<section id="models">
 
-	<!-- <div id="myCarousel" class="carousel slide">
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-			<li data-target="#myCarousel" data-slide-to="3"></li>
-		</ol>
-		<div class="carousel-inner">
-		
-			<div class="item active">
-				<div id="landing-slide1" class="landing-slide"></div>
-				<div class="carousel-caption">
-					<h4>
+	<div id="slides">
+	    <ul class="slides-container">
+	    
+	      <li>
+	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide1.jpg" alt="Cinelli">
+	        <div class="container">
+	        	<div id="slide-landing1" class="inner-slide pull-right">
+		         	<h4>
 						<span class="i-am">I am</span> 
 						<span class="descriptor">beautiful<span>
 					</h4>
-				</div>
-			</div>
-			
-			<div class="item">
-				<div id="landing-slide2" class="landing-slide"></div>
-				<div class="carousel-caption">
-					<h4>I am strong</h4>
-				</div>
-			</div>
-			
-			<div class="item">
-				<div id="landing-slide3" class="landing-slide"></div>
-				<div class="carousel-caption">
-					<h4>I am strong</h4>
-				</div>
-			</div>
-			
-			<div class="item">
-				<div id="landing-slide4" class="landing-slide"></div>
-				<div class="carousel-caption">
-					<h4>I am strong</h4>
-				</div>
-			</div>
-			
-		</div>
-	</div> -->
+				</div><!-- .inner-slide -->
+	        </div>
+	      </li>
+	      
+	      <li>
+	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide2.jpg" alt="Surly">
+	        <div class="container">
+	          	<div id="slide-landing2" class="inner-slide pull-right">
+		         	<h4>
+						<span class="i-am">I am</span> 
+						<span class="descriptor">worth it<span>
+					</h4>
+				</div><!-- .inner-slide -->
+	        </div>
+	      </li>
+	      
+	      <li>
+	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide3.jpg" alt="Cinelli">
+	        <div class="container">
+	          	<div id="slide-landing3" class="inner-slide">
+		         	<h4>
+						<span class="i-am">I am</span> 
+						<span class="descriptor">strong<span>
+					</h4>
+				</div><!-- .inner-slide -->
+	        </div>
+	      </li>
+	      
+	      <li>
+	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide4.jpg" alt="Affinity">
+	        <div class="container">
+	          	<div id="slide-landing4" class="inner-slide">
+		         	<h4>
+						<span class="i-am">I am</span> 
+						<span class="descriptor">valuable<span>
+					</h4>
+				</div><!-- .inner-slide -->
+	        </div>
+	      </li>
+	      
+	    </ul><!-- .slides-container -->
+	</div><!-- #slides -->
 	
-	<div class="landing">
-		<div class="container">
+</section><!-- #first -->
+
+<section id="headlines">
+	<div class="container">
+	
+		<h1>
+			<a href="#">
+				<span class="headline">Turbo Kick</span>
+				<span class="sub-headline">Get Fighting Fit</span>
+			</a>
+		</h1>
 		
-		</div>
-		<div class="hl-wrapper">
-			<a class="headline">
-				<span class="main-hl">Hello</span>
-				<span class="sub-hl">World</span>
+		<br>
+		
+		<h1>
+			<a href="#">
+				<span class="headline">Nutrition Workshop</span>
+				<span class="sub-headline">Feed Your Body</span>
 			</a>
-		</div><!-- .hl-wrapper -->
-		<div class="hl-wrapper">
-			<a class="headline">
-				<span class="main-hl">Hello</span>
-				<span class="sub-hl">World</span>
+		</h1>
+		
+		<br>
+		
+		<h1>
+			<a href="#">
+				<span class="headline">dream interpretation</span>
+				<span class="sub-headline">take care of your spirit</span>
 			</a>
-		</div><!-- .hl-wrapper -->
-		<div class="hl-wrapper">
-			<a class="headline">
-				<span class="main-hl">Hello</span>
-				<span class="sub-hl">World</span>
-			</a>
-		</div><!-- .hl-wrapper -->
+		</h1>
+		
 	</div>
 	
-</section><!-- #page -->
- 	<div class="container">
-			<div class="row">
+</section>
+
+<!-- <section id="latest-post">
+	<div class="container">
+		<h1>hello world</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab expedita eum debitis repudiandae veritatis quod culpa tempora modi recusandae molestias maiores ad aperiam esse iure repellat. Animi impedit assumenda nobis.
+	</div>
+</section> -->
+
 <?php get_footer(); ?>

@@ -7,63 +7,37 @@ body {
 	height: 100%;
 }
 
-#page {
-	height: 100%;
+/*..................................the header */
+.navbar-fixed-top .navbar-inner {
+	box-shadow: none;
 }
 
-.inner-slide {
-	margin-top: 400px;
-	h4 {
-		color: @white;
-		line-height: 1;
-		font-family: 'Source Sans Pro', sans-serif;
-		font-weight: 400;
-		font-size: 60px;
+.navbar {
 
-		.descriptor {
-			display: block;
-			color: #fcecb1;
-			font-family: 'Linden Hill', serif;
-			font-size: 124px
+	.brand {
+		margin-top: 30px;
+	}
+
+	.nav {
+		margin-top: 23px;
+		margin-right: 0;
+
+		& > li > a {
+			padding: 1px 0 1px 10px;
+			color: @white;
+			font-size: 18px;
+			font-weight: 200;
+			text-shadow: none;
+			text-transform: uppercase;
+
+			&:hover {
+				color: @linkColor;
+			}
 		}
 	}
 }
 
-#slide-landing1 {
-
-}
-
-#myCarousel,
-.carousel-inner,
-.item,
-.landing-slide {
-	height: 100%;
-}
-
-// .backstretch {
-// 	left: 0px;
-// 	top: 0px;
-// 	overflow: hidden;
-// 	margin: 0px;
-// 	padding: 0px;
-// 	height: 100% !important;
-// 	width: 100% !important;
-// 	z-index: -999998;
-
-// 	img {
-// 		position: absolute;
-// 		margin: 0;
-// 		padding: 0;
-// 		border: none;
-// 		width: auto !important;
-// 		height: auto !important;
-// 		max-width: none;
-// 		z-index: -999999;
-// 		// left: -66.66666666666666px;
-// 		// top: 0px;
-// 	}
-// }
-
+// The Support Group
 #support-group-details {
 	position: absolute;
 	top: 0;
@@ -75,31 +49,146 @@ body {
 }
 
 #support-group {
-	// position: fixed;
 	width: 100%;
-	height: 30px;
+	height: 35px;
 	background-color: @black;
 
 	#sg-tab {
+		width: 270px;
 		height: 50px;
 		margin-bottom: -20px;
 		background-color: @black;
+		text-align: center;
+
+		span {
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 3;
+			text-transform: uppercase;
+
+			a {
+				color: @white;
+
+				img {
+					padding-left: 10px;
+				}
+
+				&:hover {
+					color: @linkColor;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 
-.landing {
-	display: none;
-	position: absolute;
-	top: 60px;
-	width: 100%;
+/*..................................the landing page */
+// First section
+#models {
+	height: 100%;
+	margin-bottom: -425px;
+}
+
+.inner-slide {
+	margin-top: 400px;
+
+	h4 {
+		font-weight: 400;
+
+		.i-am {
+			color: @white;
+			font-family: @sansFontFamily;
+			font-size: 60px;
+			line-height: 1.6;
+			font-weight: 300;
+		}
+
+		.descriptor {
+			display: block;
+			font-family: @serifFontFamily;
+			font-size: 124px;
+		}
+	}
+}
+
+#slide-landing1 {
+
+	.i-am {
+		padding-left: 85px;
+	}
+
+	.descriptor {
+		color: @cream;
+	}
+}
+
+#slide-landing2 {
+	.descriptor {
+		color: @blueGreen;
+	}
+}
+
+#slide-landing3 {
+	.descriptor {
+		color: @royalPurple;
+	}
+}
+
+#slide-landing4 {
+	.descriptor {
+		padding-left: 20px;
+		color: @princessPink;
+	}
+}
+
+#headlines {
+	bottom: 60px;
+	height: 300px;
 	color: @white;
 
-	.headline {
-		display: none;
-		width: auto;
-		padding-left: 8.5%;
-		background-color: @gray;
+	h1 {
+		position: relative;
+		display: inline-block;
+		padding: 5px 20px 5px 0;
+		font-family: @sansFontFamily;
+		font-weight: 300;
+		text-transform: uppercase;
+		background-color: rgba(0,0,0,0.5);
+
+		a {
+			color: @white;
+
+			&:hover {
+				color: @linkColor;
+				text-decoration: none;
+			}
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			right: 100%;
+			background-color: rgba(0,0,0,0.5);  /* Match the background */
+			top: 0;
+			bottom: 0;
+			width: 9999px;   /* some huge width */
+		}
+
+		.headline {
+			display: block;
+			margin-bottom: -15px;
+			font-size: 42px;
+		}
+
+		.sub-headline {
+			font-size: 24px;
+		}
 	}
+}
+
+#latest-post {
+	margin-top: 150px;
+	height: 200px;
 }
 
 /*..................................the footer */
@@ -108,19 +197,27 @@ footer {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	height: 30px;
-	line-height: 2;
+	height: 35px;
+	line-height: 2.5;
 	background-color: @black;
-	color: @gray;
+	color: @grayLight;
 	text-transform: uppercase;
 
 	a {
-		color: @gray;
+		color: @grayLight;
+
+		&:hover {
+			color: @linkColor;
+		}
 	}
 }
 
 .social-media {
 	float: left;
+
+	img {
+		padding-right: 10px;
+	}
 }
 
 .footer-nav {
@@ -133,7 +230,7 @@ footer {
 
 	 	a {
 	 		padding: 0 10px;
-	 		line-height: 2;
+	 		line-height: 2.5;
 	 	}
 
 	 	&:after {
@@ -145,13 +242,10 @@ footer {
 	 			content: " ";
 	 		}
 	 	}
-	 }
+	}
 }
 
-#site-info {
-
-}
-
+/*..................................the image utilities */
 img.size-auto,
 img.size-full,
 img.size-large,
@@ -272,6 +366,23 @@ img.aligncenter {
   display: inline-block;
   margin: 2px;
 }
+
 .slides-pagination a.current {
   background: @white;
+
+  &:first-child {
+  	background: @cream;
+  }
+
+  &:nth-child(2) {
+  	background: @blueGreen;
+  }
+
+  &:nth-child(3) {
+  	background: @royalPurple;
+  }
+
+  &:nth-child(4) {
+  	background: @princessPink;
+  }
 }
