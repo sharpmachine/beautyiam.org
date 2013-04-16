@@ -55,6 +55,15 @@
 			    hashchange: false,
 			    scrollable: true
  			});
+
+ 			$('#featured-classes-slides').superslides({
+				play: false, //7000,
+			    slide_easing: 'easeInOutCubic',
+			    slide_speed: 800,
+			    pagination: true,
+			    hashchange: false,
+			    scrollable: true
+ 			});
 		});
 	</script>
 

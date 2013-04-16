@@ -7,6 +7,116 @@ body {
 	height: 100%;
 }
 
+/*..................................the typography */
+h1 {
+	line-height: 1;
+
+	&.serif {
+		font-size: 130px;
+	}
+
+	&.sans {
+		font-size: 55px;
+	}
+}
+
+h2 {
+	&.serif {
+		font-size: 105px;
+	}
+
+	&.sans {
+		font-size: 42px;
+	}
+}
+
+h3 {
+	&.serif {
+		font-size: 70px;
+	}
+
+	&.sans {
+		font-size: 24px;
+	}
+}
+
+h4 {
+	&.serif {
+		font-size: 55px;
+	}
+
+	&.sans {
+		font-size: 18px;
+	}
+}
+
+h5 {
+	&.serif {
+		font-size: 40px;
+	}
+
+	&.sans {
+		font-size: 18px;
+		font-weight: 600;
+	}
+}
+
+h6 {
+	&.serif {
+		font-size: 36px;
+	}
+
+	&.sans {
+		font-size: 16px;
+	}
+}
+
+.serif {
+	font-family: @serifFontFamily;
+	font-weight: 400;
+}
+
+.sans {
+	font-family: @sansFontFamily;
+	font-weight: 400;
+}
+
+
+.p-numbers {
+    font-family: Linden Hill;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 20;
+}
+
+.p-address {
+    font-family: Linden Hill;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 18;
+}
+
+.p {
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18;
+}
+
+.-copy-xs {
+    font-family: Source Sans Pro;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12;
+}
+
+.-copy-s {
+    font-family: Source Sans Pro;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 14;
+}
+
 /*..................................the header */
 .navbar-fixed-top .navbar-inner {
 	box-shadow: none;
@@ -142,7 +252,7 @@ body {
 }
 
 #headlines {
-	bottom: 60px;
+	display: none;
 	height: 300px;
 	color: @white;
 
@@ -186,9 +296,194 @@ body {
 	}
 }
 
-#latest-post {
-	margin-top: 150px;
-	height: 200px;
+//Featured Classes
+#feature-classes {
+	.slides-container {
+
+		.inner-slide {
+			margin-top: 300px;
+		}
+
+		img.layer-img {
+			position: relative;
+			top: -400px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		// .class-cat {
+		// 	color: @white;
+		// 	font-weight: 300;
+		// 	text-transform: uppercase;
+		// }
+
+		.class-icon {
+			position: relative;
+			float: left;
+			.square(156px);
+			// background: url(../img/runner-icon.png) no-repeat 20px center;
+
+			.quarter {
+				position: relative;
+				float: left;
+				.square(76px);
+
+				&:first-child {
+					border-top: solid 2px;
+					border-left: solid 2px;
+					.border-top-left-radius(100%);
+				}
+
+				&:nth-child(2) {
+					border-top: solid 2px;
+					border-right: solid 2px;
+					.border-top-right-radius(100%);
+				}
+
+				&:nth-child(3) {
+					border-bottom: solid 2px;
+					border-left: solid 2px;
+					.border-bottom-left-radius(100%);
+				}
+			}
+		}
+
+		.class-titles {
+			position: relative;
+			top: -108px;
+			// margin-top: -100px;	
+		}
+
+		h1 {
+			margin-top: -45px;
+			// color: @royalPurple;
+			text-transform: lowercase;
+		}
+
+		h3 {
+			position: relative;
+			// left: 15px;
+			display: inline-block;
+			padding-top: 15px;
+			line-height: 1;
+			font-weight: 300;
+			text-transform: uppercase;
+			// background-color: @black;
+		}
+
+		#slide-classes1 a {
+			
+			h1 {
+				color: @royalPurple;
+			}
+
+			h3 {
+				left: 15px;
+				color: @white;
+				background-color: @black;
+			}
+
+			.class-icon {
+				background: url(../img/runner-icon.png) no-repeat 20px center;
+
+				.quarter {
+					border-color: @royalPurple;
+				}
+			}
+
+			&:hover {
+
+				background-color: @royalPurple;
+
+				h1 {
+					// display: none;
+					color: @black;
+				}
+			}
+		}
+
+		#slide-classes2 {
+
+			h1 {
+				color: @calypso;
+			}
+
+			h3 {
+				left: 60px;
+				color: @grayLight;
+				background-color: @white;
+			}
+
+			.class-icon {
+				background: url(../img/cutlery-icon.png) no-repeat 45px center;
+
+				.quarter {
+					border-color: @calypso;
+				}
+			}
+		}
+
+		#slide-classes3 {
+			@spirit-care: @cream;
+
+			.class-titles {
+				margin-left: 50px;
+			}
+			
+			h1 {
+				color: @spirit-care;
+				line-height: 1;
+
+				span {
+					position: relative;
+					top: -30px;
+					display: block;
+					line-height: 1;
+					margin-left: 150px;
+				}
+			}
+
+			h3 {
+				// left: 60px;
+				color: @white;
+				background-color: transparent;
+			}
+
+			.class-icon {
+				background: url(../img/heart-icon.png) no-repeat center center;
+
+				.quarter {
+					border-color: @spirit-care;
+				}
+			}
+		}
+
+		#slide-classes4 {
+
+			.class-titles {
+				position: relative;
+				left: 70px;
+			}
+			
+			h1 {
+				color: @princessPink;
+			}
+
+			h3 {
+				// left: 60px;
+				color: @black;
+				background-color: transparent;
+			}
+
+			.class-icon {
+				background: url(../img/speech-icon.png) no-repeat 20px center;
+
+				.quarter {
+					border-color: @princessPink;
+				}
+			}
+		}
+	}
 }
 
 /*..................................the footer */
@@ -197,6 +492,7 @@ footer {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 99999;
 	height: 35px;
 	line-height: 2.5;
 	background-color: @black;
@@ -385,4 +681,25 @@ img.aligncenter {
   &:nth-child(4) {
   	background: @princessPink;
   }
+}
+
+
+@media (max-height: 768px) {
+	#models {
+		margin-bottom: -300px;
+	}
+
+	#headlines h1 {
+		padding: 0px 20px 0px 0;
+		line-height: 1.2;
+	}
+
+	#headlines h1 .headline {
+		margin-bottom: -28px;
+		font-size: 32px;
+	}
+
+	#headlines h1 .sub-headline {
+		font-size: 14px;
+	}
 }

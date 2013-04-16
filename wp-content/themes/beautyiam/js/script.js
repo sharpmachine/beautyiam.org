@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 		// $(".navbar").css("marginTop" , "30px");
 	});
 
-	$(".landing .headline").show("slide", { direction: "left" }, 1000);
+	$("#headlines").show("slide", { direction: "left" }, 2000);
 
 	// $("header").fadeIn();
 	
