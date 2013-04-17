@@ -33,7 +33,8 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/easing.1.3.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/animate-enhanced.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/superslides.js" type="text/javascript" charset="utf-8"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/superslides.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/slide-in-min.js"></script>
 
 
 	<!-- scripts concatenated and minified via ant build script-->
@@ -42,18 +43,19 @@
 
 	<script>
 		jQuery(document).ready(function($) {
-			// $("#landing-slide1").backstretch("<?php bloginfo('template_directory'); ?>/img/landing-slide1.jpg");
-			// $("#landing-slide2").backstretch("<?php bloginfo('template_directory'); ?>/img/landing-slide2.jpg");
-			// $("#landing-slide3").backstretch("<?php bloginfo('template_directory'); ?>/img/landing-slide3.jpg");
-			// $("#landing-slide4").backstretch("<?php bloginfo('template_directory'); ?>/img/landing-slide4.jpg");
 
 			$('#slides').superslides({
-				play: false, //7000,
+				play: 7000, //false
 			    slide_easing: 'easeInOutCubic',
 			    slide_speed: 800,
 			    pagination: true,
 			    hashchange: false,
-			    scrollable: true
+			    scrollable: true,
+			    classes: {
+					nav: 'slides-navigation',
+					container: 'slides-container',
+					pagination: 'slides-pagination'
+				}
  			});
 
  			$('#featured-classes-slides').superslides({
@@ -62,7 +64,13 @@
 			    slide_speed: 800,
 			    pagination: true,
 			    hashchange: false,
-			    scrollable: true
+			    scrollable: true,
+			    classes: {
+			    	preserve: 'preserve',
+					nav: 'slides-navigation2',
+					container: 'slides-container2',
+					pagination: 'slides-pagination2'
+				}
  			});
 		});
 	</script>
