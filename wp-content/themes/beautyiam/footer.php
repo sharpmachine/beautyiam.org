@@ -44,10 +44,10 @@
 	<script>
 		jQuery(document).ready(function($) {
 
-			$('#slides').superslides({
+			$('#models-slides').superslides({
 				play: 7000, //false
 			    slide_easing: 'easeInOutCubic',
-			    slide_speed: 800,
+			    slide_speed: 900,
 			    pagination: true,
 			    hashchange: false,
 			    scrollable: true,

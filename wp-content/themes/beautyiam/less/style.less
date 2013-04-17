@@ -81,7 +81,6 @@ h6 {
 	font-weight: 400;
 }
 
-
 .p-numbers {
     font-family: Linden Hill;
     font-size: 24px;
@@ -118,6 +117,7 @@ h6 {
 }
 
 /*..................................the header */
+// The Navbar
 .navbar-fixed-top .navbar-inner {
 	box-shadow: none;
 }
@@ -139,7 +139,6 @@ h6 {
 			font-weight: 200;
 			text-shadow: none;
 			text-transform: uppercase;
-			// text-shadow: 1px 1px 1px @black;
 
 			&:hover {
 				color: @linkColor;
@@ -200,27 +199,30 @@ h6 {
 	margin-bottom: -425px;
 }
 
-.inner-slide {
-	margin-top: 400px;
+#models-slides {
+	.inner-slide {
+		margin-top: 400px;
 
-	h4 {
-		font-weight: 400;
+		h4 {
+			font-weight: 400;
 
-		.i-am {
-			color: @white;
-			font-family: @sansFontFamily;
-			font-size: 60px;
-			line-height: 1.6;
-			font-weight: 300;
+			.i-am {
+				color: @white;
+				font-family: @sansFontFamily;
+				font-size: 60px;
+				line-height: 1.6;
+				font-weight: 300;
+			}
+
+			.descriptor {
+				display: block;
+				font-family: @serifFontFamily;
+				font-size: 124px;
+			}
 		}
-
-		.descriptor {
-			display: block;
-			font-family: @serifFontFamily;
-			font-size: 124px;
-		}
-	}
+	}	
 }
+
 
 #slide-landing1 {
 
@@ -299,10 +301,14 @@ h6 {
 
 //Featured Classes
 #feature-classes {
+	background-color: @white;
+
 	.slides-container2 {
 
 		.inner-slide {
-			margin-top: 300px;
+			// position: relative;
+			// margin-top: 300px;
+			margin-top: 28%;
 			margin-left: -10px;
 		}
 
@@ -318,30 +324,6 @@ h6 {
 			float: left;
 			left: -2px;
 			.square(159px);
-
-			.quarter {
-				position: relative;
-				float: left;
-				.square(76px);
-
-				&:first-child {
-					border-top: solid 2px;
-					border-left: solid 2px;
-					.border-top-left-radius(100%);
-				}
-
-				&:nth-child(2) {
-					border-top: solid 2px;
-					border-right: solid 2px;
-					.border-top-right-radius(100%);
-				}
-
-				&:nth-child(3) {
-					border-bottom: solid 2px;
-					border-left: solid 2px;
-					.border-bottom-left-radius(100%);
-				}
-			}
 		}
 
 		.class-titles {
@@ -351,7 +333,6 @@ h6 {
 
 		h1 {
 			margin-top: -45px;
-			// line-height: 0.5;
 			text-transform: lowercase;
 		}
 
@@ -362,6 +343,17 @@ h6 {
 			line-height: 1;
 			font-weight: 300;
 			text-transform: uppercase;
+		}
+
+		a {
+			position: relative;
+			font-size: 36px;
+			font-weight: 300;
+			line-height: 1;
+		}
+
+		.class-icon {
+			background: no-repeat center center;
 		}
 
 		#slide-classes1 {
@@ -377,31 +369,16 @@ h6 {
 			h3 {
 				left: 15px;
 				color: @white;
-				// background-color: @black;
 			}
 
 			a {
-				position: relative;
 				top: -10px;
 				left: 400px;
 				color: @white;
-				// font-family: @serifFontFamily;
-				// text-transform: uppercase;
-				// text-decoration: underline;
-				font-size: 36px;
-				font-weight: 300;
-				line-height: 1;
-				// border: 1px solid @white;
-				.border-radius(3px);
 			}
 
 			.class-icon {
-				background: url(../img/runner-icon-purple.png) no-repeat center center;
-
-				.quarter,
-				.half {
-					border-color: @royalPurple;
-				}
+				background-image: url(../img/runner-icon-purple.png);
 			}
 		}
 
@@ -414,15 +391,40 @@ h6 {
 			h3 {
 				left: 60px;
 				color: @grayLight;
-				background-color: @white;
+			}
+
+			a {
+				top: -10px;
+				left: 400px;
+				z-index: 9999;
+				color: @grayLight;
 			}
 
 			.class-icon {
-				background: url(../img/cutlery-icon.png) no-repeat 45px center;
+				background-image: url(../img/wellness-icon-blue.png);
+			}
 
-				.quarter {
-					border-color: @calypso;
-				}
+			.broccoli,
+			.lemon,
+			.tomatoes {
+				position: absolute;
+				width: 50%;
+			}
+
+			.broccoli {
+				width: 25%;
+				top: 50px;
+				left: 590px;
+			}
+
+			.lemon {
+				top: 150px;
+				left: 290px;
+			}
+
+			.tomatoes {
+				bottom: 25px;
+				left: 285px;
 			}
 		}
 
@@ -430,7 +432,8 @@ h6 {
 			@spirit-care: @cream;
 
 			.class-titles {
-				margin-left: 50px;
+				top: -120px;
+				margin-left: 60px;
 			}
 			
 			h1 {
@@ -447,18 +450,21 @@ h6 {
 			}
 
 			h3 {
-				// left: 60px;
 				color: @white;
 				background-color: transparent;
 			}
 
-			.class-icon {
-				background: url(../img/heart-icon.png) no-repeat center center;
-
-				.quarter {
-					border-color: @spirit-care;
-				}
+			a {
+				top: -50px;
+				left: 400px;
+				z-index: 9999;
+				color: @white;
 			}
+
+			.class-icon {
+				background-image: url(../img/spirit_care-icon-cream.png);
+			}
+
 		}
 
 		#slide-classes4 {
@@ -470,21 +476,23 @@ h6 {
 			
 			h1 {
 				color: @princessPink;
-				text-shadow: 1px 1px 1px @grayDark;
+				text-shadow: 6px 6px 5px rgba(0,0,0,0.4);
 			}
 
 			h3 {
-				// left: 60px;
 				color: @black;
 				background-color: transparent;
 			}
 
-			.class-icon {
-				background: url(../img/speech-icon.png) no-repeat 20px center;
+			a {
+				top: -20px;
+				left: 200px;
+				z-index: 9999;
+				color: @black;
+			}
 
-				.quarter {
-					border-color: @princessPink;
-				}
+			.class-icon {
+				background-image: url(../img/bubble-icon-pink.png);
 			}
 		}
 	}
@@ -581,45 +589,17 @@ img.aligncenter {
 	margin-bottom: 12px;
 }
 
-
-
-
-
-
-
-
-
-
-.entry-title {
-	
-}
-
-.entry-meta {
-	
-}
-
-.entry-utility {
-	
-}
-
-.entry-content {
-	
-}
-
-.entry-summary {
-	
-}
-
 /*..................................the slides */
-#slides {
+#models-slides,
+#featured-classes-slides {
   position: relative;
   z-index: 0;
 }
-#slides .slides-container,
-#slides .slides-container2 {
+.slides-container,
+.slides-container2 {
   display: none;
 }
-#slides .scrollable {
+#models-slides .scrollable {
   *zoom: 1;
   position: relative;
   top: 0;
@@ -628,7 +608,7 @@ img.aligncenter {
   -webkit-overflow-scrolling: touch;
   height: 100%;
 }
-#slides .scrollable:after {
+#models-slides .scrollable:after {
   content: "";
   display: table;
   clear: both;
@@ -639,7 +619,7 @@ img.aligncenter {
   margin: 0 auto;
   position: relative;
   z-index: 3;
-  top: 350px;
+  top: 48%;
   width: 100%;
 }
 
@@ -666,7 +646,7 @@ img.aligncenter {
   	}
 
   	&.next {
-  		right: -70px;
+  		right: -30px;
   	}
 }
 
@@ -873,4 +853,12 @@ img.aligncenter {
 	-ms-transition: none;
 	transition: none;
 }
+
+// @media (min-width: 1024px) {
+// 	img.tomatoes,
+// 	img.broccoli,
+// 	img.lemon {
+// 		width: 50%;
+// 	}
+// }
 

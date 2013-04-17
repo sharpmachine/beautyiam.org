@@ -2,14 +2,14 @@
 
 <section id="models">
 
-	<div id="slides">
+	<div id="models-slides">
 	    <ul class="slides-container">
 	    
 	      <li>
-	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide1.jpg" alt="Cinelli">
+	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide1.jpg" alt="I am beautiful">
 	        <div class="container">
 	        	<div id="slide-landing1" class="inner-slide pull-right">
-		         	<h4 class="module">
+		         	<h4>
 						<span class="i-am">I am</span> 
 						<span class="descriptor">beautiful<span>
 					</h4>
@@ -18,10 +18,10 @@
 	      </li>
 	      
 	      <li>
-	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide2.jpg" alt="Surly">
+	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide2.jpg" alt="I am worth it">
 	        <div class="container">
 	          	<div id="slide-landing2" class="inner-slide pull-right">
-		         	<h4 class="module">
+		         	<h4>
 						<span class="i-am">I am</span> 
 						<span class="descriptor">worth it<span>
 					</h4>
@@ -30,7 +30,7 @@
 	      </li>
 	      
 	      <li>
-	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide3.jpg" alt="Cinelli">
+	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide3.jpg" alt="I am strong">
 	        <div class="container">
 	          	<div id="slide-landing3" class="inner-slide pull-right">
 		         	<h4>
@@ -42,7 +42,7 @@
 	      </li>
 	      
 	      <li>
-	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide4.jpg" alt="Affinity">
+	        <img src="<?php bloginfo('template_directory'); ?>/img/landing-slide4.jpg" alt="I am valuable">
 	        <div class="container">
 	          	<div id="slide-landing4" class="inner-slide pull-right">
 		         	<h4>
@@ -56,7 +56,7 @@
 	    </ul><!-- .slides-container -->
 	</div><!-- #slides -->
 	
-</section><!-- #first -->
+</section><!-- #models -->
 
 <section id="headlines">
 	<div class="container">
@@ -87,7 +87,6 @@
 		</h1>
 		
 	</div>
-	
 </section>
 
 <section id="feature-classes">
@@ -95,19 +94,11 @@
 	    <ul class="slides-container2">
 	    
 	      <li>
-	        
 	        <div class="container">
-	       		
 	        	<div id="slide-classes1" class="inner-slide">
-	        		
-        			<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide1.jpg" class="bg" alt="Cinelli">
+        			<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide1.jpg" class="" alt="Purple haze">
 	        		<div class="row">
-	        			<div class="span2 offset1 class-icon">
-		        			<!-- <div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div> -->
-		        		</div>
+	        			<div class="span2 offset1 class-icon"></div>
 	        		</div>
 	        		<div class="row class-titles">
 	        			<div class="span9 offset2">
@@ -116,95 +107,75 @@
 		         			<a href="#" class="">Read more.</a>
 	        			</div>
 	        		</div>
-	        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/woman-runner.png" class="preserve layer-img module" alt="">
-	        	
+	        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/woman-runner.png" class="preserve layer-img module" alt="Woman runner">
 				</div><!-- .inner-slide -->
 	        </div>
 	      </li>
 	      
 	      <li>
-	      
-	        <img src="<?php bloginfo('template_directory'); ?>/img/classes-slide2.jpg" alt="Surly">
 	        <div class="container">
 	          	<div id="slide-classes2" class="inner-slide">
-		         	
+	          		<img src="<?php bloginfo( 'template_directory' ); ?>/img/broccoli.jpg" class="preserve broccoli" alt="Broccoli">
+	        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/lemon.png" class="preserve lemon" alt="Lemons">
 		         	<div class="row">
-	        			<div class="span2 offset1 class-icon">
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        		</div>
+	        			<div class="span2 offset1 class-icon"></div>
 	        		</div>
 	        		<div class="row class-titles">
 	        			<div class="span10 offset2">
 	        				<h3 class="sans class-cat">Wellness</h3>
-		         			<h1 class="serif">Feed Your Body</h1>
+		         			<h1 class="serif">Feed the Body</h1>
+		         			<a href="#">Read more.</a>
 	        			</div>
 	        		</div>
-	        		<!-- <img src="<?php bloginfo( 'template_directory' ); ?>/img/women-runner.png" class="preserve layer-img" alt=""> -->
-		         	
+	        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/tomatoes.png" class="preserve tomatoes" alt="Tomatoes">
 				</div><!-- .inner-slide -->
 	        </div>
 	      </li>
 	      
 	      <li>
-	        <img src="<?php bloginfo('template_directory'); ?>/img/classes-slide3.jpg" alt="Cinelli">
 	        <div class="container">
 	          	<div id="slide-classes3" class="inner-slide">
-		         	
+					<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide3.jpg" alt="Glory of Love">		         	
 		         	<div class="row">
-	        			<div class="span2 offset1 class-icon">
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        		</div>
+	        			<div class="span2 offset1 class-icon"></div>
 	        		</div>
 	        		<div class="row class-titles">
 	        			<div class="span10 offset2">
 	        				<h3 class="sans class-cat">Spirit Care</h3>
 		         			<h1 class="serif">Manage <span>the Inside</span></h1>
+		         			<a href="#">Read more.</a>
 	        			</div>
 	        		</div>
-	        		<!-- <img src="<?php bloginfo( 'template_directory' ); ?>/img/women-runner.png" class="preserve layer-img" alt=""> -->
-		         	
 				</div><!-- .inner-slide -->
 	        </div>
 	      </li>
 	      
 	      <li>
-	        <img src="<?php bloginfo('template_directory'); ?>/img/classes-slide4.jpg" alt="Affinity">
 	        <div class="container">
 	          	<div id="slide-classes4" class="inner-slide">
-		         	
+					<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide4.jpg" alt="Map of Paris">		         	
 		         	<div class="row">
-	        			<div class="span2 offset1 class-icon">
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        			<div class="quarter"></div>
-		        		</div>
+	        			<div class="span2 offset1 class-icon"></div>
 	        		</div>
 	        		<div class="row class-titles">
 	        			<div class="span10 offset2">
 	        				<h3 class="sans class-cat">Counseling</h3>
 		         			<h1 class="serif">Get Savvy</h1>
+		         			<a href="">Read more.</a>
 	        			</div>
 	        		</div>
-	        		<!-- <img src="<?php bloginfo( 'template_directory' ); ?>/img/women-runner.png" class="preserve layer-img" alt=""> -->
-		         	
 				</div><!-- .inner-slide -->
 	        </div>
 	      </li>
 	      
 	    </ul><!-- .slides-container -->
+	    
 	    <nav class="slides-navigation2">
 	    	<div class="container">
-				<a href="#" class="next pull-right"><img src="<?php bloginfo( 'template_directory' ); ?>/img/arrow-right.png" alt=""></a>
-				<!-- <a href="#" class="prev"></a> -->
+				<a href="#" class="next pull-right"><img src="<?php bloginfo( 'template_directory' ); ?>/img/arrow-right.png" alt="Right Arrow"></a>
 			</div>
 		</nav>
+		
 	</div><!-- #slides -->
 </section>
 
