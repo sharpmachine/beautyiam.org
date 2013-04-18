@@ -116,6 +116,27 @@ h6 {
     line-height: 14;
 }
 
+/*..................................the backgrounds */
+.purple-bg {
+	color: @white;
+	background-color: @royalPurple;
+}
+
+.calypso-bg {
+	color: @white;
+	background-color: @calypso;
+}
+
+.cream-bg {
+	color: @grayLight;
+	background-color: @cream;
+}
+
+.pink-bg {
+	color: @white;
+	background-color: @princessPink;
+}
+
 /*..................................the header */
 // The Navbar
 .navbar-fixed-top .navbar-inner {
@@ -299,9 +320,12 @@ h6 {
 	}
 }
 
+// .slide-bg {
+// 	display: none;
+// }
+
 //Featured Classes
 #feature-classes {
-	background-color: @white;
 
 	.slides-container2 {
 
@@ -310,13 +334,6 @@ h6 {
 			// margin-top: 300px;
 			margin-top: 28%;
 			margin-left: -10px;
-		}
-
-		img.layer-img {
-			position: relative;
-			top: -400px;
-			display: block;
-			margin: 0 auto;
 		}
 
 		.class-icon {
@@ -356,7 +373,14 @@ h6 {
 			background: no-repeat center center;
 		}
 
+		//Fitness
 		#slide-classes1 {
+
+			// &:hover {
+			// 	h1 {
+			// 		color: @black !important;
+			// 	}
+			// }
 
 			.class-titles {
 				left: 10px;
@@ -379,10 +403,26 @@ h6 {
 
 			.class-icon {
 				background-image: url(../img/runner-icon-purple.png);
+
+				&.hover {
+					background-image: url(../img/runner-icon-black.png);
+				}
+			}
+
+			img.layer-img {
+				position: relative;
+				top: -400px;
+				display: block;
+				margin: 0 auto;
 			}
 		}
 
+		//Wellness
 		#slide-classes2 {
+
+			.class-titles {
+				left: 10px;
+			}
 
 			h1 {
 				color: @calypso;
@@ -390,18 +430,22 @@ h6 {
 
 			h3 {
 				left: 60px;
-				color: @grayLight;
+				color: @black;
 			}
 
 			a {
 				top: -10px;
 				left: 400px;
 				z-index: 9999;
-				color: @grayLight;
+				color: @black;
 			}
 
 			.class-icon {
 				background-image: url(../img/wellness-icon-blue.png);
+
+				&.hover {
+					background-image: url(../img/wellness-icon-black.png);
+				}
 			}
 
 			.broccoli,
@@ -428,6 +472,7 @@ h6 {
 			}
 		}
 
+		//Spirit Care
 		#slide-classes3 {
 			@spirit-care: @cream;
 
@@ -463,10 +508,15 @@ h6 {
 
 			.class-icon {
 				background-image: url(../img/spirit_care-icon-cream.png);
+
+				&.hover {
+					background-image: url(../img/spirit_care-icon-black.png);
+				}
 			}
 
 		}
 
+		//Counseling
 		#slide-classes4 {
 
 			.class-titles {
@@ -493,6 +543,10 @@ h6 {
 
 			.class-icon {
 				background-image: url(../img/bubble-icon-pink.png);
+
+				&.hover {
+					background-image: url(../img/bubble-icon-black.png);
+				}
 			}
 		}
 	}

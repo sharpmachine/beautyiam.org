@@ -71,7 +71,20 @@
 					container: 'slides-container2',
 					pagination: 'slides-pagination2'
 				}
+
  			});
+
+ 		// 	$('body').on('animated.slides', function() {
+			//   if ($('li.white-bg').hasClass('current')) {
+			//   	$('a.brand').addClass('test');
+			//   	$('ul.nav').addClass('test2');
+
+			//   } else
+
+			//   	$('a.brand').removeClass('test');
+			//   	$('ul.nav').removeClass('test2');
+			// });
+
 		});
 	</script>
 

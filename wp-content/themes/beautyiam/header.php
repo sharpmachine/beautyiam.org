@@ -96,9 +96,9 @@
 					</a>
 					<a class="brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/img/logo-white.png" alt="Logo"></a>
 					<div class="nav-collapse">
-            			<ul class="nav">
+            		
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
-            			</ul>
+            			
 					</div><!--/.nav-collapse -->
         		</div>
 			</div>

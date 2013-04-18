@@ -93,80 +93,85 @@
 	<div id="featured-classes-slides">
 	    <ul class="slides-container2">
 	    
-	      <li>
-	        <div class="container">
-	        	<div id="slide-classes1" class="inner-slide">
-        			<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide1.jpg" class="" alt="Purple haze">
-	        		<div class="row">
-	        			<div class="span2 offset1 class-icon"></div>
-	        		</div>
-	        		<div class="row class-titles">
-	        			<div class="span9 offset2">
-	        				<h3 class="sans class-cat">Fitness</h3>
-		         			<h1 class="serif">Get Fighting Fit</h1>
-		         			<a href="#" class="">Read more.</a>
-	        			</div>
-	        		</div>
-	        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/woman-runner.png" class="preserve layer-img module" alt="Woman runner">
-				</div><!-- .inner-slide -->
-	        </div>
-	      </li>
-	      
-	      <li>
-	        <div class="container">
-	          	<div id="slide-classes2" class="inner-slide">
-	          		<img src="<?php bloginfo( 'template_directory' ); ?>/img/broccoli.jpg" class="preserve broccoli" alt="Broccoli">
-	        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/lemon.png" class="preserve lemon" alt="Lemons">
-		         	<div class="row">
-	        			<div class="span2 offset1 class-icon"></div>
-	        		</div>
-	        		<div class="row class-titles">
-	        			<div class="span10 offset2">
-	        				<h3 class="sans class-cat">Wellness</h3>
-		         			<h1 class="serif">Feed the Body</h1>
-		         			<a href="#">Read more.</a>
-	        			</div>
-	        		</div>
-	        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/tomatoes.png" class="preserve tomatoes" alt="Tomatoes">
-				</div><!-- .inner-slide -->
-	        </div>
-	      </li>
-	      
-	      <li>
-	        <div class="container">
-	          	<div id="slide-classes3" class="inner-slide">
-					<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide3.jpg" alt="Glory of Love">		         	
-		         	<div class="row">
-	        			<div class="span2 offset1 class-icon"></div>
-	        		</div>
-	        		<div class="row class-titles">
-	        			<div class="span10 offset2">
-	        				<h3 class="sans class-cat">Spirit Care</h3>
-		         			<h1 class="serif">Manage <span>the Inside</span></h1>
-		         			<a href="#">Read more.</a>
-	        			</div>
-	        		</div>
-				</div><!-- .inner-slide -->
-	        </div>
-	      </li>
-	      
-	      <li>
-	        <div class="container">
-	          	<div id="slide-classes4" class="inner-slide">
-					<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide4.jpg" alt="Map of Paris">		         	
-		         	<div class="row">
-	        			<div class="span2 offset1 class-icon"></div>
-	        		</div>
-	        		<div class="row class-titles">
-	        			<div class="span10 offset2">
-	        				<h3 class="sans class-cat">Counseling</h3>
-		         			<h1 class="serif">Get Savvy</h1>
-		         			<a href="">Read more.</a>
-	        			</div>
-	        		</div>
-				</div><!-- .inner-slide -->
-	        </div>
-	      </li>
+		    <!-- Fitness -->
+		    <li class="purple-bg">
+		        <div class="container">
+		        	<div id="slide-classes1" class="inner-slide">
+	        			<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide1.jpg" class="slide-bg" alt="Purple haze">
+		        		<div class="row">
+		        			<div class="span2 offset1 class-icon"></div>
+		        		</div>
+		        		<div class="row class-titles">
+		        			<div class="span9 offset2">
+		        				<h3 class="sans class-cat">Fitness</h3>
+			         			<h1 class="serif">Get Fighting Fit</h1>
+			         			<a href="#" class="">Read more.</a>
+		        			</div>
+		        		</div>
+		        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/woman-runner.png" class="preserve layer-img module" alt="Woman runner">
+					</div><!-- .inner-slide -->
+		        </div>
+		    </li>
+		     
+		    <!-- Wellness -->
+		    <li class="calypso-bg">
+		        <div class="container">
+		          	<div id="slide-classes2" class="inner-slide">
+		          		<img src="<?php bloginfo('template_directory'); ?>/img/table-top.jpg" class="slide-bg" alt="Purple haze">
+		          		<img src="<?php bloginfo( 'template_directory' ); ?>/img/broccoli.jpg" class="preserve broccoli" alt="Broccoli">
+		        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/lemon.png" class="preserve lemon" alt="Lemons">
+			         	<div class="row">
+		        			<div class="span2 offset1 class-icon"></div>
+		        		</div>
+		        		<div class="row class-titles">
+		        			<div class="span10 offset2">
+		        				<h3 class="sans class-cat">Wellness</h3>
+			         			<h1 class="serif">Feed the Body</h1>
+			         			<a href="#">Read more.</a>
+		        			</div>
+		        		</div>
+		        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/tomatoes.png" class="preserve tomatoes" alt="Tomatoes">
+					</div><!-- .inner-slide -->
+		        </div>
+		    </li>
+		      
+		    <!-- Spirit Care   -->
+		    <li class="cream-bg">
+		        <div class="container">
+		          	<div id="slide-classes3" class="inner-slide">
+						<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide3.jpg" class="slide-bg" alt="Glory of Love">		         	
+			         	<div class="row">
+		        			<div class="span2 offset1 class-icon"></div>
+		        		</div>
+		        		<div class="row class-titles">
+		        			<div class="span10 offset2">
+		        				<h3 class="sans class-cat">Spirit Care</h3>
+			         			<h1 class="serif">Manage <span>the Inside</span></h1>
+			         			<a href="#">Read more.</a>
+		        			</div>
+		        		</div>
+					</div><!-- .inner-slide -->
+		        </div>
+		    </li>
+		    
+		    <!-- Counseling  -->
+		    <li class="pink-bg">
+		        <div class="container">
+		          	<div id="slide-classes4" class="inner-slide">
+						<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide4.jpg" class="slide-bg" alt="Map of Paris">		         	
+			         	<div class="row">
+		        			<div class="span2 offset1 class-icon"></div>
+		        		</div>
+		        		<div class="row class-titles">
+		        			<div class="span10 offset2">
+		        				<h3 class="sans class-cat">Counseling</h3>
+			         			<h1 class="serif">Get Savvy</h1>
+			         			<a href="">Read more.</a>
+		        			</div>
+		        		</div>
+					</div><!-- .inner-slide -->
+		        </div>
+		    </li>
 	      
 	    </ul><!-- .slides-container -->
 	    
