@@ -42,7 +42,7 @@
         	/*padding-top: 40px;  60px to make the container go all the way to the bottom of the tspiropbar */
       	}
     	</style>
-    	<link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
+    	<!-- <link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet"> -->
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     	<!-- Le fav and touch icons -->
@@ -77,7 +77,7 @@
 			</div>
 		</div>
 		
-		<div class="navbar navbar-fixed-top">
+		<div class="navbar navbar-static-top">
 		
 			<div id="support-group">
 				<div class="container">

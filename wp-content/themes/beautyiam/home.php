@@ -184,4 +184,38 @@
 	</div><!-- #slides -->
 </section>
 
+<section id="blog">
+	<div class="container">
+	
+		<div class="row posts category-meals">
+			<div class="span2 author-headshot">
+				<div class="post-category-icon"></div>
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ashton-headshot.png" class="img-circle" alt="Ashton Roark">
+				<div class="post-author"><a href="">Ashton Roark</a></div>	
+			</div>
+			<div class="span9 post-details">
+				<div class="post-category"><a href="">Healthy meals on a time</a></div>
+				<h1 class="serif"><a href="#" class="category-meals">Get your metabolism started with breakfast</a></h1>
+				<div class="serif post-date">Wednesday 27 November 2012</div>
+				<div class="post-tags"><strong>Tags </strong><a href="">Health</a>, <a href="">Food</a>, <a href="">Breakfast</a></div>
+			</div>
+		</div><!-- .posts -->
+		
+		<div class="row posts category-fitness">
+			<div class="span2 author-headshot">
+				<div class="post-category-icon"></div>
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/gina-headshot.png" class="img-circle" alt="Ashton Roark">
+				<div class="post-author"><a href="">Gina Scoles</a></div>	
+			</div>
+			<div class="span9 post-details">
+				<div class="post-category"><a href="">Fitness</a></div>
+				<h1 class="serif"><a href="#" class="category-fitness">Create your plan at the gym</a></h1>
+				<div class="serif post-date">Friday 19 April 2013</div>
+				<div class="post-tags"><strong>Tags </strong><a href="">Health</a>, <a href="">Gym</a></div>
+			</div>
+		</div><!-- .posts -->
+		
+	</div>
+</section>
+
 <?php get_footer(); ?>

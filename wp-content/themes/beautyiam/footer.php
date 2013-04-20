@@ -35,7 +35,7 @@
 	<script src="<?php bloginfo('template_directory'); ?>/js/animate-enhanced.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/superslides.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/slide-in-min.js"></script>
-
+	<script src="https://raw.github.com/imsky/holder/master/holder.js"></script>
 
 	<!-- scripts concatenated and minified via ant build script-->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>

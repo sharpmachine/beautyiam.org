@@ -55,9 +55,11 @@ jQuery(document).ready(function($) {
 	//Spirit Care slide
 	$("#slide-classes3 a").hover(function(){
 		$("#slide-classes3 h1").css("color", "#000");
+		$("#slide-classes3 h3, #slide-classes3 a, .nav li a").css("text-shadow", "1px 1px 1px rgba(0,0,0,0.6)");
 	},
 	function(){
 		$("#slide-classes3 h1").css("color", "#fcecb1");
+		$("#slide-classes3 h3, #slide-classes3 a, .nav li a").css("text-shadow", "none");
 	});
 
 	//Spirit Care slide
