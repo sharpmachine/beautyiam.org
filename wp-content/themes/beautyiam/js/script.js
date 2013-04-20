@@ -24,32 +24,34 @@ jQuery(document).ready(function($) {
 
 	//Classes Slider
 	$(".slides-container2 a").hover(function(){
-		$(".slide-bg").addClass("hidden");
+		$(".slide-bg").addClass("hide");
 		$(".class-icon").addClass("hover");
 	},
 	function(){
-		$(".slide-bg").removeClass("hidden");
+		$(".slide-bg").removeClass("hide");
 		$(".class-icon").removeClass("hover");
 	});
 
 	//Fitness slide
 	$("#slide-classes1 a").hover(function(){
 		$("#slide-classes1 h1").css("color", "#000");
-		$("img.layer-img").addClass("hidden");
+		// $("img.layer-img").addClass("hide");
+		$("img.layer-img").hide();
 	},
 	function(){
 		$("#slide-classes1 h1").css("color", "#4d3c76");
-		$("img.layer-img").removeClass("hidden");
+		// $("img.layer-img").removeClass("hide");
+		$("img.layer-img").show();
 	});
 
 	//Wellness slide
 	$("#slide-classes2 a").hover(function(){
 		$("#slide-classes2 h1").css("color", "#000");
-		$("img.broccoli, img.lemon, img.tomatoes").addClass("hidden");
+		$("img.broccoli, img.lemon, img.tomatoes").addClass("hide");
 	},
 	function(){
 		$("#slide-classes2 h1").css("color", "#285775");
-		$("img.broccoli, img.lemon, img.tomatoes").removeClass("hidden");
+		$("img.broccoli, img.lemon, img.tomatoes").removeClass("hide");
 	});
 
 	//Spirit Care slide
