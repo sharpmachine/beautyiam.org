@@ -8,66 +8,64 @@ body {
 }
 
 /*..................................the typography */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	line-height: 1;
+	text-transform: uppercase;
+
+	&.serif {
+		text-transform: none;
+	}
+}
+
 h1 {
+	font-size: 55px;
 	line-height: 1;
 
 	&.serif {
 		font-size: 130px;
 	}
-
-	&.sans {
-		font-size: 55px;
-	}
 }
 
 h2 {
+	font-size: 42px;
+
 	&.serif {
 		font-size: 105px;
-	}
-
-	&.sans {
-		font-size: 42px;
 	}
 }
 
 h3 {
+	font-size: 24px;
+
 	&.serif {
 		font-size: 70px;
-	}
-
-	&.sans {
-		font-size: 24px;
 	}
 }
 
 h4 {
+	font-size: 18px;
+	font-weight: 700;
+
 	&.serif {
 		font-size: 55px;
-	}
-
-	&.sans {
-		font-size: 18px;
 	}
 }
 
 h5 {
+	font-size: 18px;
+	text-transform: none;
+
 	&.serif {
 		font-size: 40px;
-	}
-
-	&.sans {
-		font-size: 18px;
-		font-weight: 600;
 	}
 }
 
 h6 {
+	font-size: 16px;
+
 	&.serif {
 		font-size: 36px;
-	}
-
-	&.sans {
-		font-size: 16px;
 	}
 }
 
@@ -79,41 +77,83 @@ h6 {
 .sans {
 	font-family: @sansFontFamily;
 	font-weight: 400;
+	text-transform: uppercase;
 }
 
-.p-numbers {
-    font-family: Linden Hill;
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 20;
-}
-
-.p-address {
+address {
     font-family: Linden Hill;
     font-size: 18px;
     font-weight: normal;
-    line-height: 18;
 }
 
-.p {
-    font-family: Source Sans Pro;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 18;
-}
-
-.-copy-xs {
+small {
     font-family: Source Sans Pro;
     font-size: 12px;
     font-weight: normal;
     line-height: 12;
 }
 
-.-copy-s {
-    font-family: Source Sans Pro;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 14;
+/*..................................the buttons */
+.btn {
+	padding: 10px 15px;
+	text-align: left;
+	text-transform: uppercase;
+	background: url(../img/btn-texture.png) no-repeat center center;
+	border: none;
+	.box-shadow(1px 2px 5px @grayLight);
+
+	&:hover {
+		background-position: 0 0;
+	}
+
+	span.icon {
+		display: block;
+		float: left;
+		height: 40px;
+		padding-right: 25px;
+	}
+
+	span.btn-label {
+		display: block;
+		float: left;
+		margin-left: 10px;
+		text-shadow: none;
+	}
+
+	span.line2 {
+		display: block;
+		font-size: 24px;
+		font-weight: 700;
+		text-shadow: 0px 1px 1px @grayLighter;
+	}
+
+	&.btn-purple {
+		color: darken(@royalPurple, 30%);
+		background-color: @royalPurple;
+	}
+
+	&.btn-pink {
+		color: darken(@princessPink, 30%);
+		background-color: @princessPink;
+	}
+
+	&.btn-blue {
+		color: darken(@calypso, 30%);
+		background-color: @calypso;
+	}
+
+	&.btn-yellow {
+		color: darken(@yellow, 30%);
+		background-color: @yellow;
+	}
+
+	&.btn-directions {
+		span.icon {
+			// width: 16px;
+			// height: 36px;
+			background: url(../img/info-icon.png) no-repeat center center;
+		}
+	}
 }
 
 /*..................................the backgrounds */
@@ -156,16 +196,21 @@ header {
 .navbar {
 
 	.brand {
-		margin-top: 30px;
+		width: 268px;
+		height: 131px;
+		margin-top: 40px;
+		margin-left: 0;
+		padding-top: 0;
+		background: url(../img/logo-black.png) no-repeat;
 	}
 
 	.nav {
-		margin-top: 23px;
+		margin-top: 50px;
 		margin-right: 0;
 
 		& > li > a {
 			padding: 1px 0 1px 10px;
-			color: @white;
+			color: @black;
 			font-size: 18px;
 			font-weight: 200;
 			text-shadow: none;
@@ -187,6 +232,72 @@ header {
 	width: 100%;
 	height: 300px;
 	background-color: @white;
+	text-align: right;
+
+	h3.sans {
+		margin-top: 40px;
+		color: @princessPink;
+		font-size: 50px;
+		line-height: 0.7;
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	.serif {
+		font-size: 34px;
+		line-height: 1;
+	}
+
+	.sans {
+		color: @grayLight;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	#close-btn {
+		margin-top: 40px;
+		margin-bottom: -16px;
+	}
+
+	.close {
+		.opacity(80);
+
+		&:hover {
+			.opacity(100);
+		}
+	}
+}
+
+#group-quote {
+	margin-top: 50px;
+	margin-left: 35px;
+
+	span {
+		display: block;
+		text-transform: uppercase;
+	}
+}
+
+#group-details {
+	height: 180px;
+	background: url(../img/curly-bracket.png) no-repeat left center;
+}
+
+#location-notice {
+	margin-bottom: 5px;
+}
+
+#this-week {
+	margin: 20px 0 5px 0;
+}
+
+#directions-btn {
+	position: relative;
+	top: 20px;
+
+	a.btn {
+		.box-shadow(none);	
+	}
 }
 
 #support-group {
@@ -224,6 +335,24 @@ header {
 }
 
 /*..................................the landing page */
+body.home {
+	background-color: @black;
+
+	.navbar {
+		.brand {
+			background: url(../img/logo-white.png) no-repeat;
+		}
+
+		.nav > li > a {
+			color: @white;
+
+			&:hover {
+				color: @linkColor;
+			}
+		}
+	}
+}
+
 // First section
 #models {
 	height: 100%;
@@ -237,10 +366,11 @@ header {
 
 		h4 {
 			font-weight: 400;
+			text-transform: none;
+			line-height: 0.2;
 
 			.i-am {
 				color: @white;
-				font-family: @sansFontFamily;
 				font-size: 60px;
 				line-height: 1.6;
 				font-weight: 300;
@@ -629,13 +759,27 @@ header {
 	font-size: 40px;
 }
 
+.post-read-more {
+	margin-top: 25px;
+	font-weight: 300;
+	text-align: right;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
 .post-tags {
-	margin-top: 55px;
+	margin-top: 25px;
 	text-transform: uppercase;
 
 	a {
 		font-weight: 200;
 		color: @gray;
+	}
+
+	.meta-sep {
+		&:last-child {
+			display: none;
+		}
 	}
 }
 
@@ -658,6 +802,20 @@ header {
 
 	h1 a {
 		color: @royalPurple;
+	}
+}
+
+hr {
+	height: 1px;
+	border-bottom: 1px solid #999;
+}
+
+/*..................................the sidebar */
+#sidebar {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
 	}
 }
 
@@ -932,12 +1090,12 @@ img.aligncenter {
 
 @media (max-height: 768px) {
 	#models {
-		margin-bottom: -300px;
+		margin-bottom: -310px;
 	}
 
 	#headlines h1 {
-		padding: 0px 20px 0px 0;
-		line-height: 1.2;
+		padding: 3px 20px 3px 0;
+		line-height: 1;
 	}
 
 	#headlines h1 .headline {
@@ -946,11 +1104,9 @@ img.aligncenter {
 	}
 
 	#headlines h1 .sub-headline {
-		font-size: 14px;
+		font-size: 16px;
 	}
 }
-
-
 
 /*..................................the slide in effect */
 .module {
@@ -1017,12 +1173,3 @@ img.aligncenter {
 	-ms-transition: none;
 	transition: none;
 }
-
-// @media (min-width: 1024px) {
-// 	img.tomatoes,
-// 	img.broccoli,
-// 	img.lemon {
-// 		width: 50%;
-// 	}
-// }
-

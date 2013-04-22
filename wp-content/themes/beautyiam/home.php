@@ -197,6 +197,7 @@
 				<div class="post-category"><a href="">Healthy meals on a time</a></div>
 				<h1 class="serif"><a href="#" class="category-meals">Get your metabolism started with breakfast</a></h1>
 				<div class="serif post-date">Wednesday 27 November 2012</div>
+				<div class="post-read-more"><a href="">Read more...</a></div>
 				<div class="post-tags"><strong>Tags </strong><a href="">Health</a>, <a href="">Food</a>, <a href="">Breakfast</a></div>
 			</div>
 		</div><!-- .posts -->
@@ -211,6 +212,7 @@
 				<div class="post-category"><a href="">Fitness</a></div>
 				<h1 class="serif"><a href="#" class="category-fitness">Create your plan at the gym</a></h1>
 				<div class="serif post-date">Friday 19 April 2013</div>
+				<div class="post-read-more"><a href="">Read more...</a></div>
 				<div class="post-tags"><strong>Tags </strong><a href="">Health</a>, <a href="">Gym</a></div>
 			</div>
 		</div><!-- .posts -->

@@ -1,44 +1,34 @@
-<?php
-	$temp = $wp_query;
-	$wp_query = null;
-	$wp_query = new WP_Query();
-	$wp_query->query('&paged='.$paged);
-	while ($wp_query->have_posts()) : $wp_query->the_post();
-?>
 
- <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<h2 class="entry-title">
-			<a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>
-		</h2>
-		<div><?php smm_posted_on(); ?></div>
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array (100, 100) ); ?></a>
 
-		<?php the_excerpt(); ?>
-
-		<div class="entry-utility">
-		<?php if ( count( get_the_category() ) ) : ?>
-			<span class="cat-links">
-				<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
-			</span>
-			<span class="meta-sep">|</span>
-		<?php endif; ?>
-		<?php
-			$tags_list = get_the_tag_list( '', ', ' );
-			if ( $tags_list ):
-		?>
-			<span class="tag-links">
-				<?php printf( __( '<span class="%1$s">Tagged</span> %2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
-			</span>
-			<span class="meta-sep">|</span>
-		<?php endif; ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'smm' ), __( '1 Comment', 'smm' ), __( '% Comments', 'smm' ) ); ?></span>
-			<?php edit_post_link( __( 'Edit', 'smm' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-		</div><!-- .entry-utility -->
-	</article><!-- #post -->
-
-	<?php endwhile; ?>
-
-<?php bootstrap_pagination(); ?>
-
-<?php $wp_query = null; $wp_query = $temp;?>
+ 
+ 	<div class="row posts category-meals">
+ 	
+		<div class="span2 author-headshot">
+			<div class="post-category-icon"></div>
+			<img src="<?php bloginfo( 'template_directory' ); ?>/img/ashton-headshot.png" class="img-circle" alt="Ashton Roark">
+			<div class="post-author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></div>
+		</div>
+		
+		<div class="span6 post-details">
+			<div class="post-category">
+				<?php if ( count( get_the_category() ) ) : ?>
+					<?php printf( __( '%2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
+				<?php endif; ?>
+			</div>
+			<h1 class="serif"><a href="<?php the_permalink(); ?>" class="category-meals"><?php the_title(); ?></a></h1>
+			<div class="serif post-date"><?php the_date(); ?></div>
+			<div class="post-read-more"><a href="<?php the_permalink(); ?>">Read more...</a></div>
+			
+			<?php
+				$tags_list = get_the_tag_list( '', ', ' );
+				if ( $tags_list ):
+			?>
+			<div class="post-tags">
+				<?php printf( __( '<strong>Tags </strong> %2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+				<span class="meta-sep">,</span>
+			</div>
+			<?php endif; ?>
+			
+		</div>
+	</div><!-- .posts -->

@@ -1,4 +1,4 @@
-				<section id="sidebar" class="span4">
+				
 					
 					<ul>
 	
@@ -45,5 +45,4 @@
 				</div><!-- #secondary .widget-area -->
 	
 				<?php endif; ?>
-				
-				</section><!-- #sidebar -->
+			
