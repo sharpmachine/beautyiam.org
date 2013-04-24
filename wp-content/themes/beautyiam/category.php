@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="category-landing">
+<section id="category-landing" class="page">
 	
 	<div class="container">
 	

@@ -69,78 +69,84 @@
 	<body <?php body_class(); ?>>
 	
 	<header>
-	
-		<div id="support-group-details">
-			<div class="container">
-				<div id="close-btn" class="row">
-					<div class="span12">
-						<span class="close">
-							<a href="#">
-								<img src="<?php bloginfo( 'template_directory' ); ?>/img/close.png" alt="Close">
-							</a>
-						</span>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="span3">
-						<h3 class="sans">Artist<br>Converge<br>Group</h1>
-					</div>
-					
-					<div id="group-quote" class="span3">
-						<div class="serif">
-							"This group has changed my life."
-							<span class="sans">- Tiffany</span>
-						</div>
-					</div>
-					
-					<div id="group-details" class="span5 pull-right">
-						<div id="location-notice" class="sans">Location confirmed each week.</div>
-						<div class="serif">Every 3rd Sunday</div>
-						<div class="serif">7:00pm-9:00pm</div>
-						<div id="this-week" class="sans">This week we meet at:</div>
-						<div class="serif">Bella's Ballet Studio</div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div id="directions-btn" class="span3 pull-right">
-						<a href="#" class="btn btn-pink btn-directions">
-							<span class="icon"></span> 
-							<span class="btn-label">I want <span class="line2">directions</span></span>
-						</a>
-					</div>
-				</div>
-				
-			</div>
-		</div>
 		
-		<div class="navbar navbar-static-top">
-		
+		<div id="support-group-bar">
 			<div id="support-group">
 				<div class="container">
 					<div id="sg-tab" class="pull-right">
-						<span><a href="#">Artist Support Group <img src="<?php bloginfo( 'template_directory' ); ?>/img/chevron.png" alt="Chevron"></a></span>
+						<span><a href="#open">Artist Support Group <img src="<?php bloginfo( 'template_directory' ); ?>/img/chevron.png" alt="Chevron"></a></span>
 					</div>
 				</div>
 			</div>
-			
+		
+			<div id="support-group-details">
+				<div class="container">
+					<div id="close-btn" class="row">
+						<div class="span12">
+							<span class="close">
+								<a href="#close">
+									<img src="<?php bloginfo( 'template_directory' ); ?>/img/close.png" alt="Close">
+								</a>
+							</span>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="span3">
+							<h3 class="sans">Artist<br>Converge<br>Group</h1>
+						</div>
+						
+						<div id="group-quote" class="span3">
+							<div class="serif">
+								"This group has changed my life."
+								<span class="sans">- Tiffany</span>
+							</div>
+						</div>
+						
+						<div id="group-details" class="span5 pull-right">
+							<div id="location-notice" class="sans">Location confirmed each week.</div>
+							<div class="serif">Every 3rd Sunday</div>
+							<div class="serif">7:00pm-9:00pm</div>
+							<div id="this-week" class="sans">This week we meet at:</div>
+							<div class="serif">Bella's Ballet Studio</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div id="directions-btn" class="span3 pull-right">
+							<a href="#" class="btn btn-pink btn-directions">
+								<span class="icon"></span> 
+								<span class="btn-label">I want <span class="line2">directions</span></span>
+							</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div><!-- #support-group-bar -->
+		
+		<!-- <div id="secret-nav">
+			<nav>
+				<div class="container">
+					<div class="row">
+						<div id="small-logo" class="span2">
+							<a href="<?php bloginfo( 'url' ); ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/img/small-logo.png" alt="Logo"></a>
+						</div>
+						<div class="span10">
+							<?php wp_nav_menu( array( 'container' => false, 'menu_class' => 'secret-nav inline pull-right', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div> --><!-- #secret-nav -->
+	
+		<div id="top-nav" class="navbar navbar-static-top">
 			<div class="navbar-inner">
 				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            			<span class="icon-bar"></span>
-            			<span class="icon-bar"></span>
-            			<span class="icon-bar"></span>
-					</a>
 					<a class="brand" href="<?php bloginfo('url') ?>"></a>
-					<div class="nav-collapse">
-            		
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
-            			
-					</div><!--/.nav-collapse -->
         		</div>
 			</div>
-			
     	</div><!-- .navbar -->
     	
     </header>

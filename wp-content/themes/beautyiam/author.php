@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="author">
+<section id="author" class="page">
 	<div class="container">
 		<?php
 			if ( have_posts() )

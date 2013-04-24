@@ -442,3 +442,19 @@ function getgo_method() {
 }    
  
 add_action('wp_enqueue_scripts', 'getgo_method');
+
+function extra_contact_info($contactmethods) {
+ 
+unset($contactmethods['aim']);
+ 
+unset($contactmethods['yim']);
+ 
+unset($contactmethods['jabber']);
+  
+$contactmethods['twitter'] = 'Twitter';
+ 
+return $contactmethods;
+ 
+}
+ 
+add_filter('user_contactmethods', 'extra_contact_info');

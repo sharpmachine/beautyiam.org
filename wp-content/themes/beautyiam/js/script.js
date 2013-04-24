@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 	$("li.dropdown > a").attr('data-toggle','dropdown');
 	$("a.dropdown-toggle").append('<b class="caret"></b>');
 
-	$("#sg-tab a").click(function(){
+	$("#sg-tab span").click(function(){
 		$("#support-group-details").slideDown();
 		// $(".navbar").css("marginTop" , "130px");
 	});
@@ -72,5 +72,29 @@ jQuery(document).ready(function($) {
 		$("#slide-classes4 h1").css({"color": "#d086a7", "text-shadow": "6px 6px 5px rgba(0,0,0,0.4)"});
 	});
 
+	//	Secret Menu
+	var nav_container = $("#secret-nav");
+	var nav = $("#secret-nav nav");
+	var top_spacing = 35;
+	var waypoint_offset = 400;
 
+	nav_container.waypoint({
+		handler: function(event, direction) {
+
+			if (direction == 'down') {
+
+				nav_container.css({'height':nav.outerHeight() });
+				nav.stop().addClass("sticky").css("top",-nav.outerHeight()).animate({"top":top_spacing});
+
+			} else {
+
+				nav_container.css({'height':'auto' });
+				nav.stop().removeClass("sticky").css("top",nav.outerHeight()+waypoint_offset).animate({"top":""});
+			}
+
+		},
+		offset: function() {
+			return -nav.outerHeight()-waypoint_offset;
+		}
+	});
 });

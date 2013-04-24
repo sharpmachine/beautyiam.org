@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="models">
+<article id="models">
 
 	<div id="models-slides">
 	    <ul class="slides-container">
@@ -56,9 +56,9 @@
 	    </ul><!-- .slides-container -->
 	</div><!-- #slides -->
 	
-</section><!-- #models -->
+</article><!-- #models -->
 
-<section id="headlines">
+<article id="headlines">
 	<div class="container">
 	
 		<h1>
@@ -87,9 +87,9 @@
 		</h1>
 		
 	</div>
-</section>
+</article>
 
-<section id="feature-classes">
+<article id="feature-classes">
 	<div id="featured-classes-slides">
 	    <ul class="slides-container2">
 	    
@@ -182,42 +182,17 @@
 		</nav>
 		
 	</div><!-- #slides -->
-</section>
+</article>
 
-<section id="blog">
+<article id="blog">
 	<div class="container">
-	
-		<div class="row posts category-meals">
-			<div class="span2 author-headshot">
-				<div class="post-category-icon"></div>
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ashton-headshot.png" class="img-circle" alt="Ashton Roark">
-				<div class="post-author"><a href="">Ashton Roark</a></div>	
-			</div>
-			<div class="span9 post-details">
-				<div class="post-category"><a href="">Healthy meals on a time</a></div>
-				<h1 class="serif"><a href="#" class="category-meals">Get your metabolism started with breakfast</a></h1>
-				<div class="serif post-date">Wednesday 27 November 2012</div>
-				<div class="post-read-more"><a href="">Read more...</a></div>
-				<div class="post-tags"><strong>Tags </strong><a href="">Health</a>, <a href="">Food</a>, <a href="">Breakfast</a></div>
-			</div>
-		</div><!-- .posts -->
-		
-		<div class="row posts category-fitness">
-			<div class="span2 author-headshot">
-				<div class="post-category-icon"></div>
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/gina-headshot.png" class="img-circle" alt="Ashton Roark">
-				<div class="post-author"><a href="">Gina Scoles</a></div>	
-			</div>
-			<div class="span9 post-details">
-				<div class="post-category"><a href="">Fitness</a></div>
-				<h1 class="serif"><a href="#" class="category-fitness">Create your plan at the gym</a></h1>
-				<div class="serif post-date">Friday 19 April 2013</div>
-				<div class="post-read-more"><a href="">Read more...</a></div>
-				<div class="post-tags"><strong>Tags </strong><a href="">Health</a>, <a href="">Gym</a></div>
-			</div>
-		</div><!-- .posts -->
+		<h2>Lastest Articles:</h2>
+		<?php query_posts( 'posts_per_page=2' ) ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'loop', 'blog' ); ?>
+		<?php endwhile; endif; ?>
 		
 	</div>
-</section>
+</article>
 
 <?php get_footer(); ?>

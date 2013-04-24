@@ -7,6 +7,10 @@ body {
 	height: 100%;
 }
 
+section.page {
+	padding-bottom: 50px;
+}
+
 /*..................................the typography */
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
@@ -93,6 +97,35 @@ small {
     line-height: 12;
 }
 
+/*..................................the forms */
+textarea, input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input {
+	padding: 9px 15px;
+	font-size: 14px;
+	.border-radius(0);
+}
+
+button#searchsubmit {
+	width: 37px;
+	height: 40px;
+	margin-left: -3px;
+	background: url(../img/search-icon.png) no-repeat center center @black;
+	border: none;
+}
+
 /*..................................the buttons */
 .btn {
 	padding: 10px 15px;
@@ -110,13 +143,13 @@ small {
 		display: block;
 		float: left;
 		height: 40px;
+		margin-right: 10px;
 		padding-right: 25px;
 	}
 
 	span.btn-label {
 		display: block;
 		float: left;
-		margin-left: 10px;
 		text-shadow: none;
 	}
 
@@ -125,6 +158,13 @@ small {
 		font-size: 24px;
 		font-weight: 700;
 		text-shadow: 0px 1px 1px @grayLighter;
+	}
+
+	&.btn-black {
+		color: @gray;
+		background-color: @black;
+		font-weight: 600;
+		text-shadow: 1px 1px 1px @black;
 	}
 
 	&.btn-purple {
@@ -138,7 +178,7 @@ small {
 	}
 
 	&.btn-blue {
-		color: darken(@calypso, 30%);
+		color: darken(@calypso, 10%);
 		background-color: @calypso;
 	}
 
@@ -149,9 +189,13 @@ small {
 
 	&.btn-directions {
 		span.icon {
-			// width: 16px;
-			// height: 36px;
 			background: url(../img/info-icon.png) no-repeat center center;
+		}
+	}
+
+	&.btn-cat-meals {
+		span.icon {
+			background: url(../img/cutlery-icon-btn.png) no-repeat center center;
 		}
 	}
 }
@@ -179,8 +223,7 @@ small {
 
 /*..................................the header */
 header {
-	position: relative;
-	z-index: 999;
+	margin-bottom: 55px;
 }
 // The Navbar
 .navbar-fixed-top .navbar-inner,
@@ -194,6 +237,8 @@ header {
 }
 
 .navbar {
+	position: relative;
+	z-index: 9;
 
 	.brand {
 		width: 268px;
@@ -223,16 +268,75 @@ header {
 	}
 }
 
+// #secret-nav {
+// 	position: absolute;
+// 	top: -65px;
+// 	z-index: 10;
+// 	width: 100%;
+// 	background-color: @white;
+
+// 	#small-logo {
+// 		margin-top: 15px;
+// 	}
+
+
+// 	nav {
+// 		position: relative;
+// 		z-index: 42;
+// 		width: 100%;
+// 		height: 100px;
+// 		background-color: @white;
+// 		.box-shadow(0px 1px 10px @grayDarker);
+
+// 		ul {
+// 			height: 100px;
+// 			margin: 0;
+
+// 			li {
+// 				height: 100%;
+
+// 				a {
+// 					display: block;
+// 					height: 100%;
+// 					padding: 0 30px;
+// 					font-size: 18px;
+// 					line-height: 110px;
+// 					color: @black;
+// 					text-transform: uppercase;
+
+// 					&:hover {
+// 						color: @blueGreen;
+// 						background-color: @grayLighter;
+// 						text-decoration: none;
+// 					}
+
+// 					&:last-child {
+// 						margin-right: -30px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	.sticky {
+// 		position: fixed;
+// 		animation: thedrop 1s 1;
+// 		-moz-animation: thedrop 1s 1;
+// 		-webkit-animation: thedrop 1s 1;
+// 	}
+// }
+
 // The Support Group
 #support-group-details {
 	position: absolute;
 	top: 0;
-	z-index: 99999999;
+	z-index: 9;
 	display: none;
 	width: 100%;
 	height: 300px;
 	background-color: @white;
 	text-align: right;
+	.box-shadow(0px 1px 10px @grayDarker);
 
 	h3.sans {
 		margin-top: 40px;
@@ -252,6 +356,7 @@ header {
 		color: @grayLight;
 		font-size: 24px;
 		line-height: 1;
+		text-transform: none;
 	}
 
 	#close-btn {
@@ -274,7 +379,7 @@ header {
 
 	span {
 		display: block;
-		text-transform: uppercase;
+		text-transform: uppercase !important;
 	}
 }
 
@@ -294,16 +399,22 @@ header {
 #directions-btn {
 	position: relative;
 	top: 20px;
+}
 
-	a.btn {
-		.box-shadow(none);	
-	}
+#support-group-bar {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	width: 100%;
+
 }
 
 #support-group {
+	
 	width: 100%;
 	height: 35px;
 	background-color: @black;
+	.box-shadow(0px 1px 10px @grayDarker);
 
 	#sg-tab {
 		width: 270px;
@@ -311,6 +422,9 @@ header {
 		margin-bottom: -20px;
 		background-color: @black;
 		text-align: center;
+		.border-bottom-right-radius(5px);
+		.border-bottom-left-radius(5px);
+		.box-shadow(0px 3px 5px -2px @grayDarker);
 
 		span {
 			font-size: 18px;
@@ -667,7 +781,8 @@ body.home {
 			
 			h1 {
 				color: @princessPink;
-				text-shadow: 6px 6px 5px rgba(0,0,0,0.4);
+				// text-shadow: 6px 6px 5px rgba(0,0,0,0.4);
+				text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 			}
 
 			h3 {
@@ -695,17 +810,22 @@ body.home {
 
 /*..................................the blog */
 #blog {
-	padding-bottom: 50px;
+	padding: 40px 0 50px 0;
 	background-color: @white;
+
+	.posts {
+		width: 100%;
+
+		.span6 {
+			width: 750px;
+		}
+	}
 }
 
 .posts {
+	width: 670px;
 	padding: 30px 0;
 	border-bottom: 1px solid @grayLight;
-
-	&:last-child {
-		border-bottom: none;
-	}
 
 	h1 {
 		margin-bottom: 15px;
@@ -740,8 +860,20 @@ body.home {
 	}
 }
 
+.full-profile {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.post-twitter {
+	margin-top: 20px;
+	background: url(../img/blue-twitter.png) no-repeat left center;
+	text-align: right;
+}
+
 .post-details {
 	margin-left: 35px;
+	padding-top: 10px;
 }
 
 .post-category {
@@ -762,7 +894,6 @@ body.home {
 .post-read-more {
 	margin-top: 25px;
 	font-weight: 300;
-	text-align: right;
 	text-decoration: underline;
 	text-transform: uppercase;
 }
@@ -781,6 +912,64 @@ body.home {
 			display: none;
 		}
 	}
+}
+
+body.paged {
+	#featured-post {
+		display: none;
+	}
+}
+
+#featured-post {
+	padding: 40px 0;
+	border-bottom: 1px solid @grayLight;
+	border-top: 1px solid @grayLight;
+
+	.post-category {
+		color: @black;
+	}
+
+	.post-author {
+		margin-top: 10px;
+		text-align: left;
+	}
+
+	.post-read-more {
+		margin-top: 10px;
+	}
+}
+
+/*..................................the single post */
+#single-post {
+	.posts {
+		border-bottom: none;
+
+		.post-tags {
+			margin-top: 50px;
+		}
+	}
+}
+
+.post-navigation {
+	margin: 10px 0;
+	padding-top: 5px;
+	height: 50px;
+	border-top: solid 1px @grayLight;
+	border-bottom: solid 1px @grayLight;
+}
+
+.post-content {
+	margin-top: 40px;
+	padding: 40px 0;
+	border-top: solid 1px @grayLight;
+	border-bottom: solid 1px @grayLight;
+}
+
+#all-in-cat {
+	height: 60px;
+	margin-bottom: 15px;
+	padding: 5px 0;
+	border-bottom: solid 1px @grayLight;
 }
 
 /*..................................the categories */
@@ -812,10 +1001,21 @@ hr {
 
 /*..................................the sidebar */
 #sidebar {
+	margin-top: 40px;
+
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
+	}
+
+	#searchform {
+		padding-bottom: 40px;
+		border-bottom: 1px solid @grayLight;
+
+		input[type="text"] {
+			width: 161px;
+		}
 	}
 }
 

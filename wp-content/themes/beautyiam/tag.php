@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="tag-landing">
+<section id="tag-landing" class="page">
 	
 	<div class="container">
 	

@@ -1,13 +1,21 @@
 
-
-
- 
- 	<div class="row posts category-meals">
- 	
+<div class="posts category-meals">
+	<div class="row">
+	
 		<div class="span2 author-headshot">
 			<div class="post-category-icon"></div>
 			<img src="<?php bloginfo( 'template_directory' ); ?>/img/ashton-headshot.png" class="img-circle" alt="Ashton Roark">
-			<div class="post-author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></div>
+			<div class="post-author">
+				<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
+			</div>
+			<?php if(is_single( )): ?>
+			<div class="full-profile">
+				<a href="" class="btn btn-black">Full Profile</a>
+			</div>
+			<div class="post-twitter">
+				<a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>">@<?php the_author_meta( 'twitter' ); ?>
+			</div>
+			<?php endif; ?>
 		</div>
 		
 		<div class="span6 post-details">
@@ -18,7 +26,10 @@
 			</div>
 			<h1 class="serif"><a href="<?php the_permalink(); ?>" class="category-meals"><?php the_title(); ?></a></h1>
 			<div class="serif post-date"><?php the_date(); ?></div>
+			
+			<?php if(!is_single()): ?>
 			<div class="post-read-more"><a href="<?php the_permalink(); ?>">Read more...</a></div>
+			<?php endif; ?>
 			
 			<?php
 				$tags_list = get_the_tag_list( '', ', ' );
@@ -30,5 +41,24 @@
 			</div>
 			<?php endif; ?>
 			
+			<?php if(is_single()): ?>
+			<div class="post-content">
+				<?php the_content(); ?>
+			</div>
+			
+			<div id="all-in-cat">
+				<?php $category = get_the_category(); 
+				echo '
+					<a href="'.get_category_link($category[0]->cat_ID).'" class="btn btn-blue btn-cat-meals pull-right">
+						<span class="icon"></span> 
+						<span class="btn-label">All articles in <span class="line2">category</span></span>
+					</a>
+				'; ?>
+			</div>
+			
+			<?php comments_template( '', true ); ?>
+			<?php endif; ?>
+			
 		</div>
-	</div><!-- .posts -->
+	</div><!-- .post -->
+</div><!-- .row -->
