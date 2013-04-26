@@ -28,6 +28,11 @@ h1 {
 
 	&.serif {
 		font-size: 130px;
+
+		&.page-title {
+			color: @gray;
+			font-size: 70px;
+		}
 	}
 }
 
@@ -197,6 +202,23 @@ button#searchsubmit {
 		span.icon {
 			background: url(../img/cutlery-icon-btn.png) no-repeat center center;
 		}
+	}
+}
+
+/*..................................the tables */
+table.table {
+	text-transform: uppercase;
+
+	thead {
+		th {
+			color: @grayLight;
+			font-size: 14px;
+			font-weight: 500;
+		}
+	}
+
+	th, td {
+		border-top: none;
 	}
 }
 
@@ -808,6 +830,39 @@ body.home {
 	}
 }
 
+/*..................................the offsite instructors */
+h1.page-title {
+	padding-bottom: 10px;
+	text-align: right;
+	border-bottom: 1px solid @grayLighter;
+}
+
+.offsite-instructors table.table {
+	font-size: 18px;
+
+	thead {
+		// border-top: 1px solid @grayLighter;
+
+		th {
+			padding-top: 25px;
+		}
+	}
+
+	td, th {
+		&.oi-cat {
+			width: 250px;
+			font-weight: 800;
+		}
+
+		&.oi-type {
+			font-weight: 600;
+		}
+	}
+
+	tbody tr:last-child {
+		border-bottom: 1px solid @grayLighter;
+	}
+}
 /*..................................the blog */
 #blog {
 	padding: 40px 0 50px 0;
@@ -911,12 +966,6 @@ body.home {
 		&:last-child {
 			display: none;
 		}
-	}
-}
-
-body.paged {
-	#featured-post {
-		display: none;
 	}
 }
 

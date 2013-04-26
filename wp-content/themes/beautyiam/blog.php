@@ -6,10 +6,8 @@ get_header(); ?>
 
 <section id="blog-landing" class="page">
 	<div class="container">
-	
 		<div class="row">
 		
-		<div class="span12">
 			<?php
 					$temp = $wp_query;
 					$wp_query = null;
@@ -23,6 +21,9 @@ get_header(); ?>
 					$do_not_duplicate[] = $post->ID 
 					 ?>
 					
+					<?php if(!is_paged()): ?>
+		
+				<div class="span12">
 					<div id="featured-post">
 						<div class="post-category">
 							Popular / <?php if ( count( get_the_category() ) ) : ?>
@@ -47,9 +48,10 @@ get_header(); ?>
 							</div>
 						<?php endif; ?>
 					</div> 
-					
+				</div>
+				<?php endif; ?>
 				<?php endwhile; ?>
-		</div>
+		
 			<div class="span9">
 				
 				<?php while (have_posts()) : the_post();

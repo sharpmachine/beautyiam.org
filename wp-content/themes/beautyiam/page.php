@@ -1,15 +1,13 @@
 <?php get_header(); ?>
 
-<section>
+<section id="" class="page">
 	<div class="container">
-	
 		<div class="row">
-			<div class="span8">
+		
+			<div class="span12">
 				<?php get_template_part( 'loop', 'page' ); ?>
 			</div>
-			<div class="span4">
-				<?php get_sidebar(); ?>
-			</div>
+			
 		</div>
 		
 	</div>
