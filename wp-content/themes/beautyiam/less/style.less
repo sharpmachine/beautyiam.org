@@ -89,6 +89,10 @@ h6 {
 	text-transform: uppercase;
 }
 
+.i-am {
+	font-variant: small-caps;
+}
+
 address {
     font-family: Linden Hill;
     font-size: 18px;
@@ -134,8 +138,11 @@ button#searchsubmit {
 /*..................................the buttons */
 .btn {
 	padding: 10px 15px;
+	font-size: 18px;
+	font-weight: 600;
 	text-align: left;
 	text-transform: uppercase;
+	text-shadow: none;
 	background: url(../img/btn-texture.png) no-repeat center center;
 	border: none;
 	.box-shadow(1px 2px 5px @grayLight);
@@ -173,7 +180,7 @@ button#searchsubmit {
 	}
 
 	&.btn-purple {
-		color: darken(@royalPurple, 30%);
+		color: darken(@royalPurple, 10%);
 		background-color: @royalPurple;
 	}
 
@@ -202,6 +209,12 @@ button#searchsubmit {
 		span.icon {
 			background: url(../img/cutlery-icon-btn.png) no-repeat center center;
 		}
+	}
+
+	&.btn-submit {
+		font-size: 18px;
+		font-weight: 600;
+		text-shadow: none;
 	}
 }
 
@@ -863,6 +876,96 @@ h1.page-title {
 		border-bottom: 1px solid @grayLighter;
 	}
 }
+
+/*..................................the giving page */
+#giving {
+	h1 {
+		margin-bottom: 55px;
+		color: @royalPurple;
+		text-transform: lowercase;
+
+		span {
+			display: block;
+			margin-top: -25px;
+			margin-left: 45px;
+			color: @grayDark;
+			font-size: 24px;
+
+		}
+	}
+
+	h6 {
+		margin-top: 0;
+	}
+
+	.btn-donate {
+		margin-right: 5px;
+		padding: 20px 25px;
+
+		.line2 {
+			font-size: 32px;
+		}
+	}
+
+	.btn-submit {
+		margin: -10px 0 0 5px;
+	}
+}
+
+#monthly-partners {
+	margin-bottom: 35px;
+}
+
+#payment-methods {
+	margin-bottom: 50px;
+	text-align: right;
+
+	img {
+		padding-left: 30px;
+	}
+}
+
+.page-footer {
+	height: 170px;
+	margin-bottom: -15px;
+	padding: 80px 0;
+	color: @white;
+	background-color: @royalPurple;
+
+	.curly-bracket {
+		// width: 111px;
+		height: 147px;
+		margin-top: 25px;
+		&.curly-bracket-white {
+			background: url(../img/curly-bracket-white.png) no-repeat left center;
+		}
+	}
+
+	.feature-title {
+		// color: @white;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	.featurette {
+		margin-top: 60px;
+	}
+
+	.feature-name {
+		margin-bottom: 10px;
+		font-size: 36px;
+		line-height: 1;
+	}
+
+	.btn {
+		.box-shadow(none);
+	}
+
+	.i-am {
+		font-size: 46px;
+	}
+}
+
 /*..................................the blog */
 #blog {
 	padding: 40px 0 50px 0;
