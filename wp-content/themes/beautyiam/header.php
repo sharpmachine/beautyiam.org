@@ -66,7 +66,7 @@
 			<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> data-spy="scroll" data-target="#classes-menu">
 	
 	<header>
 		

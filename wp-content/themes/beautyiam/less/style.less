@@ -7,7 +7,7 @@ body {
 	height: 100%;
 }
 
-section.page {
+.page {
 	padding-bottom: 50px;
 }
 
@@ -143,7 +143,7 @@ button#searchsubmit {
 	text-align: left;
 	text-transform: uppercase;
 	text-shadow: none;
-	background: url(../img/btn-texture.png) no-repeat center center;
+	background: url(../img/btn-texture.png) center center;
 	border: none;
 	.box-shadow(1px 2px 5px @grayLight);
 
@@ -1168,6 +1168,163 @@ hr {
 		input[type="text"] {
 			width: 161px;
 		}
+	}
+}
+
+/*..................................the classes page */
+.affix {
+	top: 35px;
+}
+
+#classes-menu {
+	width: 100%;
+	height: 200px;
+	margin-bottom: -335px;
+	padding: 50px 0;
+	background: url(../img/texture-lrg.jpg) center center @black;
+
+	a {
+		display: block;
+		height: 200px;
+		color: @grayLight;
+		font-size: 24px;
+		text-transform: uppercase;
+
+		span {
+			position: relative;
+			top: 180px;
+			display: block;
+			text-align: center;
+		}
+
+		&:hover {
+			color: @white;
+			text-decoration: none;
+		}
+
+		&#class-fitness {
+			background: url(../img/classes-fitness.png) no-repeat top center;
+
+			&:hover {
+				background: url(../img/classes-fitness-active.png) no-repeat top center;
+			}
+		}
+
+		&#class-wellness {
+			background: url(../img/classes-wellness.png) no-repeat top center;
+
+			&:hover {
+				background: url(../img/classes-wellness-active.png) no-repeat top center;
+			}
+		}
+
+		&#class-spirit {
+			background: url(../img/classes-spirit.png) no-repeat top center;
+
+			&:hover {
+				background: url(../img/classes-spirit-active.png) no-repeat top center;
+			}
+		}
+
+		&#class-counsel {
+			background: url(../img/classes-counsel.png) no-repeat top center;
+
+			&:hover {
+				background: url(../img/classes-counsel-active.png) no-repeat top center;
+			}
+		}
+	}
+}
+
+#fitness {
+	margin-top: 335px;
+	color: @white;
+	background-color: @royalPurple;
+
+	a.btn {
+		background-color: @royalPurple;
+		.icon {
+			width: 34px;
+			height: 33px;
+			background: url(../img/icon-calendar-purple.png) no-repeat center center;
+		}
+	}
+}
+
+#wellness {
+	color: @white;
+	background-color: @calypso;
+
+	a.btn {
+		background-color: @calypso;
+		.icon {
+			width: 34px;
+			height: 33px;
+			background: url(../img/icon-calendar-purple.png) no-repeat center center;
+		}
+	}
+}
+
+.class-section {
+	padding: 130px 0;
+
+	&:last-child {
+		margin-bottom: -15px;
+	}
+
+	.classes {
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid @gray;
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+}
+
+.classes {
+
+	h2 {
+		line-height: 1.5;
+		font-size: 55px;
+	}
+
+	h3 {
+		font-weight: 300;
+	}
+
+	p {
+		font-weight: 200;
+	}
+}
+
+.class-time {
+	font-size: 40px;
+	line-height: 1;
+}
+
+.class-instructor {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 5px 0;
+	border-top: 1px solid @gray;
+	border-bottom: 1px solid @gray;
+}
+
+.class-instructor-name {
+	margin-top: 20px;
+	font-weight: 200;
+	text-transform: uppercase;
+}
+
+.add-to-calendar {
+	text-align: right;
+
+	a.btn {
+		.box-shadow(none);
 	}
 }
 

@@ -31,6 +31,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-collapse.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-carousel.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-affix.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/easing.1.3.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/animate-enhanced.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/superslides.js"></script>
