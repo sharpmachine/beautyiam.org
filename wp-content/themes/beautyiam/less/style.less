@@ -1328,6 +1328,59 @@ hr {
 	}
 }
 
+/*..................................the contact page */
+#contact-us {
+	h1 {
+		margin-bottom: 0;
+		line-height: 0.5;
+		color: @blueGreen;
+	}
+}
+.contact-form {
+	margin-top: 20px;
+	margin-left: 120px;
+
+	textarea {
+		width: 678px;
+		height: 160px;
+		margin-bottom: 30px;
+	}
+
+	input {
+		width: 169px;
+		margin: 0 15px;
+	}
+
+	label {
+		// font-size: 14px;
+		// float: left;
+		text-transform: uppercase;
+	}
+
+	// button {
+	// 	float: right;
+	// }
+
+	.btn {
+		color: darken(@blueGreen, 25%);
+		background-color: @blueGreen;
+	}
+}
+
+#contact-details {
+	padding: 30px 0;
+	border-top: 2px solid @grayLighter;
+}
+
+.email {
+	font-size: 36px;
+	line-height: 1;
+}
+
+.phone {
+	font-size: 24px; 
+}
+
 /*..................................the footer */
 footer {
 	position: fixed;
@@ -1681,4 +1734,11 @@ img.aligncenter {
 	-o-transition: none;
 	-ms-transition: none;
 	transition: none;
+}
+
+/*..................................the misc utilities */
+body.admin-bar {
+	#support-group-bar {
+		margin-top: 28px;
+	}
 }
