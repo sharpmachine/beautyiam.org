@@ -37,6 +37,7 @@
 	<script src="<?php bloginfo('template_directory'); ?>/js/superslides.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/slide-in-min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/waypoint.min.js"></script>
+	<script src="http://charles-harvey.co.uk/plugins/cycleThru/js/jquery.cycleThru.js"></script>
 	<script src="https://raw.github.com/imsky/holder/master/holder.js"></script>
 
 
@@ -76,6 +77,8 @@
 				}
 
  			});
+
+ 			
 
  		// 	$('body').on('animated.slides', function() {
 			//   if ($('li.white-bg').hasClass('current')) {

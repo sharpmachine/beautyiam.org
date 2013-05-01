@@ -48,7 +48,7 @@
 		</div>
 	</div>
 	
-	<div class="page-footer">
+	<div class="page-footer purple-bg">
 		<div class="container">
 			<div class="row">
 				<div class="span7 tagline">

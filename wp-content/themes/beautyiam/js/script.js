@@ -97,4 +97,7 @@ jQuery(document).ready(function($) {
 			return -nav.outerHeight()-waypoint_offset;
 		}
 	});
+
+	//Too cycle
+	$("ul#testy").cycleThru({delay: 1000});
 });
