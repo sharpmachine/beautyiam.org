@@ -3,7 +3,7 @@
 <section id="about" class="page">
 	<?php  get_template_part( 'loop', 'page' ); ?>
 	
-	<div id="about-one">
+	<!-- <div id="about-one">
 		<div class="container">
 			<div class="row">
 				<div class="span12 text-center">
@@ -27,7 +27,7 @@
 				</div>
 			</div>
 		</div>
-	</div><!-- #about-one -->
+	</div>
 	
 	<div id="about-two" class=" calypso-bg">
 		<div class="container">
@@ -65,6 +65,83 @@
 				<h1 class="serif">We are Beauty <span class="i-am">i am</span>.</h1>
 			</div>
 		</div>
+	</div> -->
+	
+	<?php rewind_posts(); ?>
+	<div id="team" class="container">
+	
+		<div class="row team-member">
+			<div class="span2 author-headshot">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ashton-headshot.png" class="img-circle" alt="Ashton Roark">
+			</div>
+			<div class="span6 member-details">
+				<div class="member-position sans">Founder / Working Actress / Model</div>
+				<div class="member-name sans">Ashton Roark</div>
+				<p class="member-description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero modi eaque eius magnam aliquid saepe ratione quasi id cumque et.
+				</p>
+			</div>
+			<div class="span2 offset1 member-actions">
+				<div class="full-profile">
+					<a href="" class="btn btn-black">Full Profile</a>
+				</div>
+				<div class="post-twitter">
+					<a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>">@<?php the_author_meta( 'twitter' ); ?></a>
+				</div>
+			</div>
+		</div><!-- .team-member -->
+		
+		<div class="row team-member">
+			<div class="span2 author-headshot">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ashton-headshot.png" class="img-circle" alt="Ashton Roark">
+			</div>
+			<div class="span6 member-details">
+				<div class="member-position sans">Founder / Working Actress / Model</div>
+				<div class="member-name sans">Ashton Roark</div>
+				<p class="member-description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero modi eaque eius magnam aliquid saepe ratione quasi id cumque et.
+				</p>
+			</div>
+			<div class="span2 offset1 member-actions">
+				<div class="full-profile">
+					<a href="" class="btn btn-black">Full Profile</a>
+				</div>
+				<div class="post-twitter">
+					<a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>">@<?php the_author_meta( 'twitter' ); ?></a>
+				</div>
+			</div>
+		</div><!-- .team-member -->
+		
+	</div>
+	
+	<div id="member-profile" class="container">
+		<div class="row team-member">
+			<div class="span2 author-headshot">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ashton-headshot.png" class="img-circle" alt="Ashton Roark">
+				<div class="post-twitter">
+					<a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>">@<?php the_author_meta( 'twitter' ); ?></a>
+				</div>
+			</div>
+			<div class="span9 member-details">
+				<div class="member-position sans">Founder / Working Actress / Model</div>
+				<div class="member-name sans">Ashton Roark</div>
+				<div class="member-headline serif">What is the meaning life?</div>
+				
+				<div class="member-bio">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum sed vero reiciendis totam non quae repellendus consequuntur vel iusto impedit ipsa dignissimos quam architecto accusantium ducimus vitae nam nihil velit rem voluptatum similique illum tenetur magni corrupti ab quia labore neque distinctio tempore ut fugit commodi quo molestias harum officiis!
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum sed vero reiciendis totam non quae repellendus consequuntur vel iusto impedit ipsa dignissimos quam architecto accusantium ducimus vitae nam nihil velit rem voluptatum similique illum tenetur magni corrupti ab quia labore neque distinctio tempore ut fugit commodi quo molestias harum officiis!
+					</p>
+				</div>
+				<div class="all-member-articles">
+					<a href="#" class="btn btn-blue pull-right">
+						<span class="btn-label">All articles from <span class="line2">Ashton</span></span>
+					</a>
+				</div>
+			</div>
+		</div><!-- .team-member -->
 	</div>
 	
 </section><!-- #page -->

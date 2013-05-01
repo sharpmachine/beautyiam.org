@@ -1,35 +1,17 @@
 <?php get_header(); ?>
 
-<section id="contact-us" class="page">
+<section id="thank-you" class="page">
 	<div class="container">
 		<div class="row">
 		
-			<div class="span12 text-center">
+			<div class="span12 text-center thanks">
 				<?php // get_template_part( 'loop', 'page' ); ?>
-				<h1 class="serif">want details?</h1>
-				<h3>Tell us what you want to know</h3>
+				<h1 class="serif">Thank you</h1>
+				<h3>you are beautiful and we look <br>forward to responding to your enquiry.</h3>
+				
+				<h3>You will hear from us soon!</h3>
 			</div>
 			
-		</div>
-		
-		<div class="row">
-			<div class="span10 offset1 contact-form">
-				<form class="form-inline">
-					
-					<textarea></textarea>
-					
-					<label>
-						Your Name <input type="text">
-					</label>
-					
-					<label>
-						Your Email <input type="email">
-					</label>
-					
-					<button type="submit" class="btn btn-submit">Send</button>
-					
-				</form>
-			</div>
 		</div>
 		
 		<div id="contact-details" class="row">

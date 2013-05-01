@@ -13,7 +13,7 @@
 				<a href="" class="btn btn-black">Full Profile</a>
 			</div>
 			<div class="post-twitter">
-				<a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>">@<?php the_author_meta( 'twitter' ); ?>
+				<a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>">@<?php the_author_meta( 'twitter' ); ?></a>
 			</div>
 			<?php endif; ?>
 		</div>
