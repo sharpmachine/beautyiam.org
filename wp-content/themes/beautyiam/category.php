@@ -5,7 +5,7 @@
 	<div class="container">
 	
 		<div class="row">
-			<h1 class="page-title">
+			<h1>
 				<?php printf( __( 'Category Archives: %s', 'smm' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
 			</h1>
 		</div>
