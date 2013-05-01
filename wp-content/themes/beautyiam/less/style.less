@@ -23,6 +23,25 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'SymbolRegular';
+    src: url('../fonts/symbol.eot');
+    src: url('../fonts/symbol.eot') format('embedded-opentype'),
+         url('../fonts/symbol.woff') format('woff'),
+         url('../fonts/symbol.ttf') format('truetype'),
+         url('../fonts/symbol.svg#SymbolRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'Rosewood';
+    src: url('../fonts/rosewood.eot');
+    src: url('../fonts/rosewood.eot') format('embedded-opentype'),
+         url('../fonts/rosewood.woff') format('woff'),
+         url('../fonts/rosewood.ttf') format('truetype'),
+         url('../fonts/rosewood.svg#RosewoodStdRegular') format('svg');
+}
+
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 1;
@@ -38,7 +57,7 @@ h1 {
 	line-height: 1;
 
 	&.serif {
-		font-size: 130px;
+		font-size: 128px;
 
 		&.page-title {
 			color: @gray;
@@ -1378,9 +1397,17 @@ hr {
 }
 
 /*..................................the about page */
-#about-one {
+#about {
 	color: @calypso;
+}
+
+#about-one {
+	margin-bottom: 50px;
 	line-height: 1;
+
+	p {
+		line-height: 20px;
+	}
 }
 
 .plus {
@@ -1445,6 +1472,7 @@ hr {
 }
 
 #line-eight {
+	margin-bottom: 20px;
 	font-size: 108px;
 }
 
@@ -1457,8 +1485,13 @@ hr {
 }
 
 #about-two {
+	padding: 50px 0;
 	color: @white;
 	line-height: 1;
+
+	p {
+		line-height: 20px;
+	}
 }
 
 #line-nine {
@@ -1468,11 +1501,23 @@ hr {
 }
 
 #line-ten {
-
+	margin-top: 55px;
+	margin-bottom: 40px;
+	font-family: 'Rosewood';
+	font-size: 102px;
 }
 
 #line-eleven {
+	margin-bottom: 10px;
+	font-family: 'SymbolRegular';
+	font-size: 90px;
 
+	span {
+		position: relative;
+		top: -3px;
+		display: inline-block;
+		.rotate(180deg);
+	}
 }
 
 #line-twelve {
@@ -1482,7 +1527,7 @@ hr {
 }
 
 #line-thirteen {
-	line-height: 2;
+	margin: 40px 0;
 	font-size: 92px;
 	text-transform: uppercase;
 
@@ -1495,6 +1540,7 @@ hr {
 }
 
 #line-fourteen {
+	margin: 35px 0;
 	font-size: 24px;
 	text-transform: uppercase;
 	font-weight: 600;
@@ -1502,11 +1548,9 @@ hr {
 
 #line-fifteen {
 	font-size: 60px;
-	line-height: 2;
 }
 
 #line-sixteen {
-	padding-bottom: 50px;
 	font-size: 116px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -1526,6 +1570,50 @@ ul#testy li {
 	opacity:0;
 	position:absolute;
 	// color: red;
+}
+
+#about-offerings {
+	margin-top: 50px;
+
+	h3 {
+		margin-top: 55px;
+		font-weight: 600;
+	}
+
+	h1 {
+		margin-top: 50px;
+		padding: 50px 0;
+		border-top: 1px solid @grayLight;
+		border-bottom: 1px solid @grayLight;
+
+		.i-am {
+			font-size: 108px;
+		}
+	}
+}
+
+#about-fitness,
+#about-wellness,
+#about-spirit,
+#about-counsel {
+	height: 130px;
+	background: no-repeat center center;
+}
+
+#about-fitness {
+	background-image: url(../img/fitness-icon-blue-lrg.png);
+}
+
+#about-wellness {
+	background-image: url(../img/wellness-icon-blue-lrg.png);
+}
+
+#about-spirit {
+	background-image: url(../img/spirit-icon-blue-lrg.png);
+}
+
+#about-counsel {
+	background-image: url(../img/counsel-icon-blue-lrg.png);
 }
 
 /*..................................the contact page */
