@@ -5,8 +5,8 @@
 		<div class="row">
 		
 			<div class="span12 text-center">
-				<h1 class="serif">want details?</h1>
-				<h3>Tell us what you want to know</h3>
+				<h1 class="serif"><?php the_field('heading'); ?></h1>
+				<h3><?php the_field('subheading'); ?></h3>
 			</div>
 			
 		</div>

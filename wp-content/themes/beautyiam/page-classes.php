@@ -35,63 +35,30 @@
 	<section id="fitness" class="class-section">
 		<div class="container">
 		
+		<?php query_posts("post_type=classes&classes_category=fitness"); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="classes">
 				<div class="row">
 					<div class="span12">
-						<h3>High Impact, High Intensity Kickboxing choregraPhed to beat!</h3>
-						<h2>Turbo Kick</h2>
-						<div class="class-time serif">Monday, Wednesday, and Friday from 7:00- 8:00 am</div>
+						<h3><?php the_field('class_headline'); ?></h3>
+						<h2><?php the_title(); ?></h2>
+						<div class="class-time serif"><?php the_field('class_days'); ?> from <?php the_field('class_start_time'); ?>- <?php the_field('class_end_time'); ?> <?php the_field('class_am_or_pm'); ?></div>
 					</div>
 				</div>
 				
 				<div class="row class-instructor">
 					<div class="span9 class-instructor-name">
-						Instructor \ Jillian Michaels
-					</div>
-					<div class="span3 add-to-calendar">
-						<a href="#" class="btn">
-							<span class="icon"></span>
-							<span class="btn-label">Add this to my</span>
-							<span class="line2">Calendar</span>
-						</a>
+						Instructor \ <?php the_field('class_instructors_name'); ?>
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="span12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique esse eos sequi quas ipsam dolore laborum. Rerum numquam sint quas reprehenderit neque amet praesentium earum nisi quos quasi quam dolore quia odit deleniti vitae fugit ipsam. Ad cum rem id. Nostrum mollitia sed aperiam repellat iure vero cupiditate repudiandae unde tempora similique. Quam rerum harum eius dolor veniam sequi consequatur excepturi animi itaque facere dignissimos molestias officia tenetur voluptatum deleniti eum maiores unde dolorum et ipsum iste minus at sapiente nisi non. Atque similique facilis a eum quibusdam qui iste assumenda accusamus autem sunt incidunt maiores suscipit obcaecati at in nostrum deserunt. Eos incidunt officia placeat voluptate dolorum eaque unde. Ab maxime fugiat unde ratione adipisci amet est libero numquam veniam aspernatur ipsam in nesciunt rerum mollitia impedit a cumque recusandae ut. Eveniet iste et incidunt necessitatibus doloremque ipsa voluptates magnam recusandae corrupti eum minus odio totam ratione atque odit a ex. Id harum voluptatibus incidunt labore tempora a deleniti illum fugiat facere culpa quaerat cum aut quibusdam earum repudiandae accusantium quasi rerum recusandae repellendus placeat atque impedit molestias in odit nulla eius ipsum totam quis animi provident ullam aspernatur alias adipisci! Eveniet laboriosam at iste repudiandae doloremque possimus nemo.</p>
+						<?php the_content(); ?>
 					</div>
 				</div>
 			</article>
-			
-			<article class="classes">
-				<div class="row">
-					<div class="span12">
-						<h3>High Impact, High Intensity Kickboxing choregraPhed to beat!</h3>
-						<h2>Turbo Kick</h2>
-						<div class="class-time serif">Monday, Wednesday, and Friday from 7:00- 8:00 am</div>
-					</div>
-				</div>
-				
-				<div class="row class-instructor">
-					<div class="span9 class-instructor-name">
-						Instructor \ Jillian Michaels
-					</div>
-					<div class="span3 add-to-calendar">
-						<a href="#" class="btn">
-							<span class="icon"></span>
-							<span class="btn-label">Add this to my</span>
-							<span class="line2">Calendar</span>
-						</a>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="span12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique esse eos sequi quas ipsam dolore laborum. Rerum numquam sint quas reprehenderit neque amet praesentium earum nisi quos quasi quam dolore quia odit deleniti vitae fugit ipsam. Ad cum rem id. Nostrum mollitia sed aperiam repellat iure vero cupiditate repudiandae unde tempora similique. Quam rerum harum eius dolor veniam sequi consequatur excepturi animi itaque facere dignissimos molestias officia tenetur voluptatum deleniti eum maiores unde dolorum et ipsum iste minus at sapiente nisi non. Atque similique facilis a eum quibusdam qui iste assumenda accusamus autem sunt incidunt maiores suscipit obcaecati at in nostrum deserunt. Eos incidunt officia placeat voluptate dolorum eaque unde. Ab maxime fugiat unde ratione adipisci amet est libero numquam veniam aspernatur ipsam in nesciunt rerum mollitia impedit a cumque recusandae ut. Eveniet iste et incidunt necessitatibus doloremque ipsa voluptates magnam recusandae corrupti eum minus odio totam ratione atque odit a ex. Id harum voluptatibus incidunt labore tempora a deleniti illum fugiat facere culpa quaerat cum aut quibusdam earum repudiandae accusantium quasi rerum recusandae repellendus placeat atque impedit molestias in odit nulla eius ipsum totam quis animi provident ullam aspernatur alias adipisci! Eveniet laboriosam at iste repudiandae doloremque possimus nemo.</p>
-					</div>
-				</div>
-			</article>
+		<?php endwhile; endif; ?>
 			
 		</div>
 	</section>
@@ -99,63 +66,99 @@
 	<section id="wellness" class="class-section">
 		<div class="container">
 		
+			<?php query_posts("post_type=classes&classes_category=wellness"); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="classes">
 				<div class="row">
 					<div class="span12">
-						<h3>High Impact, High Intensity Kickboxing choregraPhed to beat!</h3>
-						<h2>Turbo Kick</h2>
-						<div class="class-time serif">Monday, Wednesday, and Friday from 7:00- 8:00 am</div>
+						<h3><?php the_field('class_headline'); ?></h3>
+						<h2><?php the_title(); ?></h2>
+						<div class="class-time serif"><?php the_field('class_days'); ?> from <?php the_field('class_start_time'); ?>- <?php the_field('class_end_time'); ?> <?php the_field('class_am_or_pm'); ?></div>
 					</div>
 				</div>
 				
 				<div class="row class-instructor">
 					<div class="span9 class-instructor-name">
-						Instructor \ Jillian Michaels
-					</div>
-					<div class="span3 add-to-calendar">
-						<a href="#" class="btn">
-							<span class="icon"></span>
-							<span class="btn-label">Add this to my</span>
-							<span class="line2">Calendar</span>
-						</a>
+						Instructor \ <?php the_field('class_instructors_name'); ?>
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="span12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique esse eos sequi quas ipsam dolore laborum. Rerum numquam sint quas reprehenderit neque amet praesentium earum nisi quos quasi quam dolore quia odit deleniti vitae fugit ipsam. Ad cum rem id. Nostrum mollitia sed aperiam repellat iure vero cupiditate repudiandae unde tempora similique. Quam rerum harum eius dolor veniam sequi consequatur excepturi animi itaque facere dignissimos molestias officia tenetur voluptatum deleniti eum maiores unde dolorum et ipsum iste minus at sapiente nisi non. Atque similique facilis a eum quibusdam qui iste assumenda accusamus autem sunt incidunt maiores suscipit obcaecati at in nostrum deserunt. Eos incidunt officia placeat voluptate dolorum eaque unde. Ab maxime fugiat unde ratione adipisci amet est libero numquam veniam aspernatur ipsam in nesciunt rerum mollitia impedit a cumque recusandae ut. Eveniet iste et incidunt necessitatibus doloremque ipsa voluptates magnam recusandae corrupti eum minus odio totam ratione atque odit a ex. Id harum voluptatibus incidunt labore tempora a deleniti illum fugiat facere culpa quaerat cum aut quibusdam earum repudiandae accusantium quasi rerum recusandae repellendus placeat atque impedit molestias in odit nulla eius ipsum totam quis animi provident ullam aspernatur alias adipisci! Eveniet laboriosam at iste repudiandae doloremque possimus nemo.</p>
+						<?php the_content(); ?>
 					</div>
 				</div>
 			</article>
+		<?php endwhile; endif; ?>
 			
+		</div>
+	</section>
+	
+	<section id="spirit" class="class-section">
+		<div class="container">
+		
+			<?php query_posts("post_type=classes&classes_category=spirit"); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="classes">
 				<div class="row">
 					<div class="span12">
-						<h3>High Impact, High Intensity Kickboxing choregraPhed to beat!</h3>
-						<h2>Turbo Kick</h2>
-						<div class="class-time serif">Monday, Wednesday, and Friday from 7:00- 8:00 am</div>
+						<h3><?php the_field('class_headline'); ?></h3>
+						<h2><?php the_title(); ?></h2>
+						<div class="class-time serif"><?php the_field('class_days'); ?> from <?php the_field('class_start_time'); ?>- <?php the_field('class_end_time'); ?> <?php the_field('class_am_or_pm'); ?></div>
 					</div>
 				</div>
 				
 				<div class="row class-instructor">
 					<div class="span9 class-instructor-name">
-						Instructor \ Jillian Michaels
+						Instructor \ <?php the_field('class_instructors_name'); ?>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="span12">
+						<?php the_content(); ?>
+					</div>
+				</div>
+			</article>
+		<?php endwhile; endif; ?>
+			
+		</div>
+	</section>
+	
+	<section id="counsel" class="class-section">
+		<div class="container">
+		
+			<?php query_posts("post_type=classes&classes_category=counsel"); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<article class="classes">
+				<div class="row">
+					<div class="span12">
+						<h3><?php the_field('class_headline'); ?></h3>
+						<h2><?php the_title(); ?></h2>
+						<div class="class-time serif">By Appointment</div>
+					</div>
+				</div>
+				
+				<div class="row class-instructor">
+					<div class="span9 class-instructor-name">
+						Instructor \ <?php the_field('class_instructors_name'); ?>
 					</div>
 					<div class="span3 add-to-calendar">
-						<a href="#" class="btn">
+						<a href="mailto:info@beautyiam.org?subject=Counseling session" class="btn">
 							<span class="icon"></span>
-							<span class="btn-label">Add this to my</span>
-							<span class="line2">Calendar</span>
+							<span class="btn-label">Book a</span>
+							<span class="line2">Session</span>
 						</a>
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="span12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique esse eos sequi quas ipsam dolore laborum. Rerum numquam sint quas reprehenderit neque amet praesentium earum nisi quos quasi quam dolore quia odit deleniti vitae fugit ipsam. Ad cum rem id. Nostrum mollitia sed aperiam repellat iure vero cupiditate repudiandae unde tempora similique. Quam rerum harum eius dolor veniam sequi consequatur excepturi animi itaque facere dignissimos molestias officia tenetur voluptatum deleniti eum maiores unde dolorum et ipsum iste minus at sapiente nisi non. Atque similique facilis a eum quibusdam qui iste assumenda accusamus autem sunt incidunt maiores suscipit obcaecati at in nostrum deserunt. Eos incidunt officia placeat voluptate dolorum eaque unde. Ab maxime fugiat unde ratione adipisci amet est libero numquam veniam aspernatur ipsam in nesciunt rerum mollitia impedit a cumque recusandae ut. Eveniet iste et incidunt necessitatibus doloremque ipsa voluptates magnam recusandae corrupti eum minus odio totam ratione atque odit a ex. Id harum voluptatibus incidunt labore tempora a deleniti illum fugiat facere culpa quaerat cum aut quibusdam earum repudiandae accusantium quasi rerum recusandae repellendus placeat atque impedit molestias in odit nulla eius ipsum totam quis animi provident ullam aspernatur alias adipisci! Eveniet laboriosam at iste repudiandae doloremque possimus nemo.</p>
+						<?php the_content(); ?>
 					</div>
 				</div>
 			</article>
+		<?php endwhile; endif; ?>
 			
 		</div>
 	</section>

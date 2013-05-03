@@ -1240,9 +1240,13 @@ hr {
 #classes-menu {
 	width: 100%;
 	height: 200px;
-	margin-bottom: -335px;
+	// margin-bottom: -335px;
 	padding: 25px 0;
 	background: url(../img/texture-lrg.jpg) center center @black;
+
+	&.affix-top {
+		margin-bottom: -300px;
+	}
 
 	a {
 		display: block;
@@ -1298,7 +1302,7 @@ hr {
 }
 
 #fitness {
-	margin-top: 335px;
+	margin-top: 300px;
 	color: @white;
 	background-color: @royalPurple;
 
@@ -1326,8 +1330,45 @@ hr {
 	}
 }
 
+#spirit {
+	color: @black;
+	background-color: @cream;
+
+	a.btn {
+		background-color: @cream;
+		.icon {
+			width: 34px;
+			height: 33px;
+			background: url(../img/icon-calendar-purple.png) no-repeat center center;
+		}
+	}
+}
+
+#counsel {
+	color: @black;
+	background-color: @princessPink;
+
+	a.btn {
+		background-color: @princessPink;
+		.icon {
+			width: 34px;
+			height: 33px;
+			background: url(../img/icon-calendar-purple.png) no-repeat center center;
+		}
+	}
+}
+
+#spirit,
+#counsel {
+	p,
+	.class-instructor-name {
+		font-weight: 400;
+	}
+}
+
 .class-section {
-	padding: 130px 0;
+	// margin-top: 290px;
+	padding: 50px 0;
 
 	&:last-child {
 		margin-bottom: -15px;

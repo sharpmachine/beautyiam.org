@@ -38,11 +38,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Linden+Hill' rel='stylesheet' type='text/css'>
     	<!-- Le styles -->
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
-    	<style>
-      	body {
-        	/*padding-top: 40px;  60px to make the container go all the way to the bottom of the tspiropbar */
-      	}
-    	</style>
     	<!-- <link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet"> -->
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
