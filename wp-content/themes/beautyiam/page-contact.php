@@ -21,14 +21,14 @@
 		
 		<div id="contact-details" class="row">
 			<div class="span4 offset1 serif">
-				<div class="email"><a href="mailto:info@beautyiam.org">info@beautyiam.org</a></div>
-				<div class="phone">323-546-8535</div>
+				<div class="email"><a href="mailto:<?php the_field('contact_email'); ?>"><?php the_field('contact_email'); ?></a></div>
+				<div class="phone"><?php the_field('contact_phone'); ?></div>
 			</div>
 			<div class="span2 offset1">
 				<address>
-					P.O.Box 790 <br>
-					Los Angeles, CA <br>
-					90212
+					<?php the_field('contact_mailing_address'); ?> <br>
+					<?php the_field('contact_city_state'); ?> <br>
+					<?php the_field('contact_zip_code'); ?>
 				</address>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="span5 tagline">
-					<h4 class="serif">let us show you how beautiful <br>you really are</h4>
+					<h4 class="serif"><?php the_field('contact_message'); ?></h4>
 				</div>
 				<div class="span2 curly-bracket curly-bracket-white-rev"></div>
 				<div class="span5 featurette">
