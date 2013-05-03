@@ -5,7 +5,6 @@
 		<div class="row">
 		
 			<div class="span12 text-center">
-				<?php // get_template_part( 'loop', 'page' ); ?>
 				<h1 class="serif">want details?</h1>
 				<h3>Tell us what you want to know</h3>
 			</div>
@@ -14,21 +13,9 @@
 		
 		<div class="row">
 			<div class="span10 offset1 contact-form">
-				<form class="form-inline">
-					
-					<textarea></textarea>
-					
-					<label>
-						Your Name <input type="text">
-					</label>
-					
-					<label>
-						Your Email <input type="email">
-					</label>
-					
-					<button type="submit" class="btn btn-submit">Send</button>
-					
-				</form>
+				
+				<?php get_template_part( 'loop', 'page' ); ?>
+
 			</div>
 		</div>
 		
@@ -56,15 +43,20 @@
 				<div class="span2 curly-bracket curly-bracket-white-rev"></div>
 				<div class="span5 featurette">
 					<h3>Subscribe to our newsletter</h3>
-					<form class="form-inline">
-				
-						<label>
-							Your Email <input type="email">
-						</label>
-						
-						<button type="submit" class="btn btn-submit">Subscribe</button>
-						
-					</form>
+					
+					<!-- Begin MailChimp Signup Form -->
+					<div id="mc_embed_signup">
+						<form action="http://beautyiam.us6.list-manage1.com/subscribe/post?u=07683979b15d14a7c5a256a08&amp;id=5ce5b396b2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank">
+							
+							<label>
+								Your Email <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="you@email.com" required>
+							</label>
+							
+							<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-submit">Subscribe</button>
+							
+						</form>
+					</div>
+					<!--End mc_embed_signup-->
 				</div>
 			</div>
 		</div>

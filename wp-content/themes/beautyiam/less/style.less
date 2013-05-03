@@ -1451,22 +1451,45 @@ hr {
 }
 
 #line-six {
+	position: relative;
 	font-size: 102px;
 
 	span {
+		visibility: hidden;
 		position: relative;
 		top: -10px;
 		font-size: 60px;
 		text-transform: lowercase;
 		border-bottom: 1px solid @calypso;
 	}
+
+	ul {
+		font-size: 60px;
+		text-transform: lowercase;
+	}
+}
+
+.too {
+	position: absolute !important;
+	top: 12px;
+	right: 170px !important;
+	left: auto !important;
+	width: 195px;
+	height: 60px !important;
+	border-bottom: 1px solid @calypso;
+
+	ul li {
+		height: 60px !important;
+		line-height: 50px !important;
+		text-align: center !important;
+	}
 }
 
 #line-seven {
 	position: relative;
-	top: -10px;
+	top: -20px;
 	margin-bottom: 25px;
-	padding-right: 205px;
+	padding-right: 200px;
 	font-size: 24px;
 	text-transform: uppercase;
 }
@@ -1556,24 +1579,9 @@ hr {
 	text-transform: uppercase;
 }
 
-ul#testy {
-	width:200px;
-	border:solid;
-	position:relative;
-	overflow:hidden;
-	height:200px;
-}
-
-ul#testy li {
-	font-size:16px;
-	padding:20px;
-	opacity:0;
-	position:absolute;
-	// color: red;
-}
-
 #about-offerings {
 	margin-top: 50px;
+	margin-bottom: 50px;
 
 	h3 {
 		margin-top: 55px;
@@ -1706,16 +1714,39 @@ ul#testy li {
 	textarea {
 		width: 759px;
 		height: 160px;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 	}
 
-	input {
+	input[type="text"],
+	input[type="email"] {
 		width: 209px;
 	}
 
 	.btn {
+		float: right;
+		margin: 20px 0 0 0;
 		color: darken(@blueGreen, 25%);
 		background-color: @blueGreen;
+	}
+}
+
+.wpcf7-form {
+	p {
+		display: inline;
+		margin: 0;
+	}
+
+	div.wpcf7-response-output {
+		margin-top: 0 !important;
+	}
+
+	span.wpcf7-not-valid-tip {
+		top: 30px;
+		left: 20px;
+		width: 195px;
+		color: @red;
+		background: transparent;
+		border: none;
 	}
 }
 

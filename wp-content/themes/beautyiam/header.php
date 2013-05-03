@@ -75,7 +75,7 @@
 			<div id="support-group">
 				<div class="container">
 					<div id="sg-tab" class="pull-right">
-						<span><a href="#open">Artist Converge Group <img src="<?php bloginfo( 'template_directory' ); ?>/img/chevron.png" alt="Chevron"></a></span>
+						<span><a href="#open">Artist Support Group <img src="<?php bloginfo( 'template_directory' ); ?>/img/chevron.png" alt="Chevron"></a></span>
 					</div>
 				</div>
 			</div>
@@ -94,7 +94,7 @@
 					
 					<div class="row">
 						<div class="span3">
-							<h3 class="sans">Artist<br>Converge<br>Group</h1>
+							<h3 class="sans">Artist<br>Support<br>Group</h1>
 						</div>
 						
 						<div id="group-quote" class="span3">

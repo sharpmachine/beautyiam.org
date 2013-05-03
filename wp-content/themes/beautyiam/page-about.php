@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section id="about" class="page">
-	<?php  get_template_part( 'loop', 'page' ); ?>
+	<?php get_template_part( 'loop', 'page' ); ?>
 	
 	<!-- <div id="about-one">
 		<div class="container">
@@ -16,7 +16,21 @@
 					<div class="plus">+</div>
 					<div id="line-four">obsessive screenplay writer.</div>
 					<div id="line-five"><p>We are a group of people pursing various careers in Hollywood.</p></div>
-					<div id="line-six" class="serif">we are too <span class="sans">&nbsp;&nbsp;blond&nbsp;&nbsp;</span>.</div>
+					
+					<div id="line-six" class="serif">we are too<span class="sans">&nbsp;&nbsp;blond&nbsp;&nbsp;</span> 
+						<div class="anyClass">
+							<ul class="sans">
+								<li>fat</li>
+								<li>thin</li>
+								<li>tall</li>
+								<li>short</li>
+								<li>blond</li>
+								<li>young</li>
+								<li>old</li>
+							</ul>
+						</div>.
+					</div>
+					
 					<div id="line-seven" class="text-right">(You name it)</div>
 					<p class="span10 offset1">We've all experienced first-hand the pressure and scrutiny that it takes to pursue a career in Hollywood.<br>  We've been told we're too fat, too thin, too tall, too short, too blonde, too sharp, too flat, too young, too old.</p>
 					<div class="clearfix"></div>
@@ -46,7 +60,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
 	<div id="about-offerings" class="container">
 		<div class="row">
@@ -65,7 +79,7 @@
 				<h1 class="serif">We are Beauty <span class="i-am">i am</span>.</h1>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	
 	<?php rewind_posts(); ?>
 	<div id="team" class="container">

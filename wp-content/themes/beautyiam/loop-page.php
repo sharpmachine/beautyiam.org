@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div id="post-<?php the_ID(); ?>">
 		<?php if ( is_front_page() ) { ?>
 			<h2 class="entry-title hide"><?php the_title(); ?></h2>
 		<?php } else { ?>

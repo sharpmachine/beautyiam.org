@@ -100,4 +100,12 @@ jQuery(document).ready(function($) {
 
 	//Too cycle
 	$("ul#testy").cycleThru({delay: 1000});
+
+	$('form.wpcf7-form').addClass('form-inline');
+
+	 $(".too").jCarouselLite({
+        vertical: true,
+        auto: 1000,
+        // visible: 1
+    });
 });

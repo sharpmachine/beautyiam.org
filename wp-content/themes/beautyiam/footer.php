@@ -39,6 +39,7 @@
 	<script src="<?php bloginfo('template_directory'); ?>/js/waypoint.min.js"></script>
 	<script src="http://charles-harvey.co.uk/plugins/cycleThru/js/jquery.cycleThru.js"></script>
 	<script src="https://raw.github.com/imsky/holder/master/holder.js"></script>
+	<script src="http://www.gmarwaha.com/jquery/jcarousellite/js/jcarousellite_1.0.1.min.js"></script>
 
 
 	<!-- scripts concatenated and minified via ant build script-->
@@ -78,7 +79,7 @@
 
  			});
 
- 			
+
 
  		// 	$('body').on('animated.slides', function() {
 			//   if ($('li.white-bg').hasClass('current')) {
