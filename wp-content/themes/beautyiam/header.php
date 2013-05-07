@@ -62,7 +62,7 @@
 			<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 	</head>
 
-	<body <?php body_class(); ?> data-spy="scroll" data-target="#classes-menu">
+	<body <?php body_class(); ?> data-spy="scroll" data-target="#classes-menu" data-offset="590">
 	
 	<header>
 		
@@ -120,21 +120,6 @@
 				</div>
 			</div>
 		</div><!-- #support-group-bar -->
-		
-		<!-- <div id="secret-nav">
-			<nav>
-				<div class="container">
-					<div class="row">
-						<div id="small-logo" class="span2">
-							<a href="<?php bloginfo( 'url' ); ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/img/small-logo.png" alt="Logo"></a>
-						</div>
-						<div class="span10">
-							<?php wp_nav_menu( array( 'container' => false, 'menu_class' => 'secret-nav inline pull-right', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</div> --><!-- #secret-nav -->
 	
 		<div id="top-nav" class="navbar navbar-static-top">
 			<div class="navbar-inner">

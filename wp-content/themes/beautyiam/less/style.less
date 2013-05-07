@@ -255,9 +255,12 @@ form.form-inline {
 		}
 	}
 
-	&.btn-cat-meals {
-		span.icon {
-			background: url(../img/cutlery-icon-btn.png) no-repeat center center;
+	&.btn-cat {
+		color: darken(@blueGreen, 20%);
+		background-color: @blueGreen;
+
+		.icon {
+			display: none;
 		}
 	}
 
@@ -1032,7 +1035,7 @@ h1.page-title {
 	padding: 40px 0 50px 0;
 	background-color: @white;
 
-	.posts {
+	.post {
 		width: 100%;
 
 		.span6 {
@@ -1041,7 +1044,7 @@ h1.page-title {
 	}
 }
 
-.posts {
+.post {
 	width: 670px;
 	padding: 30px 0;
 	border-bottom: 1px solid @grayLight;
@@ -1061,6 +1064,7 @@ h1.page-title {
 }
 
 .post-category-icon {
+	visibility: hidden;
 	position: relative;
 	z-index: 1;
 	float: right;
@@ -1086,8 +1090,8 @@ h1.page-title {
 
 .post-twitter {
 	margin-top: 20px;
+	padding-left: 25px;
 	background: url(../img/blue-twitter.png) no-repeat left center;
-	text-align: right;
 }
 
 .post-details {
@@ -1187,23 +1191,88 @@ h1.page-title {
 
 /*..................................the categories */
 //Meals 
-.category-meals {
+.category-fitness {
 	.post-category-icon {
+		visibility: visible;
+		background: url(../img/small-runner-icon.png) no-repeat center center @royalPurple;
+	}
+
+	h1 a {
+		color: @royalPurple;
+	}
+
+	.btn-cat {
+		color: darken(@royalPurple, 5%);
+		background-color: @royalPurple;
+
+		.icon {
+			display: block;
+			background: url(../img/small-runner-icon-cat.png) no-repeat center center;
+		}
+	}
+}
+
+.category-wellness {
+	.post-category-icon {
+		visibility: visible;
 		background: url(../img/small-cutlery-icon.png) no-repeat center center @calypso;
 	}
 
 	h1 a {
 		color: @calypso;
 	}
+
+	.btn-cat {
+		color: darken(@calypso, 10%);
+		background-color: @calypso;
+
+		.icon {
+			display: block;
+			background: url(../img/cutlery-icon-btn.png) no-repeat center center;
+		}
+	}
 }
 
-.category-fitness {
+.category-spirit-care {
 	.post-category-icon {
-		background: url(../img/small-runner-icon.png) no-repeat center center @royalPurple;
+		visibility: visible;
+		background: url(../img/small-heart-icon.png) no-repeat center center darken(@cream, 25%);
 	}
 
 	h1 a {
-		color: @royalPurple;
+		color: darken(@cream, 25%);
+	}
+
+	.btn-cat {
+		color: darken(@cream, 45%);
+		background-color: darken(@cream, 25%);
+
+		.icon {
+			display: block;
+			background: url(../img/small-heart-icon-cat.png) no-repeat center center;
+		}
+	}
+}
+
+.category-counseling {
+	.post-category-icon {
+		visibility: visible;
+		background: url(../img/small-bubble-icon.png) no-repeat center center @princessPink;
+	}
+
+	h1 a {
+		color: @princessPink;
+	}
+
+	.btn-cat {
+		color: darken(@princessPink, 10%);
+		background-color: @princessPink;
+
+		.icon {
+			display: block;
+			width: 8px;
+			background: url(../img/small-bubble-icon-cat.png) no-repeat center center;
+		}
 	}
 }
 
@@ -1299,6 +1368,24 @@ hr {
 			}
 		}
 	}
+
+	.active {
+		#class-fitness {
+			background: url(../img/classes-fitness-active.png) no-repeat center 3px;
+		}
+
+		#class-wellness {
+			background: url(../img/classes-wellness-active.png) no-repeat center 3px;
+		}
+
+		#class-spirit {
+			background: url(../img/classes-spirit-active.png) no-repeat center 3px;
+		}
+
+		#class-counsel {
+			background: url(../img/classes-counsel-active.png) no-repeat center 3px;
+		}
+	}
 }
 
 #fitness {
@@ -1367,7 +1454,6 @@ hr {
 }
 
 .class-section {
-	// margin-top: 290px;
 	padding: 50px 0;
 
 	&:last-child {
@@ -1390,7 +1476,7 @@ hr {
 .classes {
 
 	h2 {
-		line-height: 1.5;
+		line-height: 1;
 		font-size: 55px;
 	}
 

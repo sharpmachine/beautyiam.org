@@ -1,38 +1,42 @@
 <?php get_header(); ?>
 
 <div class="page">
-	<article id="classes-menu" data-spy="affix" data-offset-top="200">
+	<div id="classes-menu" data-spy="affix" data-offset-top="200">
 		<div class="container">
 			<div class="row">
-			
-				<div class="span3">
-					<a href="#fitness" id="class-fitness">
-						<span>Fitness</span>
-					</a>
-				</div>
+				<ul class="nav">
 				
-				<div class="span3">
-					<a href="#wellness" id="class-wellness">
-						<span>Wellness</span>
-					</a>
-				</div>
-				<div class="span3">
-					<a href="#spirit" id="class-spirit">
-						<span>Spirit</span>
-					</a>
-				</div>
-				<div class="span3">
-					<a href="#counsel" id="class-counsel">
-						<span>Counsel</span>
-					</a>
-				</div>
+					<li class="span3 active">
+						<a href="#fitness" id="class-fitness">
+							<span>Fitness</span>
+						</a>
+					</li>
+					
+					<li class="span3">
+						<a href="#wellness" id="class-wellness">
+							<span>Wellness</span>
+						</a>
+					</li>
+					
+					<li class="span3">
+						<a href="#spirit" id="class-spirit">
+							<span>Spirit</span>
+						</a>
+					</li>
+					
+					<li class="span3">
+						<a href="#counsel" id="class-counsel">
+							<span>Counsel</span>
+						</a>
+					</li>
+					
+				</ul>
 			</div>
 			
 		</div>
-	</article>
+	</div>
 
-
-	<section id="fitness" class="class-section">
+	<div id="fitness" class="class-section">
 		<div class="container">
 		
 		<?php query_posts("post_type=classes&classes_category=fitness"); ?>
@@ -61,9 +65,9 @@
 		<?php endwhile; endif; ?>
 			
 		</div>
-	</section>
+	</div>
 	
-	<section id="wellness" class="class-section">
+	<div id="wellness" class="class-section">
 		<div class="container">
 		
 			<?php query_posts("post_type=classes&classes_category=wellness"); ?>
@@ -92,9 +96,9 @@
 		<?php endwhile; endif; ?>
 			
 		</div>
-	</section>
+	</div>
 	
-	<section id="spirit" class="class-section">
+	<div id="spirit" class="class-section">
 		<div class="container">
 		
 			<?php query_posts("post_type=classes&classes_category=spirit"); ?>
@@ -123,9 +127,9 @@
 		<?php endwhile; endif; ?>
 			
 		</div>
-	</section>
+	</div>
 	
-	<section id="counsel" class="class-section">
+	<div id="counsel" class="class-section">
 		<div class="container">
 		
 			<?php query_posts("post_type=classes&classes_category=counsel"); ?>
@@ -161,7 +165,7 @@
 		<?php endwhile; endif; ?>
 			
 		</div>
-	</section>
+	</div>
 	
 </div><!-- .page -->
 <?php get_footer(); ?>

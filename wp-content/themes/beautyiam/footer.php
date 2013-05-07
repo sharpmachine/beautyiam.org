@@ -40,6 +40,8 @@
 	<script src="http://charles-harvey.co.uk/plugins/cycleThru/js/jquery.cycleThru.js"></script>
 	<script src="https://raw.github.com/imsky/holder/master/holder.js"></script>
 	<script src="http://www.gmarwaha.com/jquery/jcarousellite/js/jcarousellite_1.0.1.min.js"></script>
+	<script src="https://raw.github.com/flesler/jquery.scrollTo/master/jquery.scrollTo.min.js"></script>
+    <script src="https://raw.github.com/sharpmachine/treasurehunt/master/js/nav.js"></script>
 
 
 	<!-- scripts concatenated and minified via ant build script-->
@@ -79,7 +81,9 @@
 
  			});
 
+ 			$('#classes-menu').onePageNav();
 
+ 			// $('#classes-menu').scrollspy();
 
  		// 	$('body').on('animated.slides', function() {
 			//   if ($('li.white-bg').hasClass('current')) {

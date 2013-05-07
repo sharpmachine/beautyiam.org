@@ -1,20 +1,23 @@
 
-<div class="posts category-meals">
+<div <?php post_class(); ?>>
 	<div class="row">
 	
 		<div class="span2 author-headshot">
 			<div class="post-category-icon"></div>
-			<img src="<?php bloginfo( 'template_directory' ); ?>/img/ashton-headshot.png" class="img-circle" alt="Ashton Roark">
+			<?php echo get_avatar( get_the_author_email(), '150' ); ?>
 			<div class="post-author">
 				<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
 			</div>
 			<?php if(is_single( )): ?>
 			<div class="full-profile">
-				<a href="" class="btn btn-black">Full Profile</a>
+				<a href="<?php bloginfo( 'url' ); ?>/team/<?php the_author_meta( 'first_name' ); ?>-<?php the_author_meta( 'last_name' ); ?>" class="btn btn-black">Full Profile</a>
+				 
 			</div>
+			<?php if(get_the_author_meta('twitter')): ?>
 			<div class="post-twitter">
 				<a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>">@<?php the_author_meta( 'twitter' ); ?></a>
 			</div>
+			<?php endif; ?>
 			<?php endif; ?>
 		</div>
 		
@@ -49,9 +52,10 @@
 			<div id="all-in-cat">
 				<?php $category = get_the_category(); 
 				echo '
-					<a href="'.get_category_link($category[0]->cat_ID).'" class="btn btn-blue btn-cat-meals pull-right">
+					<a href="'.get_category_link($category[0]->cat_ID).'" class="btn btn-blue btn-cat pull-right">
 						<span class="icon"></span> 
-						<span class="btn-label">All articles in <span class="line2">category</span></span>
+						<span class="btn-label">All articles in</span>
+						<span class="line2">category</span>
 					</a>
 				'; ?>
 			</div>

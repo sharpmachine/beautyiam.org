@@ -187,11 +187,11 @@
 <article id="blog">
 	<div class="container">
 		<h2>Lastest Articles:</h2>
-		<?php query_posts( 'posts_per_page=2' ) ?>
+		<?php query_posts( 'posts_per_page=3' ) ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'loop', 'blog' ); ?>
 		<?php endwhile; endif; ?>
-		
+		<h3 class="text-right"><a href="<?php bloginfo( 'url' ); ?>/blog">See all blog posts &rarr;</a></h3>
 	</div>
 </article>
 
