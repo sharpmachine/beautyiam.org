@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-		<section id="page" class="span8">
+<section>
+	<div class="container">
 
 <?php
 	/* Queue the first post, that way we know
@@ -13,17 +14,8 @@
 		the_post();
 ?>
 
-		<h1 class="page-title">
-<?php if ( is_day() ) : ?>
-			<?php printf( __( 'Daily Archives: <span>%s</span>', 'smm' ), get_the_date() ); ?>
-<?php elseif ( is_month() ) : ?>
-			<?php printf( __( 'Monthly Archives: <span>%s</span>', 'smm' ), get_the_date( 'F Y' ) ); ?>
-<?php elseif ( is_year() ) : ?>
-			<?php printf( __( 'Yearly Archives: <span>%s</span>', 'smm' ), get_the_date( 'Y' ) ); ?>
-<?php else : ?>
-			<?php _e( 'Blog Archives', 'smm' ); ?>
-<?php endif; ?>
-		</h1>
+		<h1 class="serif page-title">Offsite Instructors</h1>
+		<h4 class=""><?php echo get_the_term_list( $post->ID, 'instuctor_tags', '', ', ', '' ); ?></h4>
 
 <?php
 	/* Since we called the_post() above, we need to
@@ -36,10 +28,42 @@
 	 * If you want to overload this in a child theme then include a file
 	 * called loop-archive.php and that will be used instead.
 	 */
-	 get_template_part( 'loop', 'archive' );
+	
 ?>
+		<h4><?php echo $tax_term->name; // Group name (taxonomy) ?></h4>
 
-		</section><!-- #page -->
-
-<?php get_sidebar(); ?>
+		<div class="row offsite-instructors">
+			<div class="span12">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th class="oi-cat"></th>
+							
+							<th>Instructor</th>
+							<th>Phone Number</th>
+							<th>Area</th>
+							<th>Email Address</th>
+						</tr>
+					</thead>
+					<tbody>
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<tr>
+							<td class="oi-cat"></td>
+							<td><?php the_title(); ?></td>
+							<td><?php the_field('instructor_phone_number'); ?></td>
+							<td><?php the_field('instructor_area'); ?></td>
+							<td><a href="mailto:<?php the_field('instructor_email'); ?>"><?php the_field('instructor_email'); ?></a></td>
+						</tr>
+					<?php endwhile; ?>
+					</tbody>
+					</table>		
+				</div>
+			</div>
+	<?php else: ?>
+	<!-- no posts found -->
+	<?php endif; ?>
+		<hr>
+		<h3 class=""><a href="<?php bloginfo( 'url' ); ?>/offsite-instructors">&larr; Full Instructor Listing</a></h3>
+	</div>
+</section><!-- #page -->
 <?php get_footer(); ?>

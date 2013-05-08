@@ -10,166 +10,70 @@
 		</div>
 		
 <?php
-$taxonomyName = "instructor_category";
-$terms = get_terms($taxonomyName, array('parent' => 0, 'orderby' => 'slug', 'hide_empty' => false));  
-// $terms = get_terms('instructor_category', array( 'parent' => 0 ));
-// $children = get_terms($taxonomyName, array('parent' => $term->term_id, 'orderby' => 'slug', 'hide_empty' => false)); 
+    // Get current Category
+    $get_current_cat = get_term_by('name', single_cat_title('',false), 'category');
+    $current_cat = $get_current_cat->term_id;
 
-foreach ($terms as $term) {
-	$children = get_terms($taxonomyName, array('parent' => $term->term_id, 'orderby' => 'slug', 'hide_empty' => false));
+    // List posts by the terms for a custom taxonomy of any post type
+    $post_type = 'offsite_instructors';
+    $tax = 'instructor_category';
+    $tax_terms = get_terms( $tax, 'orderby=name&order=ASC');
+    if ($tax_terms) {
+        foreach ($tax_terms  as $tax_term) {
+            $args = array(
+                'post_type'         => $post_type,
+                'parent'			=> 0,
+                "$tax"              => $tax_term->slug,
+                'post_status'       => 'publish',
+                'posts_per_page'    => -1,
+                'category__in'      => $current_cat // Only posts in current category (category.php)
+            );
 
-  $wpq = array ('taxonomy'=> $taxonomyName,'term'=>$term->slug);
-  $myquery = new WP_Query ($wpq);
-  $article_count = $myquery->post_count;
-  echo "<h3 class=\"term-heading\" id=\"".$term->slug."\">";
-  echo $term->name;
-  echo "</h3>";
-  if ($article_count) {
-    echo "<ul>";
-    while ($myquery->have_posts()) : $myquery->the_post();
-      echo "<li><a href=\"".get_permalink()."\">".the_title()."</a></li>";
-      // echo $children->name;
-    endwhile;
-    echo "</ul>";
-  }
-}
+            $my_query = null;
+            $my_query = new WP_Query($args);
+
+            if( $my_query->have_posts() ) : ?>
+
+                <h4><?php echo $tax_term->name; // Group name (taxonomy) ?></h4>
+                
+                <div class="row offsite-instructors">
+					<div class="span12">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th class="oi-cat"></th>
+									<th>Type</th>
+									<th>Instructor</th>
+									<th>Phone Number</th>
+									<th>Area</th>
+									<th>Email Address</th>
+								</tr>
+							</thead>
+							<tbody>
+
+		                <?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+		                    <?php $term_list = wp_get_post_terms($post->ID, 'category', array("fields" => "ids")); // Get post categories IDs?>
+
+								<tr>
+									<td class="oi-cat"></td>
+									<td class="oi-type"><?php echo get_the_term_list( $post->ID, 'instuctor_tags', '', ', ', '' ); ?></td>
+									<td><?php the_title(); ?></td>
+									<td><?php the_field('instructor_phone_number'); ?></td>
+									<td><?php the_field('instructor_area'); ?></td>
+									<td><a href="mailto:<?php the_field('instructor_email'); ?>"><?php the_field('instructor_email'); ?></a></td>
+								</tr>
+
+		                <?php endwhile; // end of loop ?>
+		                	</tbody>
+						</table>		
+					</div>
+				</div>
+            <?php endif; // if have_posts()
+            wp_reset_query();
+        } // end foreach #tax_terms
+    } // end if tax_terms
 ?>
-<hr>
-<?php 
 
-$taxonomyName = "instructor_category";
-//This gets top layer terms only.  This is done by setting parent to 0.  
-$parent_terms = get_terms($taxonomyName, array('parent' => 0, 'orderby' => 'slug', 'hide_empty' => false));   
-echo '<ul>';
-foreach ($parent_terms as $pterm) {
-    //Get the Child terms
-    $terms = get_terms($taxonomyName, array('parent' => $pterm->term_id, 'orderby' => 'slug', 'hide_empty' => false));
-    // $terms = get_term_children( $pterm->term_id, $taxonomyName );
-    foreach ($terms as $term) {
-        echo '<li><a href="' . get_term_link( $term->name, $taxonomyName ) . '">' . $term->name . '</a></li>';  
-    }
-}
-echo '</ul>';
-
-?>
-
-		
-		
-		<?php query_posts(array('post_type' => 'offsite_instructors', 'instructor_category' => $term->slug ) ); ?>
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<?php the_title(); ?>
-			<?php the_field('instructor_phone_number'); ?>
-			<?php the_field('instructor_area'); ?>
-			<?php the_field('instructor_email'); ?>
-			<br>
-		<?php endwhile; ?>
-	
-		<?php else: ?>
-	
-		<?php endif; ?>
-		
-		<div class="row offsite-instructors">
-			<div class="span12">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th class="oi-cat"></th>
-							<th>Type</th>
-							<th>Instructor</th>
-							<th>Phone Number</th>
-							<th>Area</th>
-							<th>Email Address</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="oi-cat">Music</td>
-							<td class="oi-type">Voice</td>
-							<td>Samantda Zeitders</td>
-							<td>323.546.8535</td>
-							<td>Pasadena</td>
-							<td>sam33@gmail.com</td>
-						</tr>
-						<tr>
-							<td class="oi-cat"></td>
-							<td class="oi-type">Voice</td>
-							<td>Samantda Zeitders</td>
-							<td>323.546.8535</td>
-							<td>Pasadena</td>
-							<td>sam33@gmail.com</td>
-						</tr>
-						<tr>
-							<td class="oi-cat"></td>
-							<td class="oi-type">Voice</td>
-							<td>Samantda Zeitders</td>
-							<td>323.546.8535</td>
-							<td>Pasadena</td>
-							<td>sam33@gmail.com</td>
-						</tr>
-						<tr>
-							<td class="oi-cat"></td>
-							<td class="oi-type">Voice</td>
-							<td>Samantda Zeitders</td>
-							<td>323.546.8535</td>
-							<td>Pasadena</td>
-							<td>sam33@gmail.com</td>
-						</tr>
-					</tbody>
-				</table>		
-			</div>
-		</div>
-		
-		<div class="row offsite-instructors">
-			<div class="span12">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th class="oi-cat"></th>
-							<th>Type</th>
-							<th>Instructor</th>
-							<th>Phone Number</th>
-							<th>Area</th>
-							<th>Email Address</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="oi-cat">Music</td>
-							<td class="oi-type">Voice</td>
-							<td>Samantda Zeitders</td>
-							<td>323.546.8535</td>
-							<td>Pasadena</td>
-							<td>sam33@gmail.com</td>
-						</tr>
-						<tr>
-							<td class="oi-cat"></td>
-							<td class="oi-type">Voice</td>
-							<td>Samantda Zeitders</td>
-							<td>323.546.8535</td>
-							<td>Pasadena</td>
-							<td>sam33@gmail.com</td>
-						</tr>
-						<tr>
-							<td class="oi-cat"></td>
-							<td class="oi-type">Voice</td>
-							<td>Samantda Zeitders</td>
-							<td>323.546.8535</td>
-							<td>Pasadena</td>
-							<td>sam33@gmail.com</td>
-						</tr>
-						<tr>
-							<td class="oi-cat"></td>
-							<td class="oi-type">Voice</td>
-							<td>Samantda Zeitders</td>
-							<td>323.546.8535</td>
-							<td>Pasadena</td>
-							<td>sam33@gmail.com</td>
-						</tr>
-					</tbody>
-				</table>		
-			</div>
-		</div>
-		
 	</div>
 </section><!-- #page -->
 <?php get_footer(); ?>
