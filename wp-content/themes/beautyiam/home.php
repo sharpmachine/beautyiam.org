@@ -61,30 +61,18 @@
 <article id="headlines">
 	<div class="container">
 	
+	<?php while(the_repeater_field('headlines', 'options')): ?>
+	
 		<h1>
-			<a href="#">
-				<span class="headline">Turbo Kick</span>
-				<span class="sub-headline">Get Fighting Fit</span>
+			<a href="<?php the_sub_field('headline_link', 'options'); ?>">
+				<span class="headline"><?php the_sub_field('headline', 'options'); ?></span>
+				<span class="sub-headline"><?php the_sub_field('subheadline', 'options'); ?></span>
 			</a>
 		</h1>
 		
 		<br>
 		
-		<h1>
-			<a href="#">
-				<span class="headline">Nutrition Workshop</span>
-				<span class="sub-headline">Feed Your Body</span>
-			</a>
-		</h1>
-		
-		<br>
-		
-		<h1>
-			<a href="#">
-				<span class="headline">dream interpretation</span>
-				<span class="sub-headline">take care of your spirit</span>
-			</a>
-		</h1>
+	<?php endwhile; ?>
 		
 	</div>
 </article>
@@ -105,7 +93,7 @@
 		        			<div class="span9 offset2">
 		        				<h3 class="sans class-cat">Fitness</h3>
 			         			<h1 class="serif">Get Fighting Fit</h1>
-			         			<a href="#" class="">Read more.</a>
+			         			<a href="<?php bloginfo( 'url' ); ?>/classes/#fitness" class="">Read more.</a>
 		        			</div>
 		        		</div>
 		        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/woman-runner.png" class="preserve layer-img module" alt="Woman runner">
@@ -114,10 +102,10 @@
 		    </li>
 		     
 		    <!-- Wellness -->
-		    <li class="calypso-bg">
+		    <li class="white-bg">
 		        <div class="container">
 		          	<div id="slide-classes2" class="inner-slide">
-		          		<img src="<?php bloginfo('template_directory'); ?>/img/table-top.jpg" class="slide-bg" alt="Purple haze">
+		          		<!-- <img src="<?php bloginfo('template_directory'); ?>/img/table-top.jpg" class="slide-bg" alt="Purple haze"> -->
 		          		<img src="<?php bloginfo( 'template_directory' ); ?>/img/broccoli.jpg" class="preserve broccoli" alt="Broccoli">
 		        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/lemon.png" class="preserve lemon" alt="Lemons">
 			         	<div class="row">
@@ -127,7 +115,7 @@
 		        			<div class="span10 offset2">
 		        				<h3 class="sans class-cat">Wellness</h3>
 			         			<h1 class="serif">Feed the Body</h1>
-			         			<a href="#">Read more.</a>
+			         			<a href="<?php bloginfo( 'url' ); ?>/classes/#wellness">Read more.</a>
 		        			</div>
 		        		</div>
 		        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/tomatoes.png" class="preserve tomatoes" alt="Tomatoes">
@@ -147,7 +135,7 @@
 		        			<div class="span10 offset2">
 		        				<h3 class="sans class-cat">Spirit Care</h3>
 			         			<h1 class="serif">Manage <span>the Inside</span></h1>
-			         			<a href="#">Read more.</a>
+			         			<a href="<?php bloginfo( 'url' ); ?>/classes/#spirit">Read more.</a>
 		        			</div>
 		        		</div>
 					</div><!-- .inner-slide -->
@@ -166,7 +154,7 @@
 		        			<div class="span10 offset2">
 		        				<h3 class="sans class-cat">Counseling</h3>
 			         			<h1 class="serif">Get Savvy</h1>
-			         			<a href="">Read more.</a>
+			         			<a href="<?php bloginfo( 'url' ); ?>/classes/#counsel">Read more.</a>
 		        			</div>
 		        		</div>
 					</div><!-- .inner-slide -->
@@ -193,6 +181,12 @@
 		<?php endwhile; endif; ?>
 		<h3 class="text-right"><a href="<?php bloginfo( 'url' ); ?>/blog">See all blog posts &rarr;</a></h3>
 	</div>
+</article>
+
+<article id="featured-artist" style="background-color:<?php the_field('background_color', 'options'); ?>;display:none;">
+	<h3><?php the_field('fa_headline', 'options'); ?></h3>
+	<h2><?php the_field('fa_first_name', 'options'); ?> <?php the_field('fa_last_name', 'options'); ?></h2>
+	<img src="<?php the_field('fa_image', 'options'); ?>" alt="">
 </article>
 
 <?php get_footer(); ?>

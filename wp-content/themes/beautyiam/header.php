@@ -94,23 +94,23 @@
 						
 						<div id="group-quote" class="span3">
 							<div class="serif">
-								"This group has changed my life."
-								<span class="sans">- Tiffany</span>
+								"<?php the_field('asg_positive_experience_quote', 'options'); ?>"
+								<span class="sans">- <?php the_field('asg_quotees_first_name', 'options'); ?></span>
 							</div>
 						</div>
 						
 						<div id="group-details" class="span5 pull-right">
 							<div id="location-notice" class="sans">Location confirmed each week.</div>
-							<div class="serif">Every 3rd Sunday</div>
-							<div class="serif">7:00pm-9:00pm</div>
+							<div class="serif"><?php the_field('asg_day', 'options'); ?></div>
+							<div class="serif"><?php the_field('asg_time', 'options'); ?></div>
 							<div id="this-week" class="sans">This week we meet at:</div>
-							<div class="serif">Bella's Ballet Studio</div>
+							<div class="serif"><?php the_field('asg_location', 'options'); ?></div>
 						</div>
 					</div>
 					
 					<div class="row">
 						<div id="directions-btn" class="span3 pull-right">
-							<a href="#" class="btn btn-pink btn-directions">
+							<a href="http://maps.google.com/maps?saddr=&daddr=<?php the_field('asg_street_address', 'options'); ?>" class="btn btn-pink btn-directions">
 								<span class="icon"></span> 
 								<span class="btn-label">I want <span class="line2">directions</span></span>
 							</a>

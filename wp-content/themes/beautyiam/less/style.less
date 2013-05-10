@@ -289,6 +289,11 @@ table.table {
 }
 
 /*..................................the backgrounds */
+.white-bg {
+	// color: @white;
+	background-color: @white;
+}
+
 .purple-bg {
 	color: @white;
 	background-color: @royalPurple;
@@ -564,7 +569,9 @@ body.home {
 #models {
 	height: 100%;
 	margin-top: -215px;
-	margin-bottom: -425px;
+	// margin-bottom: -425px;
+	// margin-bottom: -310px;
+	margin-bottom: -330px;
 }
 
 #models-slides {
@@ -631,9 +638,11 @@ body.home {
 	h1 {
 		position: relative;
 		display: inline-block;
-		padding: 5px 20px 5px 0;
+		// padding: 5px 20px 5px 0;
+		padding: 3px 20px 3px 0;
 		font-family: @sansFontFamily;
 		font-weight: 300;
+		line-height: 1;
 		text-transform: uppercase;
 		background-color: rgba(0,0,0,0.5);
 
@@ -658,12 +667,15 @@ body.home {
 
 		.headline {
 			display: block;
-			margin-bottom: -15px;
-			font-size: 42px;
+			// margin-bottom: -15px;
+			margin-bottom: -28px;
+			// font-size: 42px;
+			font-size: 32px;
 		}
 
 		.sub-headline {
-			font-size: 24px;
+			// font-size: 24px;
+			font-size: 16px;
 		}
 	}
 }
@@ -1187,6 +1199,14 @@ h1.page-title {
 	margin-bottom: 15px;
 	padding: 5px 0;
 	border-bottom: solid 1px @grayLight;
+}
+
+.pagination ul,
+.pagination ul>li:first-child>a, 
+.pagination ul>li:first-child>span,
+.pagination ul>li:last-child>a, 
+.pagination ul>li:last-child>span {
+	.border-radius(0);
 }
 
 /*..................................the categories */
@@ -2077,7 +2097,7 @@ img.aligncenter {
 .slides-pagination {
 	position: absolute;
 	z-index: 3;
-	bottom: 50px;
+	bottom: 70px;
 	text-align: center;
 	width: 100%;
 
@@ -2172,23 +2192,23 @@ img.aligncenter {
 
 
 @media (max-height: 768px) {
-	#models {
-		margin-bottom: -310px;
-	}
+	// #models {
+	// 	margin-bottom: -310px;
+	// }
 
-	#headlines h1 {
-		padding: 3px 20px 3px 0;
-		line-height: 1;
-	}
+	// #headlines h1 {
+	// 	padding: 3px 20px 3px 0;
+	// 	line-height: 1;
+	// }
 
-	#headlines h1 .headline {
-		margin-bottom: -28px;
-		font-size: 32px;
-	}
+	// #headlines h1 .headline {
+	// 	margin-bottom: -28px;
+	// 	font-size: 32px;
+	// }
 
-	#headlines h1 .sub-headline {
-		font-size: 16px;
-	}
+	// #headlines h1 .sub-headline {
+	// 	font-size: 16px;
+	// }
 }
 
 /*..................................the slide in effect */

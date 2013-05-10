@@ -46,10 +46,12 @@ jQuery(document).ready(function($) {
 
 	//Wellness slide
 	$("#slide-classes2 a").hover(function(){
+		$("li.white-bg").css("background-color", "#285775");
 		$("#slide-classes2 h1").css("color", "#000");
 		$("img.broccoli, img.lemon, img.tomatoes").addClass("hide");
 	},
 	function(){
+		$("li.white-bg").css("background-color", "#fff");
 		$("#slide-classes2 h1").css("color", "#285775");
 		$("img.broccoli, img.lemon, img.tomatoes").removeClass("hide");
 	});
