@@ -22,13 +22,13 @@ function help_dashboard_widget_function() {
 		
 		<ul style="width:40%;float:left;min-width:153px;">
 			<li style="color:#666;font-size:14px;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#DFDFDF;padding-bottom:5px;margin-bottom:10px;">Videos Specific To Your Site:</li>
-			<li><a href="#" target="_blank">Introduction to Your Website</a></li>
-			<li><a href="#" target="_blank">Homepage Options</a></li>
-			<li><a href="#" target="_blank">Managing Offsite Instructors</a></li>
-			<li><a href="#" target="_blank">Managing Team Members</a></li>
-			<li><a href="#" target="_blank">Managing Classes</a></li>
-			<li><a href="#" target="_blank">Managing the Contact &amp; Giving Pages</a></li>
-			<li><a href="#" target="_blank">Managing PayPal Buttons</a></li>
+			<li><a href="http://youtu.be/CzGNTgULgkw" target="_blank">Introduction to Your Website</a></li>
+			<li><a href="http://youtu.be/SOd5sz6_Bhk" target="_blank">Homepage Options</a></li>
+			<li><a href="http://youtu.be/wJW9CQt5IuE" target="_blank">Managing Offsite Instructors</a></li>
+			<li><a href="http://youtu.be/w85T55Q2OsQ" target="_blank">Managing Team Members</a></li>
+			<li><a href="http://youtu.be/SJJV4VGZxqA" target="_blank">Managing Classes</a></li>
+			<li><a href="http://youtu.be/lLS8EJeC11o" target="_blank">Managing the Contact &amp; Giving Pages</a></li>
+			<li><a href="http://www.youtube.com/watch?v=pWe_lJ6KKaY" target="_blank">Managing PayPal Buttons</a></li>
 			<li><a href="http://www.youtube.com/watch?v=IE_10_nwe0c" target="_blank">SEO Ultimate Tutorial</a></li>
 		</ul>
 		
