@@ -1275,11 +1275,12 @@ hr {
 	z-index: 9;
 	width: 100%;
 	height: 200px;
-	// margin-bottom: -335px;
 	padding: 25px 0;
 	background: url(../img/texture-lrg.jpg) center center @black;
 
 	&.affix-top {
+		position: relative;
+		z-index: 9999;
 		margin-bottom: -300px;
 	}
 
@@ -1355,7 +1356,7 @@ hr {
 }
 
 #all-classes {
-	margin-top: 300px;
+	// margin-top: 300px;
 }
 
 #fitness {
@@ -2023,6 +2024,7 @@ img.aligncenter {
   	}
 
   	&.next {
+  		margin-top: 35%;
   		right: -30px;
   	}
 }

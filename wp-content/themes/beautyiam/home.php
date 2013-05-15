@@ -163,11 +163,13 @@
 	      
 	    </ul><!-- .slides-container -->
 	    
-	    <nav class="slides-navigation2">
-	    	<div class="container">
+	    
+    	<div class="container">
+	    	<nav class="slides-navigation2">
 				<a href="#" class="next pull-right"><img src="<?php bloginfo( 'template_directory' ); ?>/img/arrow-right.png" alt="Right Arrow"></a>
-			</div>
-		</nav>
+			</nav>
+		</div>
+		
 		
 	</div><!-- #slides -->
 </article>
