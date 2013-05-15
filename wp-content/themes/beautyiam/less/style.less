@@ -41,7 +41,6 @@ body {
          url('../fonts/rosewood.svg#RosewoodStdRegular') format('svg');
 }
 
-
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 1;
@@ -366,64 +365,6 @@ header {
 	}
 }
 
-// #secret-nav {
-// 	position: absolute;
-// 	top: -65px;
-// 	z-index: 10;
-// 	width: 100%;
-// 	background-color: @white;
-
-// 	#small-logo {
-// 		margin-top: 15px;
-// 	}
-
-
-// 	nav {
-// 		position: relative;
-// 		z-index: 42;
-// 		width: 100%;
-// 		height: 100px;
-// 		background-color: @white;
-// 		.box-shadow(0px 1px 10px @grayDarker);
-
-// 		ul {
-// 			height: 100px;
-// 			margin: 0;
-
-// 			li {
-// 				height: 100%;
-
-// 				a {
-// 					display: block;
-// 					height: 100%;
-// 					padding: 0 30px;
-// 					font-size: 18px;
-// 					line-height: 110px;
-// 					color: @black;
-// 					text-transform: uppercase;
-
-// 					&:hover {
-// 						color: @blueGreen;
-// 						background-color: @grayLighter;
-// 						text-decoration: none;
-// 					}
-
-// 					&:last-child {
-// 						margin-right: -30px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-
-// 	.sticky {
-// 		position: fixed;
-// 		animation: thedrop 1s 1;
-// 		-moz-animation: thedrop 1s 1;
-// 		-webkit-animation: thedrop 1s 1;
-// 	}
-// }
-
 // The Support Group
 #support-group-details {
 	position: absolute;
@@ -569,8 +510,6 @@ body.home {
 #models {
 	height: 100%;
 	margin-top: -215px;
-	// margin-bottom: -425px;
-	// margin-bottom: -310px;
 	margin-bottom: -330px;
 }
 
@@ -638,7 +577,6 @@ body.home {
 	h1 {
 		position: relative;
 		display: inline-block;
-		// padding: 5px 20px 5px 0;
 		padding: 3px 20px 3px 0;
 		font-family: @sansFontFamily;
 		font-weight: 300;
@@ -647,6 +585,7 @@ body.home {
 		background-color: rgba(0,0,0,0.5);
 
 		a {
+			display: block;
 			color: @white;
 
 			&:hover {
@@ -667,22 +606,15 @@ body.home {
 
 		.headline {
 			display: block;
-			// margin-bottom: -15px;
 			margin-bottom: -28px;
-			// font-size: 42px;
 			font-size: 32px;
 		}
 
 		.sub-headline {
-			// font-size: 24px;
 			font-size: 16px;
 		}
 	}
 }
-
-// .slide-bg {
-// 	display: none;
-// }
 
 //Featured Classes
 #feature-classes {
@@ -690,9 +622,7 @@ body.home {
 	.slides-container2 {
 
 		.inner-slide {
-			// position: relative;
-			// margin-top: 300px;
-			margin-top: 28%;
+			margin-top: 27%;
 			margin-left: -10px;
 		}
 
@@ -735,12 +665,6 @@ body.home {
 
 		//Fitness
 		#slide-classes1 {
-
-			// &:hover {
-			// 	h1 {
-			// 		color: @black !important;
-			// 	}
-			// }
 
 			.class-titles {
 				left: 10px;
@@ -812,23 +736,30 @@ body.home {
 			.lemon,
 			.tomatoes {
 				position: absolute;
-				width: 50%;
+				// width: 50%;
 			}
 
 			.broccoli {
-				width: 25%;
-				top: 50px;
-				left: 590px;
+				// width: 25%;
+				// top: 50px;
+				top: 10%;
+				// left: 590px;
+				left: 50%;
 			}
 
 			.lemon {
-				top: 150px;
-				left: 290px;
+				// top: 150px;
+				top: 22%;
+				// left: 290px;
+				left: 30%;
 			}
 
 			.tomatoes {
-				bottom: 25px;
-				left: 285px;
+				// bottom: 25px;
+				// bottom: 3%;
+				top: 58%;
+				// left: 285px;
+				left: 28%;
 			}
 		}
 
@@ -886,7 +817,6 @@ body.home {
 			
 			h1 {
 				color: @princessPink;
-				// text-shadow: 6px 6px 5px rgba(0,0,0,0.4);
 				text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 			}
 
@@ -922,14 +852,6 @@ h1.page-title {
 
 .offsite-instructors table.table {
 	font-size: 18px;
-
-	thead {
-		// border-top: 1px solid @grayLighter;
-
-		th {
-			// padding-top: 25px;
-		}
-	}
 
 	td, th {
 		&.oi-cat {
@@ -1326,7 +1248,31 @@ hr {
 	top: 35px;
 }
 
+.class-section {
+	position: relative;
+	padding-top: 320px !important;
+	margin-top: -270px;
+
+	&:first-child {
+		z-index: 4;
+		margin-top: 0 !important;
+	}
+
+	&:nth-child(2) {
+		z-index: 3;
+	}
+
+	&:nth-child(3) {
+		z-index: 2;
+	}
+
+	&:last-child {
+		z-index: 1;
+	}
+}
+
 #classes-menu {
+	z-index: 9;
 	width: 100%;
 	height: 200px;
 	// margin-bottom: -335px;
@@ -1408,8 +1354,12 @@ hr {
 	}
 }
 
-#fitness {
+#all-classes {
 	margin-top: 300px;
+}
+
+#fitness {
+	// margin-top: 300px;
 	color: @white;
 	background-color: @royalPurple;
 
@@ -1456,11 +1406,13 @@ hr {
 	background-color: @princessPink;
 
 	a.btn {
+		color: darken(@princessPink, 15%);
 		background-color: @princessPink;
+
 		.icon {
-			width: 34px;
+			width: 8px;
 			height: 33px;
-			background: url(../img/icon-calendar-purple.png) no-repeat center center;
+			background: url(../img/pink-calendar.png) no-repeat center center;
 		}
 	}
 }
@@ -1523,7 +1475,7 @@ hr {
 }
 
 .class-instructor-name {
-	margin-top: 20px;
+	line-height: 60px;
 	font-weight: 200;
 	text-transform: uppercase;
 }
@@ -2044,7 +1996,7 @@ img.aligncenter {
   margin: 0 auto;
   position: relative;
   z-index: 3;
-  top: 48%;
+  top: 45%;
   width: 100%;
 }
 
@@ -2074,25 +2026,6 @@ img.aligncenter {
   		right: -30px;
   	}
 }
-
-// .slides-navigation a,
-// .slides-navigation2 a {
-//   position: absolute;
-//   display: block;
-// }
-// .slides-navigation a.prev,
-// .slides-navigation2 a.prev {
-//   left: 0;
-// }
-// .slides-navigation a.next,
-// .slides-navigation2 a.next {
-//   right: 0;
-// }
-
-// .slides-navigation a.next,
-// .slides-navigation2 a.next {
-//   right: 0;
-// }
 
 .slides-pagination {
 	position: absolute;
@@ -2134,18 +2067,14 @@ img.aligncenter {
 .slides-pagination2 {
   position: absolute;
   z-index: 3;
-  // top: 250px;
   bottom: 50px;
   text-align: center;
   width: 100%;
 
 	a {
-		// border: 2px solid @white;
-		// border-radius: 15px;
 		width: 55px;
 		height: 3px;
 		display: inline-block;
-		// margin: 2px;
 		background-color: @grayDark;
 
 		&.current {
@@ -2168,47 +2097,6 @@ img.aligncenter {
 			}
 		}
 	}
-}
-
-// .slides-pagination a.current {
-//   background: @white;
-
-//   &:first-child {
-//   	background: @cream;
-//   }
-
-//   &:nth-child(2) {
-//   	background: @blueGreen;
-//   }
-
-//   &:nth-child(3) {
-//   	background: @royalPurple;
-//   }
-
-//   &:nth-child(4) {
-//   	background: @princessPink;
-//   }
-// }
-
-
-@media (max-height: 768px) {
-	// #models {
-	// 	margin-bottom: -310px;
-	// }
-
-	// #headlines h1 {
-	// 	padding: 3px 20px 3px 0;
-	// 	line-height: 1;
-	// }
-
-	// #headlines h1 .headline {
-	// 	margin-bottom: -28px;
-	// 	font-size: 32px;
-	// }
-
-	// #headlines h1 .sub-headline {
-	// 	font-size: 16px;
-	// }
 }
 
 /*..................................the slide in effect */

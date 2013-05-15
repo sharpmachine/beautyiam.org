@@ -35,7 +35,7 @@
 			
 		</div>
 	</div>
-
+<div id="all-classes">
 	<div id="fitness" class="class-section">
 		<div class="container">
 		
@@ -150,8 +150,9 @@
 					<div class="span3 add-to-calendar">
 						<a href="mailto:info@beautyiam.org?subject=Counseling session" class="btn">
 							<span class="icon"></span>
-							<span class="btn-label">Book a</span>
-							<span class="line2">Session</span>
+							<span class="btn-label">Book a
+								<span class="line2">Session</span>
+							</span>
 						</a>
 					</div>
 				</div>
@@ -166,6 +167,6 @@
 			
 		</div>
 	</div>
-	
+</div><!-- #all-classes -->
 </div><!-- .page -->
 <?php get_footer(); ?>

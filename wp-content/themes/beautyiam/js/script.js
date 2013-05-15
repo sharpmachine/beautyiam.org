@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
 		$("#slide-classes4 h1").css({"color": "#000", "text-shadow": "none"});
 	},
 	function(){
-		$("#slide-classes4 h1").css({"color": "#d086a7", "text-shadow": "6px 6px 5px rgba(0,0,0,0.4)"});
+		$("#slide-classes4 h1").css({"color": "#d086a7", "text-shadow": "1px 1px 1px rgba(0,0,0,0.8)"});
 	});
 
 	//	Secret Menu
