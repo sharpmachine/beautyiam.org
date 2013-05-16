@@ -101,7 +101,7 @@
 					<a href="<?php the_permalink(); ?>" class="btn btn-black">Full Profile</a>
 				</div>
 				<div class="post-twitter">
-					<a href="http://twitter.com/<?php the_field('member_twitter'); ?>"><?php the_field('member_twitter'); ?></a>
+					<a href="http://twitter.com/<?php the_field('member_twitter'); ?>">@<?php the_field('member_twitter'); ?></a>
 				</div>
 			</div>
 		</div><!-- .team-member -->
