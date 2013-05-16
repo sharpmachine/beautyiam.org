@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div id="myCarousel" class="carousel slide hidden-desktop">
-	<ol class="carousel-indicators">
+	<ol class="carousel-indicators hidden-phone">
 		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		<li data-target="#myCarousel" data-slide-to="1"></li>
 		<li data-target="#myCarousel" data-slide-to="2"></li>
