@@ -235,9 +235,9 @@ endif;
 function smm_widgets_init() {
 	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
-		'name' => __( 'Primary Widget Area', 'smm' ),
+		'name' => __( 'Blog Sidbar', 'smm' ),
 		'id' => 'primary-widget-area',
-		'description' => __( 'The primary widget area', 'smm' ),
+		'description' => __( 'The blog sidebar widget area', 'smm' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',

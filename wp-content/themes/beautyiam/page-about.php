@@ -100,9 +100,11 @@
 				<div class="full-profile">
 					<a href="<?php the_permalink(); ?>" class="btn btn-black">Full Profile</a>
 				</div>
+			<?php if(get_field('member_twitter')): ?>
 				<div class="post-twitter">
 					<a href="http://twitter.com/<?php the_field('member_twitter'); ?>">@<?php the_field('member_twitter'); ?></a>
 				</div>
+			<?php endif; ?>
 			</div>
 		</div><!-- .team-member -->
 		<?php endwhile; endif; ?>	
