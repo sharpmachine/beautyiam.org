@@ -5,9 +5,11 @@
 	<div class="container">
 	
 		<div class="row">
-			<h1 class="page-title">
-				<?php printf( __( 'Tag Archives: %s', 'smm' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?>
-			</h1>
+			<div class="span12">
+				<h1 class="page-title">
+					<?php printf( __( 'Tag Archives: %s', 'smm' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?>
+				</h1>
+			</div>
 		</div>
 	
 		<div class="row">
@@ -20,7 +22,7 @@
 				
 			</div>
 			
-			<div id="sidebar" class="span3">
+			<div id="sidebar" class="span3 visible-desktop">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>

@@ -100,6 +100,9 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	//Mobile carousel
+	$('.carousel').carousel()
+
 	//Too cycle
 	$("ul#testy").cycleThru({delay: 1000});
 

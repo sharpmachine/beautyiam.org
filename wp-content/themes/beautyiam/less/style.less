@@ -1070,6 +1070,7 @@ h1.page-title {
 
 .post-date {
 	font-size: 40px;
+	line-height: 1;
 }
 
 .post-read-more {
@@ -2190,6 +2191,81 @@ img.aligncenter {
 	-o-transition: none;
 	-ms-transition: none;
 	transition: none;
+}
+
+/*..................................the mobile carousel */
+#myCarousel {
+	margin-top: -201px;
+	margin-bottom: -260px;
+}
+
+.carousel-caption {
+	top: 400px;
+	right: 50px;
+
+	h4 {
+		text-transform: none;
+
+		.i-amm {
+			display: block;
+			margin-bottom: 12px;
+			padding-left: 20px;
+			line-height: 1;
+			text-transform: none;
+		}
+
+		.descriptor {
+			display: block;
+			line-height: 0;
+		}
+	}
+}
+
+.beautiful {
+	h4 {
+		.descriptor {
+			color: @cream;
+		}
+	}
+}
+
+.worth-it {
+	h4 {
+		.descriptor {
+			color: @blueGreen;
+		}
+	}
+}
+
+.strongg {
+	h4 {
+		.descriptor {
+			color: @royalPurple;
+		}
+	}
+}
+
+.valuable {
+	h4 {
+		.descriptor {
+			color: @princessPink;
+		}
+	}
+}
+
+.carousel-indicators {
+	top: auto;
+	bottom: 15px;
+
+	li {
+		.square(40px);
+		margin-left: 15px;
+		.border-radius(50%);
+
+		&.active {
+			background-color: @princessPink;
+		}
+	}
 }
 
 /*..................................the misc utilities */

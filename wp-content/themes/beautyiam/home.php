@@ -1,6 +1,53 @@
 <?php get_header(); ?>
 
-<article id="models">
+<div id="myCarousel" class="carousel slide hidden-desktop">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="<?php bloginfo('template_directory'); ?>/img/landing-slide1.jpg" alt="I am beautiful">
+			<div class="carousel-caption beautiful">
+				<h4>
+					<span class="i-amm sans">I am</span> 
+					<span class="descriptor serif">beautiful<span>
+				</h4>
+			</div>
+		</div>
+		<div class="item">
+			<img src="<?php bloginfo('template_directory'); ?>/img/landing-slide2.jpg" alt="I am beautiful">
+			<div class="carousel-caption worth-it">
+				<h4>
+					<span class="i-amm sans">I am</span> 
+					<span class="descriptor serif">worth it<span>
+				</h4>
+			</div>
+		</div>
+		<div class="item">
+			<img src="<?php bloginfo('template_directory'); ?>/img/landing-slide3.jpg" alt="I am beautiful">
+			<div class="carousel-caption strongg">
+				<h4>
+					<span class="i-amm sans">I am</span> 
+					<span class="descriptor serif">strong<span>
+				</h4>
+			</div>
+		</div>
+		<div class="item">
+			<img src="<?php bloginfo('template_directory'); ?>/img/landing-slide4.jpg" alt="I am beautiful">
+			<div class="carousel-caption valuable">
+				<h4>
+					<span class="i-amm sans">I am</span> 
+					<span class="descriptor serif">valuable<span>
+				</h4>
+			</div>
+		</div>
+	</div>
+</div>
+
+<article id="models" class="visible-desktop">
 
 	<div id="models-slides">
 	    <ul class="slides-container">
@@ -58,7 +105,7 @@
 	<div class="down"><a href="#feature-classes"></a></div>
 </article><!-- #models -->
 
-<article id="headlines">
+<article id="headlines" class="hidden-phone">
 	<div class="container">
 	
 	<?php while(the_repeater_field('headlines', 'options')): ?>
@@ -78,7 +125,7 @@
 
 </article>
 
-<article id="feature-classes">
+<article id="feature-classes" class="visible-desktop">
 	<div id="featured-classes-slides">
 	    <ul class="slides-container2">
 	    
@@ -176,6 +223,37 @@
 	<div class="down"><a href="#blog"></a></div>
 </article>
 
+<div id="about-offerings" class="container hidden-desktop">
+	<div class="row">
+		<div class="span12 sans">
+			<h2>Classes &amp; Counseling</h2>
+			<h3 class="text-center">We offer a variety of groups, counsel, and classes that address the mental, physical and spiritual needs of those pursing their dreams in this industry.</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div id="about-fitness" class="span3">
+			<a href="<?php bloginfo( 'url' ); ?>/classes#fitness">
+				<span>Fitness</span>
+			</a>
+		</div>
+		<div id="about-wellness" class="span3">
+			<a href="<?php bloginfo( 'url' ); ?>/classes#wellness">
+				<span>Wellness</span>
+			</a>
+		</div>
+		<div id="about-spirit" class="span3">
+			<a href="<?php bloginfo( 'url' ); ?>/classes#spirit">
+				<span>Spirit</span>
+			</a>
+		</div>
+		<div id="about-counsel" class="span3">
+			<a href="<?php bloginfo( 'url' ); ?>/classes#counsel">
+				<span>Counseling</span>
+			</a>
+		</div>
+	</div>
+</div>
+<hr>
 <article id="blog">
 	<div class="container">
 		<h2>Lastest Articles:</h2>
