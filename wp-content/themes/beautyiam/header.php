@@ -27,7 +27,7 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'smm' ), max( $paged, $page ) );
      	?></title>
 
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<meta name="viewport" content="width=1024, initial-scale=0">
     	<meta name="description" content="">
     	<meta name="author" content="Sharp Machine">
 	
