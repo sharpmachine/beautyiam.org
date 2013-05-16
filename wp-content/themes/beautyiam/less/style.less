@@ -11,6 +11,27 @@ body {
 	padding-bottom: 50px;
 }
 
+.down {
+	position: relative;
+	bottom: 100px;
+	.square(50px);
+	margin: 0 auto;
+	margin-bottom: -50px;
+	background-color: @grayDarker;
+
+	a {
+		display: block;
+		.square(50px);
+		background: url(../img/arrow.png) no-repeat center center;
+	}
+}
+
+#feature-classes {
+	.down {
+		bottom: 77px;
+	}
+}
+
 /*..................................the typography */
 @font-face {
     font-family: 'batman';
@@ -510,7 +531,7 @@ body.home {
 #models {
 	height: 100%;
 	margin-top: -215px;
-	margin-bottom: -330px;
+	margin-bottom: -350px;
 }
 
 #models-slides {
@@ -966,6 +987,9 @@ h1.page-title {
 
 /*..................................the blog */
 #blog {
+	position: relative;
+	z-index: 1;
+	margin-top: -77px;
 	padding: 40px 0 50px 0;
 	background-color: @white;
 
@@ -1280,7 +1304,7 @@ hr {
 
 	&.affix-top {
 		position: relative;
-		z-index: 9999;
+		z-index: 999;
 		margin-bottom: -250px;
 	}
 
@@ -2033,7 +2057,8 @@ img.aligncenter {
 	position: absolute;
 	z-index: 3;
 	bottom: 70px;
-	text-align: center;
+	right: 50px;
+	text-align: right;
 	width: 100%;
 
   	a {

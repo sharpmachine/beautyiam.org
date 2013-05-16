@@ -110,4 +110,37 @@ jQuery(document).ready(function($) {
         auto: 1000,
         // visible: 1
     });
+
+	 $('#models-slides').superslides({
+			play: 7000,
+			slide_easing: 'easeInOutCubic',
+			slide_speed: 900,
+			pagination: true,
+			hashchange: false,
+			scrollable: true,
+			classes: {
+				nav: 'slides-navigation',
+				container: 'slides-container',
+				pagination: 'slides-pagination'
+			}
+		});
+
+		$('#featured-classes-slides').superslides({
+			play: false,
+			slide_easing: 'easeInOutCubic',
+			slide_speed: 800,
+			pagination: true,
+			hashchange: false,
+			scrollable: true,
+			classes: {
+				preserve: 'preserve',
+				nav: 'slides-navigation2',
+				container: 'slides-container2',
+				pagination: 'slides-pagination2'
+			}
+
+		});
+
+		$('#classes-menu').onePageNav();
+		$('.down').onePageNav();
 });

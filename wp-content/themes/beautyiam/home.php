@@ -55,7 +55,7 @@
 	      
 	    </ul><!-- .slides-container -->
 	</div><!-- #slides -->
-	
+	<div class="down"><a href="#feature-classes"></a></div>
 </article><!-- #models -->
 
 <article id="headlines">
@@ -75,6 +75,7 @@
 	<?php endwhile; ?>
 		
 	</div>
+
 </article>
 
 <article id="feature-classes">
@@ -170,8 +171,9 @@
 			</nav>
 		</div>
 		
-		
 	</div><!-- #slides -->
+	
+	<div class="down"><a href="#blog"></a></div>
 </article>
 
 <article id="blog">
@@ -183,12 +185,6 @@
 		<?php endwhile; endif; ?>
 		<h3 class="text-right"><a href="<?php bloginfo( 'url' ); ?>/blog">See all blog posts &rarr;</a></h3>
 	</div>
-</article>
-
-<article id="featured-artist" style="background-color:<?php the_field('background_color', 'options'); ?>;display:none;">
-	<h3><?php the_field('fa_headline', 'options'); ?></h3>
-	<h2><?php the_field('fa_first_name', 'options'); ?> <?php the_field('fa_last_name', 'options'); ?></h2>
-	<img src="<?php the_field('fa_image', 'options'); ?>" alt="">
 </article>
 
 <?php get_footer(); ?>
