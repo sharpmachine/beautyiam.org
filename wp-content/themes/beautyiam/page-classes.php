@@ -45,7 +45,11 @@
 					<div class="span12">
 						<h3><?php the_field('class_headline'); ?></h3>
 						<h2><?php the_title(); ?></h2>
-						<div class="class-time serif"><?php the_field('class_days'); ?> from <?php the_field('class_start_time'); ?>- <?php the_field('class_end_time'); ?> <?php the_field('class_am_or_pm'); ?></div>
+					
+					<?php if(get_field('class_days')): ?>
+						<div class="class-time serif"><?php the_field('class_days'); ?> from <?php the_field('class_start_time'); ?>- <?php the_field('class_end_time'); ?> <?php the_field('class_am_or_pm'); ?>
+						</div>
+					<?php endif; ?>
 					</div>
 				</div>
 				
@@ -84,7 +88,10 @@
 					<div class="span12">
 						<h3><?php the_field('class_headline'); ?></h3>
 						<h2><?php the_title(); ?></h2>
-						<div class="class-time serif"><?php the_field('class_days'); ?> from <?php the_field('class_start_time'); ?>- <?php the_field('class_end_time'); ?> <?php the_field('class_am_or_pm'); ?></div>
+					<?php if(get_field('class_days')): ?>
+						<div class="class-time serif"><?php the_field('class_days'); ?> from <?php the_field('class_start_time'); ?>- <?php the_field('class_end_time'); ?> <?php the_field('class_am_or_pm'); ?>
+						</div>
+					<?php endif; ?>
 					</div>
 				</div>
 				
@@ -123,7 +130,10 @@
 					<div class="span12">
 						<h3><?php the_field('class_headline'); ?></h3>
 						<h2><?php the_title(); ?></h2>
-						<div class="class-time serif"><?php the_field('class_days'); ?> from <?php the_field('class_start_time'); ?>- <?php the_field('class_end_time'); ?> <?php the_field('class_am_or_pm'); ?></div>
+					<?php if(get_field('class_days')): ?>
+						<div class="class-time serif"><?php the_field('class_days'); ?> from <?php the_field('class_start_time'); ?>- <?php the_field('class_end_time'); ?> <?php the_field('class_am_or_pm'); ?>
+						</div>
+					<?php endif; ?>
 					</div>
 				</div>
 				
