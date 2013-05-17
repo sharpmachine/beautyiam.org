@@ -38,7 +38,6 @@
 <div id="all-classes">
 	<div id="fitness" class="class-section">
 		<div class="container">
-		
 		<?php query_posts("post_type=classes&classes_category=fitness"); ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="classes">

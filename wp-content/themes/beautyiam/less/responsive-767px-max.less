@@ -117,10 +117,32 @@
 
   /*..................................the Custom */
   // Home
+  .navbar-static-top .container, 
+  .navbar-fixed-top .container, 
+  .navbar-fixed-bottom .container {
+    width: auto;
+  }
+
   .navbar .brand {
+    width: 168px;
+    height: 82px;
+    margin-left: 20px;
+    background: url(../img/logo-black-phone.png) no-repeat;
+  }
+
+  body.home .navbar .brand {
+    // float: right;
+    background: url(../img/logo-black-phone.png) no-repeat;
+  }
+
+  body.home .navbar .nav>li>a {
+    color: @black;
+  }
+
+  #top-nav {
     width: 100%;
   }
-  
+
   #support-group-details {
     height: 600px;
     text-align: left;
@@ -140,10 +162,201 @@
     background-image: none;
   }
 
+  #myCarousel {
+    margin-top: 0;
+    margin-bottom: -315px;
+  }
+
   .carousel-caption {
+    position: absolute !important;
     height: 45px;
-    margin-top: -75px;
-    text-align: right;
+    margin-top: -200px;
+  }
+
+  body.home #about-offerings {
+    margin-top: 25px;
+    color: @calypso;
+
+    h2 {
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .span3 {
+      height: 170px;
+
+      a {
+        position: relative;
+        display: block;
+        .square(100%);
+        color: @calypso;
+
+        span {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          font-size: 18px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  #blog .post .span6 {
+    width: auto;
+  }
+
+  /*..................................the about page */
+  #line-two {
+    font-size: 58px;
+  }
+
+  #line-three {
+    margin-top: -15px;
+    font-size: 60px;
+  }
+
+  #line-six,
+  #line-seven {
+    display: none;
+  }
+
+  #curlies {
+    height: 240px;
+    margin-top: 25px;
+    padding: 50px 0;
+  }
+
+  #line-eight {
+    height: 210px;
+    font-size: 76px;
+  }
+
+  #about-one {
+    margin-bottom: 220px;
+  }
+
+  #line-ten {
+    font-size: 62px;
+  }
+
+  #line-thirteen {
+    font-size: 62px;
+  }
+
+  #line-sixteen {
+    font-size: 70px;
+  }
+
+  .team-member {
+    padding-bottom: 25px;
+    border-bottom: 1px solid @black;
+  }
+
+  #team .author-headshot img,
+  #member-profile .author-headshot img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .member-details {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .member-actions {
+    padding-top: 0;
+  }
+
+  .post-twitter {
+    text-align: center;
+    background: url(../img/blue-twitter.png) no-repeat 100px center;
+  }
+
+  // Contact Page
+  #contact-us h1 {
+    font-size: 104px;
+    line-height: 0.8;
+  }
+
+  .contact-form textarea {
+    width: 90%;
+  }
+
+  .contact-form .btn {
+    margin-bottom: 20px;
+  }
+
+  // Page Footer
+  .page-footer {
+    height: auto;
+
+    .curly-bracket {
+      display: none;
+    }
+  }
+
+  .page-footer .featurette input {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  .page-footer .btn {
+    display: block;
+  }
+
+  //Giving
+  #giving h1 {
+    font-size: 100px;
+  }
+
+  #giving h1 span {
+    margin: 0;
+  }
+
+  #giving .btn-donate {
+    padding: 20px 5px;
+  }
+
+  //404
+  .post {
+    width: auto;
+  }
+
+  button#searchsubmit {
+    margin: 0;
+  }
+
+  //Blog
+  .author-headshot {
+    width: 150px;
+    margin: 0 auto 25px auto;
+  }
+
+  //Classes
+  #classes-menu {
+    display: none;
+  }
+
+  .class-section {
+    margin-top: 0;
+    padding: 50px 0;
+  }
+
+  .class-instructor-name {
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .add-to-calendar {
+    text-align: left;
   }
 
 }

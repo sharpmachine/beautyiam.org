@@ -65,7 +65,7 @@
 		<div id="support-group-bar">
 			<div id="support-group">
 				<div class="container">
-					<div id="sg-tab" class="pull-right">
+					<div id="sg-tab" class="pull-right hidden-phone">
 						<span><a href="#open">Artist Support Group <img src="<?php bloginfo( 'template_directory' ); ?>/img/chevron.png" alt="Chevron"></a></span>
 					</div>
 				</div>
