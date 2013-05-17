@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section id="single-post" class="page">
-	
+
 	<div class="container">
 		<div class="row">
 			<div class="span9">
