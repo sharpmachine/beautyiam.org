@@ -41,12 +41,12 @@
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th class="oi-cat"></th>
-									<th>Type</th>
-									<th>Instructor</th>
-									<th>Phone Number</th>
-									<th>Area</th>
-									<th>Email Address</th>
+									<!-- <th class="oi-cat"></th> -->
+									<th class="oi-type">Type</th>
+									<th class="oi-instructor">Instructor</th>
+									<th class="oi-phone">Phone Number</th>
+									<th class="oi-area">Area</th>
+									<th class="oi-email">Email Address</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -55,12 +55,12 @@
 		                    <?php $term_list = wp_get_post_terms($post->ID, 'category', array("fields" => "ids")); // Get post categories IDs?>
 
 								<tr>
-									<td class="oi-cat"></td>
+									<!-- <td class="oi-cat"></td> -->
 									<td class="oi-type"><?php echo get_the_term_list( $post->ID, 'instuctor_tags', '', ', ', '' ); ?></td>
-									<td><?php the_title(); ?></td>
-									<td><?php the_field('instructor_phone_number'); ?></td>
-									<td><?php the_field('instructor_area'); ?></td>
-									<td><a href="mailto:<?php the_field('instructor_email'); ?>"><?php the_field('instructor_email'); ?></a></td>
+									<td class="oi-instructor"><?php the_title(); ?></td>
+									<td class="oi-phone"><?php the_field('instructor_phone_number'); ?></td>
+									<td class="oi-area"><?php the_field('instructor_area'); ?></td>
+									<td class="oi-email"><a href="mailto:<?php the_field('instructor_email'); ?>"><?php the_field('instructor_email'); ?></a></td>
 								</tr>
 
 		                <?php endwhile; // end of loop ?>
