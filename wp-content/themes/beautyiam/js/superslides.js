@@ -1,4 +1,4 @@
-/*! Superslides - v0.5.2 - 2013-01-20
+/*! Superslides - v0.5.4-beta - 2013-04-02
 * https://github.com/nicinabox/superslides
 * Copyright (c) 2013 Nic Aitch; Licensed MIT */
 
@@ -10,7 +10,7 @@
   $ = jQuery;
 
   Superslides = function(el, options) {
-    var $children, $container, $control, $pagination, $window, addPagination, addPaginationItem, adjustImagePosition, adjustSlidesSize, animator, findMultiplier, height, init, initialize, loadImage, multiplier, next, parseHash, positions, prev, setHorizontalPosition, setVerticalPosition, setupChildren, setupContainers, setupCss, setupNextPrev, that, toggleNav, upcomingSlide, width,
+    var $children, $container, $control, $pagination, $window, addPagination, addPaginationItem, adjustImagePosition, adjustSlidesSize, animator, findMultiplier, height, init, initialize, loadImage, multiplier, next, parseHash, positions, prev, setHorizontalPosition, setVerticalPosition, setupChildren, setupContainers, setupCss, setupImageCSS, setupNextPrev, that, toggleNav, upcomingSlide, width,
       _this = this;
     if (options == null) {
       options = {};
@@ -79,6 +79,9 @@
         listStyle: 'none',
         position: 'relative'
       });
+      return setupImageCSS();
+    };
+    setupImageCSS = function() {
       return $container.find('img').not("." + _this.options.classes.preserve).css({
         "-webkit-backface-visibility": 'hidden',
         "-ms-interpolation-mode": 'bicubic',
@@ -115,7 +118,7 @@
         $children.wrap('<div>');
         $children = $container.children();
       }
-      $children.css({
+      $container.children().css({
         display: 'none',
         position: 'absolute',
         overflow: 'hidden',
@@ -151,27 +154,28 @@
       }));
     };
     addPagination = function() {
-      var array, last_index;
+      var array, next_index;
       if (!_this.options.pagination || _this.size() === 1) {
         return;
       }
       if ($(el).find("." + _this.options.classes.pagination).length) {
-        last_index = $pagination.children().last().index();
-        array = $children;
+        next_index = $pagination.children().last().index() + 1;
+        array = $container.children();
+        array = array.slice(next_index);
       } else {
-        last_index = 0;
-        array = new Array(_this.size() - last_index);
+        next_index = 0;
+        array = new Array(_this.size() - next_index);
         $pagination = $pagination.appendTo(_this.el);
       }
       return $.each(array, function(i) {
-        return addPaginationItem(i);
+        return addPaginationItem(i + next_index);
       });
     };
     loadImage = function($img, callback) {
       return $("<img>", {
-        src: $img.attr('src')
+        src: "" + ($img.attr('src')) + "?" + (new Date().getTime())
       }).load(function() {
-        if (callback instanceof Function) {
+        if (typeof callback === 'function') {
           return callback(this);
         }
       });
@@ -362,6 +366,13 @@
       return animator(direction, callback);
     };
     this.update = function() {
+      $children = $container.children();
+      adjustSlidesSize($children);
+      setupChildren();
+      setupImageCSS();
+      $children.eq(_this.current).css({
+        display: 'block'
+      });
       positions(_this.current);
       addPagination();
       toggleNav();
@@ -404,7 +415,10 @@
       width = $window.width();
       height = $window.height();
       setupContainers();
-      return adjustSlidesSize($children);
+      adjustSlidesSize($children);
+      return $('body').css({
+        overflow: 'visible'
+      });
     });
     $(document).on('click', "." + this.options.classes.nav + " a", function(e) {
       if (!that.options.hashchange) {
