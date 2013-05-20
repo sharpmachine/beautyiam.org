@@ -14,7 +14,7 @@
 	
 	#logo
 	{
-		width: 355px;
+		width: 268px;
 		margin: 50px auto;
 	}
 	
@@ -29,7 +29,7 @@
 <body>
 		
 	<div id="logo">
-		<img src="http://www.domain.com/wp-content/themes/project_theme/images/logo.png" width="335" height="52" alt="Logo">
+		<img src="http://beautyiam.org/wp-content/themes/beautyiam/img/logo-white.png" width="268" height="131" alt="Logo">
 		<p>We are currently undergoing routine maintenance.  Please check back soon.</p>
 	</div>
 		
