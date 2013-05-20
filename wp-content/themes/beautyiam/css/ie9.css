@@ -1,0 +1,49 @@
+.ie8 #models-slides {
+	position: relative;
+	zoom: 1;
+	top: -238px;
+}
+
+.ie8 #headlines,
+.ie8 #feature-classes,
+.ie8 #blog {
+	position: relative;
+	zoom: 1;
+	top: -600px;
+}
+
+#models-slides {
+	overflow-x: visible !important;
+}
+
+#sidebar #searchform input[type="text"] {
+	width: 160px;
+}
+
+.ie8 .social-media {
+	width: 100px;
+}
+
+.contact-form input[type="text"], 
+.contact-form input[type="email"] {
+	width: 199px;
+}
+
+.page-footer .featurette input {
+	width: 123px;
+}
+
+#support-group-details {
+	border-bottom: 1px solid #666;
+}
+
+#feature-classes .slides-container2 a,
+article#blog h2,
+article#blog h3 a,
+.post-category a,
+.post-author a,
+.post-read-more a,
+.footer-nav li a,
+#site-info {
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

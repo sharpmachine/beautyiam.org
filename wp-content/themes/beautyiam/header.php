@@ -39,6 +39,10 @@
     	<!-- Le styles -->
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
     	<link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
+    	<!--[if lte IE 9]>
+    		<link href="<?php bloginfo('template_directory'); ?>/css/ie9.css" rel="stylesheet">
+    	<![endif]-->
+    	
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     	<!-- Le fav and touch icons -->

@@ -54,8 +54,9 @@
 				echo '
 					<a href="'.get_category_link($category[0]->cat_ID).'" class="btn btn-blue btn-cat pull-right">
 						<span class="icon"></span> 
-						<span class="btn-label">All articles in</span>
-						<span class="line2">category</span>
+						<span class="btn-label">All articles in
+							<span class="line2">category</span>
+						</span>
 					</a>
 				'; ?>
 			</div>

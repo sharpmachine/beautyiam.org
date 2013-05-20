@@ -154,8 +154,6 @@
 		        <div class="container">
 		          	<div id="slide-classes2" class="inner-slide">
 		          	<img src="<?php bloginfo('template_directory'); ?>/img/classes-slide2.jpg" class="slide-bg" alt="Goodies">
-		          		<!-- <img src="<?php bloginfo( 'template_directory' ); ?>/img/broccoli.jpg" class="preserve broccoli" width="256" height="157" alt="Broccoli">
-		        		<img src="<?php bloginfo( 'template_directory' ); ?>/img/lemon.png" class="preserve lemon" width="512" height="318" alt="Lemons"> -->
 			         	<div class="row">
 		        			<div class="span2 offset1 class-icon"></div>
 		        		</div>
@@ -166,7 +164,6 @@
 			         			<a href="<?php bloginfo( 'url' ); ?>/classes/#wellness">Read more.</a>
 		        			</div>
 		        		</div>
-		        		<!-- <img src="<?php bloginfo( 'template_directory' ); ?>/img/tomatoes.png" class="preserve tomatoes" width="512" height="269" alt="Tomatoes"> -->
 					</div><!-- .inner-slide -->
 		        </div>
 		    </li>
