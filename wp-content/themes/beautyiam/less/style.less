@@ -2,36 +2,6 @@
 Project Name: Twitter Bootstrap Framework
 */
 
-html, 
-body {
-	height: 100%;
-}
-
-.page {
-	padding-bottom: 50px;
-}
-
-.down {
-	position: relative;
-	bottom: 100px;
-	.square(50px);
-	margin: 0 auto;
-	margin-bottom: -50px;
-	background-color: @grayDarker;
-
-	a {
-		display: block;
-		.square(50px);
-		background: url(../img/arrow.png) no-repeat center center;
-	}
-}
-
-#feature-classes {
-	.down {
-		bottom: 77px;
-	}
-}
-
 /*..................................the typography */
 @font-face {
     font-family: 'batman';
@@ -60,6 +30,36 @@ body {
          url('../fonts/rosewood.woff') format('woff'),
          url('../fonts/rosewood.ttf') format('truetype'),
          url('../fonts/rosewood.svg#RosewoodStdRegular') format('svg');
+}
+
+html, 
+body {
+	height: 100%;
+}
+
+.page {
+	padding-bottom: 50px;
+}
+
+.down {
+	position: relative;
+	bottom: 100px;
+	.square(50px);
+	margin: 0 auto;
+	margin-bottom: -50px;
+	background-color: @grayDarker;
+
+	a {
+		display: block;
+		.square(50px);
+		background: url(../img/arrow.png) no-repeat center center;
+	}
+}
+
+#feature-classes {
+	.down {
+		bottom: 77px;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -341,7 +341,7 @@ table.table {
 
 /*..................................the header */
 header {
-	margin-bottom: 55px;
+	margin-bottom: 115px;
 }
 // The Navbar
 .navbar-fixed-top .navbar-inner,
@@ -359,6 +359,7 @@ header {
 	z-index: 9;
 
 	.brand {
+		position: absolute;
 		width: 268px;
 		height: 131px;
 		margin-top: 40px;
@@ -530,11 +531,12 @@ body.home {
 // First section
 #models {
 	height: 100%;
-	margin-top: -215px;
+	margin-top: -238px;
 	margin-bottom: -350px;
 }
 
 #models-slides {
+	
 	.inner-slide {
 		margin-top: 400px;
 
@@ -1292,7 +1294,8 @@ hr {
 
 .class-section {
 	position: relative;
-	padding-top: 320px !important;
+	padding: 320px 0 50px 0;
+	// padding-top: 320px !important;
 	margin-top: -270px;
 
 	&:first-child {
@@ -1470,7 +1473,7 @@ hr {
 }
 
 .class-section {
-	padding: 50px 0;
+	// padding: 50px 0;
 
 	&:last-child {
 		margin-bottom: -15px;
@@ -1537,6 +1540,28 @@ hr {
 	margin-left: 3px;
 	padding-right: 0;
 	color: @red;
+}
+
+#single-class {
+	.class-instructor-name,
+	p {
+		font-weight: 400;
+	}
+
+	h2 {
+		color: @royalPurple;
+	}
+
+	a.btn {
+		color: darken(@princessPink, 15%);
+		background-color: @princessPink;
+
+		.icon {
+			width: 8px;
+			height: 33px;
+			background: url(../img/pink-calendar.png) no-repeat center center;
+		}
+	}
 }
 
 /*..................................the about page */
