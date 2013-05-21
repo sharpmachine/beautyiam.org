@@ -22,9 +22,29 @@
 
     <!-- Le javascript
     ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-transition.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-scrollspy.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-button.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-collapse.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-carousel.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-affix.js"></script>
+
+    
+	<script src="<?php bloginfo('template_directory'); ?>/js/animate-enhanced.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/superslides.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/slide-in-min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/waypoint.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/easing.1.3.js"></script>
+
+	<script src="<?php bloginfo('template_directory'); ?>/js/cycleThru.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/jcarousellite.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/scrollTo.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/pageNav.js"></script>
+
 	<!-- scripts concatenated and minified via ant build script-->
-	<script src="<?php bloginfo ('template_directory'); ?>/js/plugins-min.js"></script>
-	<script src="<?php bloginfo ('template_directory'); ?>/js/script-min.js"></script>
+	<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>
+	<script src="<?php bloginfo ('template_directory'); ?>/js/script.js"></script>
 
 <?php wp_footer(); ?>
 	</body>
