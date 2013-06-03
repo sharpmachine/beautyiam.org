@@ -44,6 +44,8 @@
 			</div>
 			<?php endif; ?>
 			
+			<?php echo ahp_tags2hashtags(); ?>
+			
 			<?php if(is_single()): ?>
 			<div class="post-content">
 				<?php the_content(); ?>
