@@ -403,3 +403,32 @@ return $contactmethods;
 }
  
 add_filter('user_contactmethods', 'extra_contact_info');
+
+function ahp_tags2hashtags($title) {
+ 
+$taglist = "";
+$posttags = get_the_tags();
+ 
+if ($posttags) {
+ 
+        # for each tag,
+        foreach($posttags as $tag) {
+ 
+                # get tag name
+                $tagname = $tag->name;
+ 
+                # remove spaces from tag
+                $tagname = str_replace(" ","",$tagname);               
+ 
+                # prepend # symbol and append to hashtag list
+                $taglist = $taglist . " #" . $tagname;
+        }
+}
+ 
+$title = "<a href='https://plus.google.com/u/0/s/%23" . $tagname . "'>" . $title . $taglist. "</a>" ;
+ 
+return $title;
+ 
+}
+ 
+add_filter('the_title_rss', 'ahp_tags2hashtags');

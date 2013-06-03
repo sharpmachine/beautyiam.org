@@ -1,4 +1,8 @@
 .htaccess
+config.rb
+sass/
+wp-content/themes/beautyiam/img/sprites/
+wp-content/themes/beautyiam/img/sprites-s30e912f736.png
 wp-config.php
 wp-content/uploads/
 wp-content/blogs.dir/
@@ -14,3 +18,8 @@ wp-content/cache/
 wp-content/backups/
 sitemap.xml
 sitemap.xml.gz
+.sass-cache/
+stylesheets/
+wp-content/themes/beautyiam/css/sprites.css
+wp-content/themes/beautyiam/css/sprites.scss
+wp-content/themes/beautyiam/test.html
