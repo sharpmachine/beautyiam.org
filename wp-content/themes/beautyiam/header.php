@@ -64,17 +64,6 @@
 	
 	<body <?php body_class(); ?> data-spy="scroll" data-target="#classes-menu" data-offset="590">
 	
-	<style type="text/css">
-	#cssawards{position:fixed;top:50px;left:0px;z-index:555;}
-	#cssawards a{width:95px;height:50px;text-indent:-8000px;display:block;background:url(<?php bloginfo("template_directory"); ?>/img/cssa-ribbons-nominated-13.png) no-repeat;}
-
-	#cssdesignawards{position:fixed;top:110px;left:0px;z-index:555;}
-	#cssdesignawards a{width:68px;height:95px;text-indent:-8000px;display:block;background:url(<?php bloginfo("template_directory"); ?>/img/css-design-awards-nominee-white-left.png) no-repeat;}
-	</style>
-	<div id="cssawards"><a href="http://cssawards.net/?p=30929" target="_blank">Beauty I AM</a></div>
-	
-	<div id="cssdesignawards"><a href="http://www.cssdesignawards.com/css-web-design-award-nominees.php" target="_blank">Beauty I AM</a></div>
-	
 	<header>
 		
 		<div id="support-group-bar">
