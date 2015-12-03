@@ -98,12 +98,22 @@ class acf_field_limiter extends acf_field
 			</td>
 			<td>
 				<?php
+				
+				
+				// Set to Yes if value isn't set
+				if(!isset($field['displayCount'])){
+					$field['displayCount'] = 1;
+				}
+				
 				do_action('acf/create_field', array(
 					'type'	=>	'radio',
 					'name'	=>	'fields['.$field['name'].'][displayCount]',
 					'value'	=>	$field['displayCount'],
-					'layout'	=>	'horizontal',
-					'choices' => array('No','Yes')
+					'layout'	=>	'verticle',
+					'choices' => array(
+						1	=>	__("Yes",'acf'),
+						0	=>	__("No",'acf')
+					)
 				));
 				?>
 			</td>

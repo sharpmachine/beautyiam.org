@@ -159,16 +159,17 @@ class blcPostTypeOverlord {
 
         $post_container->mark_as_unsynched();
 	}
-	
-	
-  /**
-   * Create or update synchronization records for all posts.
-   *
-   * @param bool $forced If true, assume that all synch. records are gone and will need to be recreated from scratch. 
-   * @return void
-   */
+
+
+	/**
+	 * Create or update synchronization records for all posts.
+	 *
+	 * @param string $container_type
+	 * @param bool $forced If true, assume that all synch. records are gone and will need to be recreated from scratch.
+	 * @return void
+	 */
 	function resynch($container_type = '', $forced = false){
-		global $wpdb;
+		global $wpdb; /** @var wpdb $wpdb */
 		global $blclog;
 		
 		//Resynch is expensive in terms of DB performance. Thus we only do it once, processing
@@ -185,8 +186,8 @@ class blcPostTypeOverlord {
 			return;
 		}
 		
-		$escaped_post_types = array_map(array(&$wpdb, 'escape'), $this->enabled_post_types);
-		$escaped_post_statuses = array_map(array(&$wpdb, 'escape'), $this->enabled_post_statuses);
+		$escaped_post_types = array_map('esc_sql', $this->enabled_post_types);
+		$escaped_post_statuses = array_map('esc_sql', $this->enabled_post_statuses);
 		
 		if ( $forced ){
 			//Create new synchronization records for all posts. 
@@ -519,15 +520,17 @@ class blcAnyPostContainer extends blcContainer {
 				__('Nothing to update', 'broken-link-checker')
 			);
 		}
-		
-		$id = wp_update_post($this->wrapped_object);
-		if ( $id != 0 ){
-			return true;
-		} else {
+
+		$post_id = wp_update_post($this->wrapped_object, true);
+		if ( is_wp_error($post_id) ) {
+			return $post_id;
+		} else if ( $post_id == 0 ){
 			return new WP_Error(
 				'update_failed',
 				sprintf(__('Updating post %d failed', 'broken-link-checker'), $this->container_id)
 			);
+		} else {
+			return true;
 		}
 	}
 	

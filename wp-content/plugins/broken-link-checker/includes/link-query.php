@@ -292,7 +292,7 @@ class blcLinkQuery {
 		//Parser type should match the parser_type column in the instance table.
 		if ( !empty($s_parser_type) ){
 			$s_parser_type = array_map('trim', array_unique($s_parser_type));
-			$s_parser_type = array_map(array(&$wpdb, 'escape'), $s_parser_type);
+			$s_parser_type = array_map('esc_sql', $s_parser_type);
 			
 			if ( count($s_parser_type) == 1 ){
 				$pieces[] = sprintf("instances.parser_type = '%s'", reset($s_parser_type));
@@ -307,7 +307,7 @@ class blcLinkQuery {
 		if ( !empty($s_container_type) ){
 			//Sanitize for use in SQL
 			$s_container_type = array_map('trim', array_unique($s_container_type));
-			$s_container_type = array_map(array(&$wpdb, 'escape'), $s_container_type);
+			$s_container_type = array_map('esc_sql', $s_container_type);
 			
 			if ( count($s_container_type) == 1 ){
 				$pieces[] = sprintf("instances.container_type = '%s'", reset($s_container_type));
@@ -346,7 +346,7 @@ class blcLinkQuery {
 		
 		//Anchor text - use LIKE search
 		if ( !empty($params['s_link_text']) ){
-			$s_link_text = like_escape($wpdb->escape($params['s_link_text']));
+			$s_link_text = like_escape(esc_sql($params['s_link_text']));
 			$s_link_text  = str_replace('*', '%', $s_link_text);
 			
 			$pieces[] = '(instances.link_text LIKE "%' . $s_link_text . '%")';
@@ -357,7 +357,7 @@ class blcLinkQuery {
 		//There is limited wildcard support, e.g. "google.*/search" will match both 
 		//"google.com/search" and "google.lv/search" 
 		if ( !empty($params['s_link_url']) ){
-			$s_link_url = like_escape($wpdb->escape($params['s_link_url']));
+			$s_link_url = like_escape(esc_sql($params['s_link_url']));
 			$s_link_url = str_replace('*', '%', $s_link_url);
 			
 			$pieces[] = '(links.url LIKE "%'. $s_link_url .'%") OR '.
@@ -375,7 +375,7 @@ class blcLinkQuery {
 			
 		//Link type can match either the the parser_type or the container_type.
 		if ( !empty($params['s_link_type']) ){
-			$s_link_type = $wpdb->escape($params['s_link_type']);
+			$s_link_type = esc_sql($params['s_link_type']);
 			$pieces[] = "instances.parser_type = '$s_link_type' OR instances.container_type='$s_link_type'";
 			$join_instances = true;
 		}
@@ -442,6 +442,7 @@ class blcLinkQuery {
 		if ( !empty($params['orderby']) ) {
 			$allowed_columns = array(
 				'url' => 'links.url',
+				'link_text' => 'instances.link_text',
 			);
 			$column = $params['orderby'];
 
@@ -563,7 +564,7 @@ class blcLinkQuery {
 		if ( $params['max_results'] || $params['offset'] ){
 			$q .= sprintf("\nLIMIT %d, %d", $params['offset'], $params['max_results']);
 		}
-		
+
 		$results = $wpdb->get_results($q, ARRAY_A);
 		if ( empty($results) ){
 			return array();
@@ -661,11 +662,12 @@ class blcLinkQuery {
 		foreach ($filters as $filter => $data){
 			if ( !empty($data['hidden']) ) continue; //skip hidden filters
 															
-			$class = $number_class = '';
+			$class = '';
+			$number_class = 'filter-' . $filter . '-link-count';
 			
 			if ( $current == $filter ) {
 				$class = 'class="current"';
-				$number_class = 'current-link-count';	
+				$number_class .= ' current-link-count';
 			}
 			
 			$items[] = "<li><a href='tools.php?page=view-broken-links&filter_id=$filter' {$class}>
@@ -715,6 +717,10 @@ class blcLinkQuery {
 	 * @return array Associative array of filter data and the results of its execution.
 	 */
 	function exec_filter($filter_id, $page = 1, $per_page = 30, $fallback = 'broken', $orderby = '', $order = 'asc'){
+		//The only valid sort directions are 'asc' and 'desc'.
+		if ( !in_array($order, array('asc', 'desc')) ) {
+			$order = 'asc';
+		}
 		
 		//Get the selected filter (defaults to displaying broken links)
 		$current_filter = $this->get_filter($filter_id);
@@ -818,4 +824,3 @@ function blc_get_links($params = null){
 	return $instance->get_links($params);
 }
 
-?>

@@ -87,15 +87,15 @@ td.column-new-url .mini-status {
 /* Styles for broken links, redirects and other link states or types */
 
 .blc-redirect .blc-link-url {
-	background-image: url("../images/bullet_blue.png");
+	background-image: url("../images/blue_dot.png");
 }
 
 .link-status-error .blc-link-url {
-	background-image: url("../images/bullet_error.png");
+	background-image: url("../images/font-awesome/font-awesome-exclamation-sign.png");
 }
 
 .link-status-warning .blc-link-url {
-	background-image: url("../images/bullet_warning.png");
+	background-image: url("../images/font-awesome/font-awesome-warning-sign.png");
 }
 
 .blc-excluded-link {
@@ -246,6 +246,95 @@ td.column-link-text, td.column-new-link-text {
 	vertical-align: middle;
 }
 
+
+/* Inline editor */
+
+.blc-inline-editor label {
+    display: block;
+    margin: 0.2em 0;
+}
+
+.blc-inline-editor .blc-input-text-wrap {
+    display: block;
+    margin-left: 5em;
+}
+
+.blc-inline-editor .blc-input-text-wrap input[type="text"] {
+    width: 100%;
+}
+
+.blc-inline-editor .blc-input-text-wrap textarea {
+    width: 100%;
+}
+
+
+.blc-inline-editor label span.title {
+    display: block;
+    float: left;
+    width: 5em;
+}
+
+.blc-inline-editor span.title {
+    line-height: 1.8em;
+}
+
+.blc-inline-editor-content > h4:first-child {
+    margin-top: 0.4em;
+}
+
+/* Inline editor: suggestion list */
+ul.blc-suggestion-list {
+    list-style: disc outside;
+}
+
+ul.blc-suggestion-list li {
+    margin-left: 1.5em;
+}
+
+.blc-suggestion-details {
+    display: inline-block;
+    width: 465px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+
+    vertical-align: top;
+}
+
+.blc-suggestion-list input.blc-use-url-button {
+    float: right;
+    max-width: 110px;
+    margin-top: 10px;
+}
+
+.blc-suggestion-list code.blc-suggestion-url {
+    display: block;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.blc-suggestion-list .blc-suggestion-name {
+    display: block;
+}
+
+
+.blc-inline-editor-buttons {
+    clear: both;
+    margin: 0.5em 0 0;
+    padding: 0.5em;
+}
+
+.blc-inline-editor-content {
+    max-width: 600px;
+}
+
+
 /* Bulk edit form */
 #bulk-edit {
 	display: none;
@@ -317,16 +406,28 @@ td.column-link-text, td.column-new-link-text {
 }
 
 #search-links-dialog label, #search-links-dialog input.text, #search-links-dialog select { display:block; }
-#search-links-dialog input.text { margin-bottom:12px; width:95%; padding: .4em; }
-#search-links-dialog select { margin-bottom:12px; padding: .4em; }
-#search-links-dialog fieldset { padding:0; border:0; margin-top:25px; }
+
+#search-links-dialog input.text,
+#search-links-dialog select{
+    margin-bottom: 12px;
+    width: 290px;
+}
+
+#search-links-dialog select#s_filter {
+    width: auto;
+}
+
+#search-links-dialog fieldset {
+    padding:0;
+    border:0;
+    margin-top:25px;
+}
 
 #blc-search-button-row {
 	text-align: center;
 }
 
 #blc-search-button-row input {
-	padding: 0.4em;
 	margin-left: 8px;
 	margin-right: 8px;
 	margin-top: 8px; 
@@ -354,14 +455,6 @@ div.search-box{
 }
 
 /* Filter-related styles */
-.blc-undismiss-button {
-    display: none;
-}
-
-.base-filter-dismissed .blc-undismiss-button {
-    display: inline;
-}
-
 .base-filter-all .blc-dismiss-button {
     display: none;
 }

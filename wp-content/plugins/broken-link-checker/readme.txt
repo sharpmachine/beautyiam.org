@@ -3,8 +3,8 @@ Contributors: whiteshadow
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A6P9S6CE3SRSW
 Tags: links, broken, maintenance, blogroll, custom fields, admin, comments, posts
 Requires at least: 3.2
-Tested up to: 3.5
-Stable tag: 1.7.1
+Tested up to: 3.9
+Stable tag: 1.9.3
 
 This plugin will check your posts, comments and other content for broken links and missing images, and notify you if any are found. 
 
@@ -43,18 +43,20 @@ You can also click on the contents of the "Status" or "Link Text" columns to get
 
 **Translations**
 
-* Arabic - [Yaser Maadan](http://englize.com/)
+* Arabic - Yaser Maadan
 * Belorussian - [M. Comfi](http://www.comfi.com/)
 * Bulgarian - [Ajoft Technologes](http://www.ajoft.com/)
 * Chinese Simplified - Kaijia Feng
 * Chinese Traditional - [YILIN](http://sh2153.com)
 * Czech - [Lelkoun](http://lelkoun.cz/)
 * Danish - [Georg S. Adamsen](http://wordpress.blogos.dk/)
-* Dutch - [Gideon van Melle](http://www.gvmelle.com/)
+* Dutch - [Robin Roelofsen](http://www.dreamdesignsolutions.nl/)
 * Finnish - [Jani Alha](http://www.wysiwyg.fi)
 * French - [Whiler](http://blogs.wittwer.fr/whiler/), Luc Capronnier, [Guillaume Boda](http://www.michtoblog.com/)
 * German - [Ivan Graf](http://blog.bildergallery.com/)
+* Hebrew - [Eitan Caspi](http://caspi.org.il/)
 * Hindi - [Outshine Solutions](http://outshinesolutions.com/)
+* Hungarian - [Language Connect](http://www.languageconnect.net/)
 * Irish - [Ray Gren](http://letsbefamous.com/)
 * Italian - [Gianni Diurno](http://gidibao.net/index.php/portfolio/) and [Giacomo Ross](http://www.luxemozione.com/) (alternative)
 * Japanese - [ningendesu](http://ningendesu.com/)
@@ -62,17 +64,19 @@ You can also click on the contents of the "Status" or "Link Text" columns to get
 * Persian - [Omid Sheerkavand](http://qanal.ir/)
 * Polish - [http://positionmaker.pl](http://positionmaker.pl/)
 * Portuguese - [mowster](http://wordpress.mowster.net/)
+* Brazilian Portuguese - [Paulino Michelazzo](http://www.michelazzo.com.br/)
 * Romanian - [Ovidiu](http://www.jibo.ro)
 * Russian - [Anna Ozeritskaya](http://hweia.ru/)
 * Spanish - [Neoshinji](http://blog.tuayudainformatica.com/traducciones-de-plugins-wordpress/)
 * Turkish - [Murat Durgun](http://www.lanwifi.net/)
 * Ukrainian - [Stas Mykhajlyuk](http://www.kosivart.com/)
+* Vietnamese - [Biz.O](http://bizover.net/)
 
 *Note: Some translations are not entirely up to date with the latest release, so parts of the interface may appear untranslated.*
 
 **Other Credits**
 
-This plugin uses one or more icons from the beautiful ["Silk" icon set](http://www.famfamfam.com/lab/icons/silk/).
+This plugin uses some icons from the [Font Awesome icon font](http://fortawesome.github.io/Font-Awesome/). Font Awesome is licensed under SIL OFL 1.1.
 
 == Installation ==
 
@@ -92,6 +96,77 @@ To upgrade your installation
 1. Reactivate the plugin. Your settings will be retained from the previous version.
 
 == Changelog ==
+
+= 1.9.3 =
+* Tested on WP 3.8.1 and WP 3.9-beta2.
+* Added an option to sort links by link text. May produce unexpected results for links that have multiple copies with different anchor text.
+* Added a Vietnamese translation.
+* Added file-based logging for debugging purposes. Logging can be enabled in the "Advanced" section of the plugin settings page.
+* Added a "Auto-Submitted: auto-generated" header to notification emails sent by the plugin. This should prevent "out-of-office" auto-responders and similar software from responding to these emails.
+* Added domain-based rate limiting to the HTTP checker module.
+* Throttled background parsing by about 40% to reduce overall resource usage.
+* Fixed (probably) a long-standing bug related to encoding international characters in link URLs.
+* Fixed a typo in the Polish translation.
+* Made the error message that's displayed when trying to network-activate the plugin more useful.
+
+= 1.9.2 =
+* Fixed several UI/layout issues related to the new WP 3.8 admin style.
+* Fixed HTML entity codes showing up in confirmation messages in when running a localized version of WP (only affects some languages).
+* Fixed the "dismiss this notice" link URL not being HTML-escaped.
+* Fixed a couple of cross-site scripting vulnerabilities related to the sort direction query argument not being properly validated and the bulk action form not escaping the current URL.
+* Updated Hebrew translation.
+* Updated French translation.
+* When you dismiss a link, the dismissed link counter is now updated right away instead of on page reload.
+
+= 1.9.1 =
+* Updated Dutch, German, Chinese and Portuguese translations.
+* Fixed suggestions not working on sites that force HTTPS in the WordPress admin.
+* Tested on WordPress 3.7.
+
+= 1.9 =
+* Added the ability to edit link text from inside the plugin. This features is only available for certain types of links.
+* Added a "suggestions" feature. When you go to edit a broken link, the plugin will now suggest replacing it with an archived page from the Wayback Machine (if available). You can disable suggestions in Settings -> Link Checker -> General.
+* Added a Hebrew translation.
+* Added support for HTML code in custom fields. To make the plugin treat a field as HTML, prefix its name with "html:" in BLC settings. For example, if you have a custom field named "foo" that contains HTML, enter it as "html:foo".
+* Fixed: The "Status" column is now properly updated when editing a link.
+* Fixed: Visual feedback when a link is successfully edited. Basically, it briefly changes the row background to green.
+* Fixed: Email notifications will only include the "see all broken links here" link if the recipient can actually access that link.
+* Fixed some UI labels not being localizable.
+* The "Undismiss" action is now displayed in all views instead of only the "Dismissed" view. This way you can tell if a broken link has been dismissed without having to search the "Dismissed" list.
+* Added information about the last email notification sent to debug info. It's accessible by clicking "show debug info" on the plugin settings page.
+
+= 1.8.3 =
+* Added a Hungarian translation.
+* Fixed a bunch of "deprecated function" notices that showed up due to wpdb::escape() becoming deprecated in WP 3.6.
+* Fixed a vulnerability that would allow users with the ability to bulk-edit links to execute arbitrary PHP code by using a specially crafted regex as the search string.
+* Updated German translation.
+* Replaced the old Dutch translation with a new and more complete translation by Robin Roelofsen.
+
+= 1.8.2 =
+* Removed one of the translator credits links because Google flagged it as "suspicious".
+* Updated French translation.
+* Updated Polish translation.
+* Fixed several field size and layout issues that made the search form display incorrectly in Firefox.
+
+= 1.8.1 =
+* Updated the Polish and Simplified Chinese translations.
+* Updated the German translation.
+* Added translation strings for two modules that were missing them.
+* Replaced a number of icons with GPL-compatible alternatives from Font Awesome.
+* Removed some unused images.
+
+= 1.8 =
+* Added an option to only show the dashboard widget for users with the Administrator role, or to disable it completely.
+* Added a way to change the notification email address.
+* Added support for Smart YouTube "httpv://" links.
+* Added support for protocol-relative URLs (for example, "//example.com/").
+* Added support for checking YouTube playlists.
+* Added a Brazilian Portuguese (pt-BR) translation.
+* Updated Chinese (Traditional) translation.
+* Switched over to storing plugin settings as JSON instead of serialized PHP arrays.
+* Improved error reporting in situations where the plugin can not load settings from the database.
+* Fixed: Display a more specific error message than just "update failed" when the plugin fails to modify a post. This only applies to WP 3.5+.
+* Fixed: Display the right URL for embedded YouTube playlists. Previously the plugin would show the same (incorrect) URL for all playlists.
 
 = 1.7.1 =
 * Added an Arabic translation.
@@ -626,6 +701,9 @@ To upgrade your installation
 * *There are no release notes for this version*
 
 == Upgrade Notice ==
+
+= 1.9.2 =
+Fixes UI issues related to the new WP 3.8 admin style and a few security vulnerabilities.
 
 = 1.6.2 =
 Attempts to fix the "database not up to date" bug that some users are still experiencing with 1.6.1. If you have not encountered this bug, you can skip this update.
